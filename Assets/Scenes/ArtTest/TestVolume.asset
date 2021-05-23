@@ -137,7 +137,7 @@ MonoBehaviour:
     max: 200
   greenOutRedIn:
     m_OverrideState: 1
-    m_Value: -10
+    m_Value: 200
     min: -200
     max: 200
   greenOutGreenIn:
@@ -162,6 +162,6 @@ MonoBehaviour:
     max: 200
   blueOutBlueIn:
     m_OverrideState: 0
-    m_Value: 100
+    m_Value: 200
     min: -200
     max: 200

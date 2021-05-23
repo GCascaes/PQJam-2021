@@ -65,6 +65,21 @@ TextureImporter:
   - first:
       213: -6893074869574333023
     second: Rabbit_Jump_gun_1
+  - first:
+      213: -2970297545714548618
+    second: Bullet_spawn_0
+  - first:
+      213: 3959744616456444350
+    second: Bullet_spawn_1
+  - first:
+      213: 8293917875276900993
+    second: Bullet_spawn_2
+  - first:
+      213: -7844870168030191582
+    second: player_bullet_0
+  - first:
+      213: 3485556836204218101
+    second: player_bullet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -109,7 +124,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 2
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -140,6 +155,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -590,6 +617,111 @@ TextureImporter:
       bones: []
       spriteID: 1ad89dc5de0e650a0800000000000000
       internalID: -6893074869574333023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullet_spawn_0
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 499
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67048769e1267c6d0800000000000000
+      internalID: -2970297545714548618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullet_spawn_1
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 500
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9d621cfb6d3f630800000000000000
+      internalID: 3959744616456444350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bullet_spawn_2
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 501
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a64205d5ae91370800000000000000
+      internalID: 8293917875276900993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_bullet_0
+      rect:
+        serializedVersion: 2
+        x: 267
+        y: 482
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2206085652c612390800000000000000
+      internalID: -7844870168030191582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_bullet_1
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 482
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6036aa97f2f5030800000000000000
+      internalID: 3485556836204218101
       vertices: []
       indices: 
       edges: []

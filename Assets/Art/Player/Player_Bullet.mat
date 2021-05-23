@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Rabbit
-  m_Shader: {fileID: -6465566751694194690, guid: 6f5128f51358cb042a11b6f92c995145, type: 3}
+  m_Name: Player_Bullet
+  m_Shader: {fileID: -6465566751694194690, guid: e25632ef4312c1d4b9928bba2f1d5818, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -56,10 +56,12 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _DissolveAmount: 0
     - _EnableExternalAlpha: 0
     - _FlashPower: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DissolveColor: {r: 2, g: 0, b: 0.0627451, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 0}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}

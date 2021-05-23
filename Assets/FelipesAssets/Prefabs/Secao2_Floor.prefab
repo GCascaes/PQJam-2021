@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7224756051428364930}
   - component: {fileID: 6267302380550284025}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Sign2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,9 +70,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 1a502c097671e764f9ab4a8e54ed1fac, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5176471, g: 0.5176471, b: 0.5176471, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -91,9 +91,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8587815790187767647}
-  - component: {fileID: 8587815790187767641}
-  - component: {fileID: 8587815790187767646}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Secao2_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -136,267 +134,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &8587815790187767641
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8587815790187767644}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!66 &8587815790187767646
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8587815790187767644}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 8587815791009784856}
-    m_ColliderPaths:
-    - - X: -1020000293
-        Y: -80000000
-      - X: -1020000293
-        Y: 80000000
-      - X: -1180000000
-        Y: 79999707
-      - X: -1179999707
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791547204564}
-    m_ColliderPaths:
-    - - X: -860000293
-        Y: -80000000
-      - X: -860000293
-        Y: 80000000
-      - X: -1020000000
-        Y: 79999707
-      - X: -1019999707
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791787951430}
-    m_ColliderPaths:
-    - - X: -700000293
-        Y: -80000000
-      - X: -700000293
-        Y: 80000000
-      - X: -860000000
-        Y: 79999707
-      - X: -859999707
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791664332618}
-    m_ColliderPaths:
-    - - X: -540000293
-        Y: -80000000
-      - X: -540000293
-        Y: 80000000
-      - X: -700000000
-        Y: 79999707
-      - X: -699999707
-        Y: -80000000
-  - m_Collider: {fileID: 8587815790395920280}
-    m_ColliderPaths:
-    - - X: -380000293
-        Y: -80000000
-      - X: -380000293
-        Y: 80000000
-      - X: -540000000
-        Y: 79999707
-      - X: -539999707
-        Y: -80000000
-  - m_Collider: {fileID: 8587815792137208330}
-    m_ColliderPaths:
-    - - X: -220000293
-        Y: -80000000
-      - X: -220000293
-        Y: 80000000
-      - X: -380000000
-        Y: 79999707
-      - X: -379999707
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791346141084}
-    m_ColliderPaths:
-    - - X: -60000293
-        Y: -80000000
-      - X: -60000293
-        Y: 80000000
-      - X: -220000000
-        Y: 79999707
-      - X: -219999707
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791468682623}
-    m_ColliderPaths:
-    - - X: 99999707
-        Y: -80000000
-      - X: 99999707
-        Y: 80000000
-      - X: -60000000
-        Y: 79999707
-      - X: -59999707
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791452149877}
-    m_ColliderPaths:
-    - - X: 259999707
-        Y: -80000000
-      - X: 259999707
-        Y: 80000000
-      - X: 100000000
-        Y: 79999707
-      - X: 100000293
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791384219970}
-    m_ColliderPaths:
-    - - X: 419999707
-        Y: -80000000
-      - X: 419999707
-        Y: 80000000
-      - X: 260000000
-        Y: 79999707
-      - X: 260000293
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791347477922}
-    m_ColliderPaths:
-    - - X: 579999707
-        Y: -80000000
-      - X: 579999707
-        Y: 80000000
-      - X: 420000000
-        Y: 79999707
-      - X: 420000293
-        Y: -80000000
-  - m_Collider: {fileID: 8587815792196025368}
-    m_ColliderPaths:
-    - - X: 739999707
-        Y: -80000000
-      - X: 739999707
-        Y: 80000000
-      - X: 580000000
-        Y: 79999707
-      - X: 580000293
-        Y: -80000000
-  - m_Collider: {fileID: 8587815790675672805}
-    m_ColliderPaths:
-    - - X: 899999707
-        Y: -80000000
-      - X: 899999707
-        Y: 80000000
-      - X: 740000000
-        Y: 79999707
-      - X: 740000293
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791110884778}
-    m_ColliderPaths:
-    - - X: 1059999707
-        Y: -80000000
-      - X: 1059999707
-        Y: 80000000
-      - X: 900000000
-        Y: 79999707
-      - X: 900000293
-        Y: -80000000
-  - m_Collider: {fileID: 8587815791490710343}
-    m_ColliderPaths:
-    - - X: 1219999707
-        Y: -80000000
-      - X: 1219999707
-        Y: 80000000
-      - X: 1060000000
-        Y: 79999707
-      - X: 1060000293
-        Y: -80000000
-  - m_Collider: {fileID: 8587815792135947312}
-    m_ColliderPaths:
-    - - X: 739999707
-        Y: 80000000
-      - X: 739999707
-        Y: 240000000
-      - X: 580000000
-        Y: 239999707
-      - X: 580000293
-        Y: 80000000
-  - m_Collider: {fileID: 8587815791947929184}
-    m_ColliderPaths:
-    - - X: 899999707
-        Y: 80000000
-      - X: 899999707
-        Y: 240000000
-      - X: 740000000
-        Y: 239999707
-      - X: 740000293
-        Y: 80000000
-  - m_Collider: {fileID: 8587815792056686367}
-    m_ColliderPaths:
-    - - X: 1059999707
-        Y: 80000000
-      - X: 1059999707
-        Y: 240000000
-      - X: 900000000
-        Y: 239999707
-      - X: 900000293
-        Y: 80000000
-  - m_Collider: {fileID: 8587815792212563588}
-    m_ColliderPaths:
-    - - X: 1059999707
-        Y: 240000000
-      - X: 1059999707
-        Y: 400000000
-      - X: 900000000
-        Y: 399999707
-      - X: 900000293
-        Y: 240000000
-  - m_Collider: {fileID: 8587815791467109099}
-    m_ColliderPaths:
-    - - X: 899999707
-        Y: 240000000
-      - X: 899999707
-        Y: 400000000
-      - X: 740000000
-        Y: 399999707
-      - X: 740000293
-        Y: 240000000
-  - m_Collider: {fileID: 8587815790840051307}
-    m_ColliderPaths:
-    - - X: 739999707
-        Y: 240000000
-      - X: 739999707
-        Y: 400000000
-      - X: 580000000
-        Y: 399999707
-      - X: 580000293
-        Y: 240000000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: -117.99998, y: -7.9999704}
-      - {x: 121.99998, y: -7.9999704}
-      - {x: 121.99994, y: 8}
-      - {x: 105.99997, y: 8}
-      - {x: 105.99995, y: 40}
-      - {x: 58, y: 39.999943}
-      - {x: 58, y: 8}
-      - {x: -118, y: 7.999942}
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
 --- !u!1 &8587815790395920287
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,7 +145,7 @@ GameObject:
   - component: {fileID: 8587815790395920286}
   - component: {fileID: 8587815790395920281}
   - component: {fileID: 8587815790395920280}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,7 +254,7 @@ GameObject:
   - component: {fileID: 8587815790675672811}
   - component: {fileID: 8587815790675672810}
   - component: {fileID: 8587815790675672805}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +363,7 @@ GameObject:
   - component: {fileID: 8587815790840051305}
   - component: {fileID: 8587815790840051304}
   - component: {fileID: 8587815790840051307}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Obstacle_Floor (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -735,7 +472,7 @@ GameObject:
   - component: {fileID: 8587815791009784862}
   - component: {fileID: 8587815791009784857}
   - component: {fileID: 8587815791009784856}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -844,7 +581,7 @@ GameObject:
   - component: {fileID: 8587815791110884776}
   - component: {fileID: 8587815791110884779}
   - component: {fileID: 8587815791110884778}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -953,7 +690,7 @@ GameObject:
   - component: {fileID: 8587815791346141058}
   - component: {fileID: 8587815791346141085}
   - component: {fileID: 8587815791346141084}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1062,7 +799,7 @@ GameObject:
   - component: {fileID: 8587815791347477920}
   - component: {fileID: 8587815791347477923}
   - component: {fileID: 8587815791347477922}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1171,7 +908,7 @@ GameObject:
   - component: {fileID: 8587815791384219968}
   - component: {fileID: 8587815791384219971}
   - component: {fileID: 8587815791384219970}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1280,7 +1017,7 @@ GameObject:
   - component: {fileID: 8587815791452149883}
   - component: {fileID: 8587815791452149882}
   - component: {fileID: 8587815791452149877}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1389,7 +1126,7 @@ GameObject:
   - component: {fileID: 8587815791467109097}
   - component: {fileID: 8587815791467109096}
   - component: {fileID: 8587815791467109099}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Obstacle_Floor (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,7 +1235,7 @@ GameObject:
   - component: {fileID: 8587815791468682621}
   - component: {fileID: 8587815791468682620}
   - component: {fileID: 8587815791468682623}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1607,7 +1344,7 @@ GameObject:
   - component: {fileID: 8587815791490710341}
   - component: {fileID: 8587815791490710340}
   - component: {fileID: 8587815791490710343}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1716,7 +1453,7 @@ GameObject:
   - component: {fileID: 8587815791547204570}
   - component: {fileID: 8587815791547204565}
   - component: {fileID: 8587815791547204564}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1825,7 +1562,7 @@ GameObject:
   - component: {fileID: 8587815791664332616}
   - component: {fileID: 8587815791664332619}
   - component: {fileID: 8587815791664332618}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1934,7 +1671,7 @@ GameObject:
   - component: {fileID: 8587815791787951428}
   - component: {fileID: 8587815791787951431}
   - component: {fileID: 8587815791787951430}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2043,7 +1780,7 @@ GameObject:
   - component: {fileID: 8587815791947929190}
   - component: {fileID: 8587815791947929185}
   - component: {fileID: 8587815791947929184}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Obstacle_Floor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2152,7 +1889,7 @@ GameObject:
   - component: {fileID: 8587815792056686365}
   - component: {fileID: 8587815792056686364}
   - component: {fileID: 8587815792056686367}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Obstacle_Floor (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2261,7 +1998,7 @@ GameObject:
   - component: {fileID: 8587815792135947318}
   - component: {fileID: 8587815792135947313}
   - component: {fileID: 8587815792135947312}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Obstacle_Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2370,7 +2107,7 @@ GameObject:
   - component: {fileID: 8587815792137208328}
   - component: {fileID: 8587815792137208331}
   - component: {fileID: 8587815792137208330}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2479,7 +2216,7 @@ GameObject:
   - component: {fileID: 8587815792196025374}
   - component: {fileID: 8587815792196025369}
   - component: {fileID: 8587815792196025368}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Floor1 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2588,7 +2325,7 @@ GameObject:
   - component: {fileID: 8587815792212563594}
   - component: {fileID: 8587815792212563589}
   - component: {fileID: 8587815792212563588}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Obstacle_Floor (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

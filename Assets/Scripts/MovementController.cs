@@ -7,8 +7,8 @@ public class MovementController : MonoBehaviour
     [SerializeField] private float maxVelocity;
     [SerializeField] private float acceleration;
     [SerializeField] private float decceleration;
-    [SerializeField] private float baseJumpVelocity;
-    [SerializeField] private float holdJumpVelocity;
+    [SerializeField] private float baseJumpHeight;
+    [SerializeField] private float holdJumpHeightMultiplier;
     [SerializeField] private float doubleJumpVelocityModifier;
     [SerializeField] private int doubleJumps;
     [SerializeField] private LayerMask groundLayers;
@@ -19,6 +19,8 @@ public class MovementController : MonoBehaviour
     private bool holdJump = false;
     private bool facingRight = true;
     private float currentVelocity = 0;
+    private float baseJumpVelocity;
+    private float holdJumpAcceleration;
     private Rigidbody2D body;
     private Collider2D[] colliders;
     private Animator animator;
@@ -28,6 +30,9 @@ public class MovementController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         colliders = GetComponents<Collider2D>();
         animator = GetComponent<Animator>();
+
+        baseJumpVelocity = Mathf.Sqrt(2 * (-Physics2D.gravity.y) * body.gravityScale * baseJumpHeight / 1);
+        holdJumpAcceleration = (-Physics2D.gravity.y) * body.gravityScale - Mathf.Pow(baseJumpVelocity, 2) / (2 * holdJumpHeightMultiplier * baseJumpHeight);
     }
 
     private void FixedUpdate()
@@ -63,7 +68,7 @@ public class MovementController : MonoBehaviour
         }
         else if (holdJump)
         {
-            body.velocity = new Vector2(body.velocity.x, body.velocity.y + holdJumpVelocity);
+            body.velocity = new Vector2(body.velocity.x, body.velocity.y + holdJumpAcceleration * Time.fixedDeltaTime);
             holdJump = false;
         }
     }

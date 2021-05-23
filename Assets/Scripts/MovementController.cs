@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 public class MovementController : MonoBehaviour
@@ -7,6 +8,7 @@ public class MovementController : MonoBehaviour
     [SerializeField] private float acceleration;
     [SerializeField] private float decceleration;
     [SerializeField] private float jumpImpulse;
+    [SerializeField] private float doubleJumpDelay;
     [SerializeField] private int doubleJumps;
     [SerializeField] private LayerMask groundLayers;
 
@@ -15,14 +17,16 @@ public class MovementController : MonoBehaviour
     private bool isJumping = false;
     private bool facingRight = true;
     private float currentVelocity = 0;
+    private float jumpStartTime = 0;
     private Rigidbody2D body;
+    private Collider2D[] colliders;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
+        colliders = gameObject.GetComponents<Collider2D>();
     }
 
-    // Update is called once per frame
     private void FixedUpdate()
     {
         if (!isJumping || airControl)
@@ -42,9 +46,12 @@ public class MovementController : MonoBehaviour
         {
             if (currentJumps <= doubleJumps)
             {
-                body.AddForce(new Vector2(0, jumpImpulse), ForceMode2D.Impulse);
+                float jumpImpulseModifier = Mathf.Min((Time.time - jumpStartTime) / doubleJumpDelay, 1);
+                body.AddForce(new Vector2(0, jumpImpulse * jumpImpulseModifier * Time.fixedDeltaTime), ForceMode2D.Impulse);
+                
                 isJumping = true;
                 currentJumps++;
+                jumpStartTime = Time.time;
             }
             shouldJump = false;
         }
@@ -56,6 +63,15 @@ public class MovementController : MonoBehaviour
         {
             isJumping = false;
             currentJumps = 0;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (!colliders.Any(x => x.IsTouchingLayers(groundLayers)))
+        {
+            isJumping = true;
+            currentJumps = 1;
         }
     }
 

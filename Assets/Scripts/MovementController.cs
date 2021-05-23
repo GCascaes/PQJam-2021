@@ -7,17 +7,18 @@ public class MovementController : MonoBehaviour
     [SerializeField] private float maxVelocity;
     [SerializeField] private float acceleration;
     [SerializeField] private float decceleration;
-    [SerializeField] private float jumpImpulse;
-    [SerializeField] private float doubleJumpDelay;
+    [SerializeField] private float baseJumpVelocity;
+    [SerializeField] private float holdJumpVelocity;
+    [SerializeField] private float doubleJumpVelocityModifier;
     [SerializeField] private int doubleJumps;
     [SerializeField] private LayerMask groundLayers;
 
     private int currentJumps = 0;
     private bool shouldJump = false;
     private bool isJumping = false;
+    private bool holdJump = false;
     private bool facingRight = true;
     private float currentVelocity = 0;
-    private float jumpStartTime = 0;
     private Rigidbody2D body;
     private Collider2D[] colliders;
     private Animator animator;
@@ -49,14 +50,21 @@ public class MovementController : MonoBehaviour
         {
             if (currentJumps <= doubleJumps)
             {
-                float jumpImpulseModifier = Mathf.Min((Time.time - jumpStartTime) / doubleJumpDelay, 1);
-                body.AddForce(new Vector2(0, jumpImpulse * jumpImpulseModifier * Time.fixedDeltaTime), ForceMode2D.Impulse);
+                float jumpVelocity = baseJumpVelocity;
+                if (currentJumps > 0)
+                    jumpVelocity *= doubleJumpVelocityModifier;
+
+                body.velocity = new Vector2(body.velocity.x, jumpVelocity);
 
                 SetJumping(true);
                 currentJumps++;
-                jumpStartTime = Time.time;
             }
             shouldJump = false;
+        }
+        else if (holdJump)
+        {
+            body.velocity = new Vector2(body.velocity.x, body.velocity.y + holdJumpVelocity);
+            holdJump = false;
         }
     }
 
@@ -78,9 +86,10 @@ public class MovementController : MonoBehaviour
         }
     }
 
-    public void SmoothMove(float direction, bool jump)
+    public void SmoothMove(float direction, bool jump, bool holdJump)
     {
         shouldJump = jump;
+        this.holdJump = holdJump;
 
         if (direction == 0)
             return;

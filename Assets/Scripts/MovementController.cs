@@ -20,11 +20,13 @@ public class MovementController : MonoBehaviour
     private float jumpStartTime = 0;
     private Rigidbody2D body;
     private Collider2D[] colliders;
+    private Animator animator;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
-        colliders = gameObject.GetComponents<Collider2D>();
+        colliders = GetComponents<Collider2D>();
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -32,6 +34,7 @@ public class MovementController : MonoBehaviour
         if (!isJumping || airControl)
         {
             body.velocity = new Vector2(currentVelocity, body.velocity.y);
+            animator.SetFloat("Speed", Mathf.Abs(currentVelocity));
 
             if ((currentVelocity > 0 && !facingRight) || (currentVelocity < 0 && facingRight))
                 Flip();
@@ -48,8 +51,8 @@ public class MovementController : MonoBehaviour
             {
                 float jumpImpulseModifier = Mathf.Min((Time.time - jumpStartTime) / doubleJumpDelay, 1);
                 body.AddForce(new Vector2(0, jumpImpulse * jumpImpulseModifier * Time.fixedDeltaTime), ForceMode2D.Impulse);
-                
-                isJumping = true;
+
+                SetJumping(true);
                 currentJumps++;
                 jumpStartTime = Time.time;
             }
@@ -61,7 +64,7 @@ public class MovementController : MonoBehaviour
     {
         if (collision.otherCollider.IsTouchingLayers(groundLayers))
         {
-            isJumping = false;
+            SetJumping(false);
             currentJumps = 0;
         }
     }
@@ -70,7 +73,7 @@ public class MovementController : MonoBehaviour
     {
         if (!colliders.Any(x => x.IsTouchingLayers(groundLayers)))
         {
-            isJumping = true;
+            SetJumping(true);
             currentJumps = 1;
         }
     }
@@ -98,5 +101,11 @@ public class MovementController : MonoBehaviour
         Vector3 theScale = transform.localScale;
         theScale.x *= -1;
         transform.localScale = theScale;
+    }
+
+    private void SetJumping(bool jumping)
+    {
+        isJumping = jumping;
+        animator.SetBool("InAir", jumping);
     }
 }

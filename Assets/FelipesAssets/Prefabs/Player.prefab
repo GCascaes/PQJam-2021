@@ -206,6 +206,7 @@ MonoBehaviour:
   decceleration: 5
   baseJumpHeight: 10
   holdJumpHeightMultiplier: 4
+  holdJumpFallAttenuation: 0.1
   doubleJumpVelocityModifier: 0.5
   doubleJumps: 0
   groundLayers:

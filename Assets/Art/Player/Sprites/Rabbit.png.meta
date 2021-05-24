@@ -80,6 +80,60 @@ TextureImporter:
   - first:
       213: 3485556836204218101
     second: player_bullet_1
+  - first:
+      213: 673224372540571792
+    second: UI_HP_BG
+  - first:
+      213: 5246886010371638295
+    second: UI_HP
+  - first:
+      213: 2410797782365434089
+    second: UI_Barrier_BG
+  - first:
+      213: 6491855614636477845
+    second: UI_Barrier
+  - first:
+      213: 2372753446098763428
+    second: PowerUp_gun_0
+  - first:
+      213: -2814080343673853368
+    second: PowerUp_gun_1
+  - first:
+      213: -1481964778630405277
+    second: PowerUp_gun_2
+  - first:
+      213: -2679308981365192830
+    second: PowerUp_gun_3
+  - first:
+      213: -4049825464476568856
+    second: Barrier_0
+  - first:
+      213: -1349780244381081602
+    second: Barrier_1
+  - first:
+      213: 5588763108446222338
+    second: Barrier_2
+  - first:
+      213: 3422845743041815541
+    second: Skull
+  - first:
+      213: -4128762964926612318
+    second: Bone
+  - first:
+      213: 6278309052527377676
+    second: Blood0
+  - first:
+      213: 1605461151897945390
+    second: Blood1
+  - first:
+      213: 8739454688714762884
+    second: Blood4
+  - first:
+      213: 2907200871441724882
+    second: Blood2
+  - first:
+      213: -4963719191727941862
+    second: Blood3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -630,7 +684,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -651,7 +705,7 @@ TextureImporter:
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -672,7 +726,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -693,7 +747,7 @@ TextureImporter:
         width: 15
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -714,7 +768,7 @@ TextureImporter:
         width: 15
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -722,6 +776,384 @@ TextureImporter:
       bones: []
       spriteID: 5f6036aa97f2f5030800000000000000
       internalID: 3485556836204218101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_HP_BG
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 494
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0908a6bfff5c75900800000000000000
+      internalID: 673224372540571792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_HP
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 503
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7140b29f60fa0d840800000000000000
+      internalID: 5246886010371638295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Barrier_BG
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 487
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e0f0336fcfd47120800000000000000
+      internalID: 2410797782365434089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Barrier
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 480
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d48834944b71a50800000000000000
+      internalID: 6491855614636477845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_gun_0
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 484
+        width: 21
+        height: 22
+      alignment: 9
+      pivot: {x: 0.47619048, y: 0.40909094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aefc4610b6bde020800000000000000
+      internalID: 2372753446098763428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_gun_1
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 484
+        width: 21
+        height: 22
+      alignment: 9
+      pivot: {x: 0.47619048, y: 0.40909094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a29e946d062f8d0800000000000000
+      internalID: -2814080343673853368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_gun_2
+      rect:
+        serializedVersion: 2
+        x: 402
+        y: 484
+        width: 21
+        height: 21
+      alignment: 9
+      pivot: {x: 0.47619048, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3632818b2e00f6be0800000000000000
+      internalID: -1481964778630405277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_gun_3
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 484
+        width: 21
+        height: 21
+      alignment: 9
+      pivot: {x: 0.47619048, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 287c6325dae21dad0800000000000000
+      internalID: -2679308981365192830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrier_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 399
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e2fa8b62312cc7c0800000000000000
+      internalID: -4049825464476568856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrier_1
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 399
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eff53d8e40e944de0800000000000000
+      internalID: -1349780244381081602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Barrier_2
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 399
+        width: 36
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 208beb4cf664f8d40800000000000000
+      internalID: 5588763108446222338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skull
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 414
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f327fa7114608f20800000000000000
+      internalID: 3422845743041815541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bone
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 409
+        width: 7
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acb2c165ffa3b6c0800000000000000
+      internalID: -4128762964926612318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood0
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 428
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0d7302c1d8012750800000000000000
+      internalID: 6278309052527377676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood1
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 422
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25019b596eb74610800000000000000
+      internalID: 1605461151897945390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood4
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 414
+        width: 6
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a277b5cb7c84970800000000000000
+      internalID: 8739454688714762884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 423
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d57df02ac3785820800000000000000
+      internalID: 2907200871441724882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Blood3
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 412
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a17544ca1b35d1bb0800000000000000
+      internalID: -4963719191727941862
       vertices: []
       indices: 
       edges: []

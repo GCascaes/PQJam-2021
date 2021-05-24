@@ -62,6 +62,24 @@ TextureImporter:
   - first:
       213: -7058638438382550567
     second: enemy_Bear_Sit_emo_1
+  - first:
+      213: 4491295534373481323
+    second: Kidnap_0
+  - first:
+      213: -2756699986305231383
+    second: Kidnap_1
+  - first:
+      213: -7530142797673451586
+    second: Kidnap_2
+  - first:
+      213: -6875356729439464681
+    second: Kidnap_3
+  - first:
+      213: 805673727648305783
+    second: Kidnap_4
+  - first:
+      213: 5809297713845055315
+    second: Kidnap_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -566,6 +584,132 @@ TextureImporter:
       bones: []
       spriteID: 9d14a421dbdaa0e90800000000000000
       internalID: -7058638438382550567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kidnap_0
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 347
+        width: 58
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6551724, y: 0.52000004}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6b21ab1e79445e30800000000000000
+      internalID: 4491295534373481323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kidnap_1
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 346
+        width: 56
+        height: 75
+      alignment: 9
+      pivot: {x: 0.67857146, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e5d3f3d7fb3eb9d0800000000000000
+      internalID: -2756699986305231383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kidnap_2
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 346
+        width: 52
+        height: 80
+      alignment: 9
+      pivot: {x: 0.7307693, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf25bc950f8f7790800000000000000
+      internalID: -7530142797673451586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kidnap_3
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 347
+        width: 53
+        height: 67
+      alignment: 9
+      pivot: {x: 0.7169812, y: 0.58208954}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7135ba55b73d590a0800000000000000
+      internalID: -6875356729439464681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kidnap_4
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 348
+        width: 53
+        height: 67
+      alignment: 9
+      pivot: {x: 0.7169812, y: 0.5671642}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77297559cf35e2b00800000000000000
+      internalID: 805673727648305783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kidnap_5
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 348
+        width: 58
+        height: 75
+      alignment: 9
+      pivot: {x: 0.6551724, y: 0.50666666}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35f2934ed75ce9050800000000000000
+      internalID: 5809297713845055315
       vertices: []
       indices: 
       edges: []

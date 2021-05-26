@@ -2,11 +2,15 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    public MovementController movementController;
+    [SerializeField]
+    private MovementController movementController;
+    [SerializeField]
+    private GunController gunController;
 
     private float move = 0;
     private bool shouldJump = false;
     private bool holdJump = false;
+    private bool shoot = false;
 
     private void Update()
     {
@@ -14,6 +18,7 @@ public class InputController : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
             shouldJump = true;
         holdJump = Input.GetButton("Jump");
+        shoot = Input.GetButton("Fire1");
     }
 
     private void FixedUpdate()
@@ -22,5 +27,8 @@ public class InputController : MonoBehaviour
             movementController.SmoothMove(move, shouldJump, holdJump);
 
         shouldJump = false;
+
+        if (shoot)
+            gunController.Shoot();
     }
 }

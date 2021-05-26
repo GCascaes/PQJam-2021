@@ -29,20 +29,24 @@ public class MovementController : MonoBehaviour
     private bool shouldJump = false;
     private bool isJumping = false;
     private bool holdJump = false;
-    private bool facingRight = true;
-    private float currentVelocity = 0;
     private float baseJumpVelocity;
     private float holdJumpAcceleration;
     private float holdJumpFallAcceleration;
+
+    private bool facingRight = true;
+    private float currentVelocity = 0;
+
     private Rigidbody2D body;
     private Collider2D[] colliders;
     private Animator animator;
+    private GunController gunController;
 
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         colliders = GetComponents<Collider2D>();
         animator = GetComponent<Animator>();
+        gunController = GetComponent<GunController>();
 
         baseJumpVelocity = Mathf.Sqrt(2 * (-Physics2D.gravity.y) * body.gravityScale * baseJumpHeight / 1);
         holdJumpAcceleration = (-Physics2D.gravity.y) * body.gravityScale - Mathf.Pow(baseJumpVelocity, 2) / (2 * holdJumpHeightMultiplier * baseJumpHeight);
@@ -56,7 +60,8 @@ public class MovementController : MonoBehaviour
             body.velocity = new Vector2(currentVelocity, body.velocity.y);
             animator.SetFloat("Speed", Mathf.Abs(currentVelocity));
 
-            if ((currentVelocity > 0 && !facingRight) || (currentVelocity < 0 && facingRight))
+            if ((gunController is null || !gunController.IsShooting) &&
+                ((currentVelocity > 0 && !facingRight) || (currentVelocity < 0 && facingRight)))
                 Flip();
 
             if (Mathf.Abs(currentVelocity) > 0)
@@ -123,13 +128,8 @@ public class MovementController : MonoBehaviour
 
     private void Flip()
     {
-        // Switch the way the player is labelled as facing.
         facingRight = !facingRight;
-
-        // Multiply the player's x local scale by -1.
-        Vector3 theScale = transform.localScale;
-        theScale.x *= -1;
-        transform.localScale = theScale;
+        transform.Rotate(transform.up, 180);
     }
 
     private void SetJumping(bool jumping)

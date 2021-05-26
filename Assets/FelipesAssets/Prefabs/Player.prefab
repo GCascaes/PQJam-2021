@@ -204,9 +204,9 @@ MonoBehaviour:
   maxVelocity: 80
   acceleration: 10
   decceleration: 5
-  baseJumpHeight: 10
-  holdJumpHeightMultiplier: 4
-  holdJumpFallAttenuation: 0.1
+  baseJumpHeight: 15
+  holdJumpHeightMultiplier: 3
+  holdJumpFallAttenuation: 0.155
   doubleJumpVelocityModifier: 0.5
   doubleJumps: 0
   groundLayers:

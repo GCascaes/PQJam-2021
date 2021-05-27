@@ -3,6 +3,8 @@
 public class GunController : MonoBehaviour
 {
     [SerializeField]
+    private bool shootingEnabled;
+    [SerializeField]
     private GameObject bulletPrefab;
     [SerializeField]
     private bool hasGun;
@@ -11,6 +13,9 @@ public class GunController : MonoBehaviour
     [SerializeField]
     private float shotsPerSecond;
 
+    internal bool shootContinuously = false;
+
+    private bool canShoot;
     private bool shouldShoot;
     private float shootPeriod;
     private float lastShotTime;
@@ -20,6 +25,7 @@ public class GunController : MonoBehaviour
 
     private void Awake()
     {
+        canShoot = shootingEnabled;
         shootPeriod = 1 / shotsPerSecond;
         animator = GetComponent<Animator>();
         UpdateAnimator();
@@ -30,6 +36,13 @@ public class GunController : MonoBehaviour
         if (!hasGun)
             return;
 
+        if (!canShoot)
+        {
+            shouldShoot = false;
+            UpdateAnimatorShooting(shouldShoot);
+            return;
+        }
+
         UpdateAnimatorShooting(shouldShoot);
 
         if (shouldShoot && Time.realtimeSinceStartup - lastShotTime > shootPeriod)
@@ -37,7 +50,7 @@ public class GunController : MonoBehaviour
             BulletController.Instantiate(bulletPrefab, transform.position, transform.rotation, bulletVelocity);
             lastShotTime = Time.realtimeSinceStartup;
             IsShooting = true;
-            shouldShoot = false;
+            shouldShoot = shootContinuously;
         }
         else if (!shouldShoot)
         {
@@ -47,7 +60,7 @@ public class GunController : MonoBehaviour
 
     public void Shoot()
     {
-        if (!hasGun)
+        if (!hasGun || !canShoot)
             return;
 
         shouldShoot = true;
@@ -64,6 +77,10 @@ public class GunController : MonoBehaviour
         hasGun = false;
         UpdateAnimator();
     }
+
+    public void EnableShooting() => canShoot = true;
+    
+    public void DisableShooting() => canShoot = false;
 
     private void UpdateAnimator()
     {

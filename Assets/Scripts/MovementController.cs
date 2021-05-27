@@ -33,6 +33,8 @@ public class MovementController : MonoBehaviour
     private float holdJumpAcceleration;
     private float holdJumpFallAcceleration;
 
+    private bool movementEnabled = true;
+
     private bool facingRight = true;
     private float currentVelocity = 0;
 
@@ -57,6 +59,7 @@ public class MovementController : MonoBehaviour
     {
         if (!isJumping || airControl)
         {
+            // TODO Reduce maximum speed when moving and shooting
             body.velocity = new Vector2(currentVelocity, body.velocity.y);
             animator.SetFloat("Speed", Mathf.Abs(currentVelocity));
 
@@ -111,8 +114,15 @@ public class MovementController : MonoBehaviour
         }
     }
 
+    public void DisableMovement() => movementEnabled = false;
+    
+    public void EnableMovement() => movementEnabled = true;
+    
     public void SmoothMove(float direction, bool jump, bool holdJump)
     {
+        if (!movementEnabled)
+            return;
+
         shouldJump = jump;
         this.holdJump = holdJump;
 

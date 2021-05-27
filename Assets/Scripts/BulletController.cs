@@ -31,13 +31,11 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") || collision.CompareTag("LevelBounds"))
+        if (collision.CompareTag("LevelBounds"))
             return;
 
         if (collision.gameObject.TryGetComponent<HealthController>(out var healthController))
-        {
             healthController.TakeDamage(bulletDamage);
-        }
 
         Destroy(gameObject);
     }

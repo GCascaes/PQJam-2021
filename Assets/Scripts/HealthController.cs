@@ -9,6 +9,7 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        Debug.Log("Taking damage");
         currentHealth -= damage;
     }
 }

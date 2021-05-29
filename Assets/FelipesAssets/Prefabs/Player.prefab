@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airControl: 1
-  maxVelocity: 80
+  maxVelocity: 100
   maxShootingVelocity: 25
   acceleration: 100
   decceleration: 300
@@ -321,3 +321,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 0
+  shouldDie: 0

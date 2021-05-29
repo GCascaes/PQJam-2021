@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - LevelBounds
+  - DefenseBarrier
+  - Enemy
+  - Bullet
   layers:
   - Default
   - TransparentFX

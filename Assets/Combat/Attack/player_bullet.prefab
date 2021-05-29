@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -4014155936729753012}
   m_Layer: 0
   m_Name: player_bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,6 +115,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletDamage: 10
+  shotParticlePrefab: {fileID: 0}
+  hitParticlePrefab: {fileID: 0}
 --- !u!50 &-2398333162376173767
 Rigidbody2D:
   serializedVersion: 4

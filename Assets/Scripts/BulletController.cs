@@ -10,16 +10,19 @@ public class BulletController : MonoBehaviour
     private GameObject hitParticlePrefab;
 
     private float bulletVelocity;
+    private string shootingEntityTag;
 
     public static BulletController Instantiate(
         GameObject projectilePrefab,
         Vector2 position,
         Quaternion rotation,
-        float bulletVelocity)
+        float bulletVelocity,
+        string shootingEntityTag)
     {
         var projectile = Instantiate(projectilePrefab, position, rotation);
         var controller = projectile.GetComponent<BulletController>();
         controller.bulletVelocity = bulletVelocity;
+        controller.shootingEntityTag = shootingEntityTag;
         return controller;
     }
 
@@ -31,7 +34,7 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("LevelBounds"))
+        if (collision.CompareTag("LevelBounds") || collision.CompareTag("Bullet") || collision.CompareTag(shootingEntityTag))
             return;
 
         if (collision.gameObject.TryGetComponent<HealthController>(out var healthController))

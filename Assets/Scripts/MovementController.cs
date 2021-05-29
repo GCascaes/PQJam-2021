@@ -8,6 +8,8 @@ public class MovementController : MonoBehaviour
     [SerializeField]
     private float maxVelocity;
     [SerializeField]
+    private float maxShootingVelocity;
+    [SerializeField]
     private float acceleration;
     [SerializeField]
     private float decceleration;
@@ -36,6 +38,7 @@ public class MovementController : MonoBehaviour
     private bool movementEnabled = true;
 
     private bool facingRight = true;
+    private float movementDirection = 0;
     private float currentVelocity = 0;
 
     private Rigidbody2D body;
@@ -59,18 +62,45 @@ public class MovementController : MonoBehaviour
     {
         if (!isJumping || airControl)
         {
-            // TODO Reduce maximum speed when moving and shooting
+            float direction = movementDirection != 0 ? Mathf.Sign(movementDirection) : 0;
+
+            float targetVelocity = direction * maxVelocity;
+            if (gunController != null && gunController.IsShooting)
+                targetVelocity = direction * maxShootingVelocity;
+
+            if (targetVelocity == currentVelocity)
+            {
+                // Maintain current velocity
+            }
+            else if ((direction > 0 && targetVelocity > currentVelocity)
+                ||   (direction < 0 && targetVelocity < currentVelocity))
+            {
+                // Accelerate in direction of movement
+                float newVelocity = currentVelocity + direction * acceleration * Time.fixedDeltaTime;
+                currentVelocity = Mathf.Sign(newVelocity) * Mathf.Min(Mathf.Abs(newVelocity), Mathf.Abs(targetVelocity));
+            }
+            else if ((direction > 0 && targetVelocity < currentVelocity)
+                ||   (direction < 0 && targetVelocity > currentVelocity))
+            {
+                // Deccelerate in direction of movement
+                float newVelocity = currentVelocity - direction * decceleration * Time.fixedDeltaTime;
+                currentVelocity = Mathf.Sign(newVelocity) * Mathf.Max(Mathf.Abs(newVelocity), Mathf.Abs(targetVelocity));
+            }
+            else if (direction == 0 && currentVelocity != 0)
+            {
+                // Deccelerate to zero
+                float newVelocity = currentVelocity - Mathf.Sign(currentVelocity) * Mathf.Min(decceleration * Time.fixedDeltaTime, Mathf.Abs(currentVelocity));
+                currentVelocity = Mathf.Sign(newVelocity) * Mathf.Max(Mathf.Abs(newVelocity), Mathf.Abs(targetVelocity));
+            }
+
             body.velocity = new Vector2(currentVelocity, body.velocity.y);
             animator.SetFloat("Speed", Mathf.Abs(currentVelocity));
 
             if ((gunController is null || !gunController.IsShooting) &&
-                ((currentVelocity > 0 && !facingRight) || (currentVelocity < 0 && facingRight)))
+                ((currentVelocity > 0.1 && !facingRight) || (currentVelocity < -0.1 && facingRight)))
                 Flip();
 
-            if (Mathf.Abs(currentVelocity) > 0)
-            {
-                currentVelocity -= Mathf.Sign(currentVelocity) * Mathf.Min(decceleration, Mathf.Abs(currentVelocity));
-            }
+            movementDirection = 0;
         }
 
         if (shouldJump)
@@ -126,14 +156,7 @@ public class MovementController : MonoBehaviour
         shouldJump = jump;
         this.holdJump = holdJump;
 
-        if (direction == 0)
-            return;
-
-        if (!isJumping || airControl)
-        {
-            float newVelocity = currentVelocity + Mathf.Sign(direction) * acceleration;
-            currentVelocity = Mathf.Min(Mathf.Abs(newVelocity), maxVelocity) * Mathf.Sign(newVelocity);
-        }
+        movementDirection = direction;
     }
 
     private void Flip()

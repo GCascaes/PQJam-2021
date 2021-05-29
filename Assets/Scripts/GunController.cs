@@ -47,7 +47,7 @@ public class GunController : MonoBehaviour
 
         if (shouldShoot && Time.realtimeSinceStartup - lastShotTime > shootPeriod)
         {
-            BulletController.Instantiate(bulletPrefab, transform.position, transform.rotation, bulletVelocity);
+            BulletController.Instantiate(bulletPrefab, transform.position, transform.rotation, bulletVelocity, tag);
             lastShotTime = Time.realtimeSinceStartup;
             IsShooting = true;
             shouldShoot = shootContinuously;

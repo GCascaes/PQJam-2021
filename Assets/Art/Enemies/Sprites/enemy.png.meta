@@ -128,6 +128,24 @@ TextureImporter:
   - first:
       213: 6441796528174145524
     second: NormalShot_1
+  - first:
+      213: -5843136092794344701
+    second: BarrierRabbit_Shot_0
+  - first:
+      213: -4775434347972606009
+    second: BarrierRabbit_Shot_1
+  - first:
+      213: 1929695462936905799
+    second: BarrierRabbit_Idle_0
+  - first:
+      213: 4499845458033220194
+    second: BarrierRabbit_Idle_1
+  - first:
+      213: -3425886376585321336
+    second: BarrierRabbit_Idle_2
+  - first:
+      213: -7648441643748521599
+    second: BarrierRabbit_Idle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1023,7 +1041,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1044,7 +1062,7 @@ TextureImporter:
         width: 8
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1065,7 +1083,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1086,7 +1104,7 @@ TextureImporter:
         width: 11
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1094,6 +1112,132 @@ TextureImporter:
       bones: []
       spriteID: 4ff1a21ffcbd56950800000000000000
       internalID: 6441796528174145524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarrierRabbit_Shot_0
+      rect:
+        serializedVersion: 2
+        x: 432
+        y: 324
+        width: 24
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30baabe8ea209eea0800000000000000
+      internalID: -5843136092794344701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarrierRabbit_Shot_1
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 324
+        width: 24
+        height: 32
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.28125}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7c4e803cf3abdb0800000000000000
+      internalID: -4775434347972606009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarrierRabbit_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 289
+        width: 24
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.3214286}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7488901bcc7a7ca10800000000000000
+      internalID: 1929695462936905799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarrierRabbit_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 289
+        width: 23
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5652174, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a99365a99a27e30800000000000000
+      internalID: 4499845458033220194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarrierRabbit_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 289
+        width: 24
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88428cadd7ec470d0800000000000000
+      internalID: -3425886376585321336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BarrierRabbit_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 289
+        width: 24
+        height: 27
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189801329d64bd590800000000000000
+      internalID: -7648441643748521599
       vertices: []
       indices: 
       edges: []

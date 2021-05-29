@@ -49,7 +49,7 @@ public class EnemyStateMachine : MonoBehaviour
     {
         //Adds Enemy Idle state as entry point for its stateMachine
         currentState = EnemyStatesEnum.IDLE;
-                
+        
         StartCoroutine(EnemyLogic());
     }
 

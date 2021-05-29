@@ -34,7 +34,10 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("LevelBounds") || collision.CompareTag("Bullet") || collision.CompareTag(shootingEntityTag))
+        if (collision.CompareTag("LevelBounds")
+            || collision.CompareTag("Bullet")
+            || collision.CompareTag(shootingEntityTag)
+            || collision.isTrigger)
             return;
 
         if (collision.gameObject.TryGetComponent<HealthController>(out var healthController))

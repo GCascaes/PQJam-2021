@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class MovementController : MonoBehaviour
+public class GroundMovementController : MonoBehaviour, IMovementController
 {
     [SerializeField]
     private bool airControl;
@@ -37,7 +37,7 @@ public class MovementController : MonoBehaviour
 
     private bool movementEnabled = true;
 
-    private bool facingRight = true;
+    private bool facingRight;
     private float movementDirection = 0;
     private float currentVelocity = 0;
 
@@ -46,12 +46,19 @@ public class MovementController : MonoBehaviour
     private Animator animator;
     private GunController gunController;
 
+    public bool FacingRight => facingRight;
+
+    public float CurrentVelocity => currentVelocity;
+    public float Decceleration => decceleration;
+
     private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         colliders = GetComponents<Collider2D>();
         animator = GetComponent<Animator>();
         gunController = GetComponent<GunController>();
+
+        facingRight = transform.eulerAngles.y < 90 || transform.eulerAngles.y > 240;
 
         baseJumpVelocity = Mathf.Sqrt(2 * (-Physics2D.gravity.y) * body.gravityScale * baseJumpHeight / 1);
         holdJumpAcceleration = (-Physics2D.gravity.y) * body.gravityScale - Mathf.Pow(baseJumpVelocity, 2) / (2 * holdJumpHeightMultiplier * baseJumpHeight);
@@ -94,7 +101,9 @@ public class MovementController : MonoBehaviour
             }
 
             body.velocity = new Vector2(currentVelocity, body.velocity.y);
-            animator.SetFloat("Speed", Mathf.Abs(currentVelocity));
+
+            if (animator != null)
+                animator.SetFloat("Speed", Mathf.Abs(currentVelocity));
 
             if ((gunController is null || !gunController.IsShooting) &&
                 ((currentVelocity > 0.1 && !facingRight) || (currentVelocity < -0.1 && facingRight)))
@@ -159,7 +168,7 @@ public class MovementController : MonoBehaviour
         movementDirection = direction;
     }
 
-    private void Flip()
+    public void Flip()
     {
         facingRight = !facingRight;
         transform.Rotate(transform.up, 180);
@@ -168,6 +177,7 @@ public class MovementController : MonoBehaviour
     private void SetJumping(bool jumping)
     {
         isJumping = jumping;
-        animator.SetBool("InAir", jumping);
+        if (animator != null)
+            animator.SetBool("InAir", jumping);
     }
 }

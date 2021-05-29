@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyIdle : EnemyState
+public class EnemyIdle : EnemyStates
 {
     //Can be used if any angry animations might be reset to 'tender' face animation (irritado -> fofinho)
 

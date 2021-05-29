@@ -28,13 +28,13 @@ public class DefenseController : MonoBehaviour
     private GameObject barrier;
 
     private GunController gunController;
-    private MovementController movementController;
+    private GroundMovementController movementController;
 
     private void Start()
     {
         canDefend = defenseEnabled;
         gunController = GetComponent<GunController>();
-        movementController = GetComponent<MovementController>();
+        movementController = GetComponent<GroundMovementController>();
     }
 
     public void StartDefending()

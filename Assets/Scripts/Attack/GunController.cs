@@ -23,7 +23,7 @@ public class GunController : MonoBehaviour
 
     public bool IsShooting { get; private set; } = false;
 
-    private void Awake()
+    protected virtual void Awake()
     {
         canShoot = shootingEnabled;
         shootPeriod = 1 / shotsPerSecond;
@@ -31,7 +31,7 @@ public class GunController : MonoBehaviour
         UpdateAnimator();
     }
 
-    private void FixedUpdate()
+    protected virtual void FixedUpdate()
     {
         if (!hasGun)
             return;

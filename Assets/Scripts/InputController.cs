@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class InputController : MonoBehaviour
 {
-    private MovementController movementController;
+    private GroundMovementController movementController;
     private GunController gunController;
     private DefenseController defenseController;
 
@@ -21,7 +21,7 @@ public class InputController : MonoBehaviour
 
     private void Awake()
     {
-        movementController = GetComponent<MovementController>();
+        movementController = GetComponent<GroundMovementController>();
         gunController = GetComponent<GunController>();
         defenseController = GetComponent<DefenseController>();
     }

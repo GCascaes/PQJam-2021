@@ -80,6 +80,27 @@ TextureImporter:
   - first:
       213: 5809297713845055315
     second: Kidnap_5
+  - first:
+      213: -6096776313456823178
+    second: enemy_Bear_Idle_0
+  - first:
+      213: -1869164478038423500
+    second: enemy_Bear_Idle_1
+  - first:
+      213: -4549860467875717951
+    second: enemy_Bear_Walking_0
+  - first:
+      213: 8868932145260773183
+    second: enemy_Bear_Walking_1
+  - first:
+      213: -983040512028964113
+    second: enemy_Bear_Walking_2
+  - first:
+      213: 2598795410371983661
+    second: enemy_Bear_Shot_0
+  - first:
+      213: 7135706476314987969
+    second: enemy_Bear_Shot_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -526,27 +547,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HeartBallon
-      rect:
-        serializedVersion: 2
-        x: 414
-        y: 476
-        width: 19
-        height: 16
-      alignment: 9
-      pivot: {x: 0.47368422, y: -0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ba9118faf9e4a9de0800000000000000
-      internalID: -1325660692555949653
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: enemy_Bear_Sit_emo_0
       rect:
         serializedVersion: 2
@@ -710,6 +710,153 @@ TextureImporter:
       bones: []
       spriteID: 35f2934ed75ce9050800000000000000
       internalID: 5809297713845055315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_Bear_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 436
+        width: 14
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 674f369be36e36ba0800000000000000
+      internalID: -6096776313456823178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_Bear_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 436
+        width: 14
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438cdbb7fc46f06e0800000000000000
+      internalID: -1869164478038423500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_Bear_Walking_0
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 436
+        width: 15
+        height: 20
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ccdcaab206abd0c0800000000000000
+      internalID: -4549860467875717951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_Bear_Walking_1
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 436
+        width: 14
+        height: 21
+      alignment: 9
+      pivot: {x: 0.5, y: 0.47619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fbf47ebc6c41b70800000000000000
+      internalID: 8868932145260773183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_Bear_Walking_2
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 436
+        width: 14
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea02b8dcd98b52f0800000000000000
+      internalID: -983040512028964113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_Bear_Shot_0
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 436
+        width: 16
+        height: 21
+      alignment: 9
+      pivot: {x: 0.375, y: 0.47619048}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d29332f18a6c01420800000000000000
+      internalID: 2598795410371983661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: enemy_Bear_Shot_1
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 436
+        width: 16
+        height: 23
+      alignment: 9
+      pivot: {x: 0.375, y: 0.43478262}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd853ecb3f170360800000000000000
+      internalID: 7135706476314987969
       vertices: []
       indices: 
       edges: []

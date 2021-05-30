@@ -42,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 1413995009
+    locked: 0
   - name: Scenario
     uniqueID: 2885159635
     locked: 0

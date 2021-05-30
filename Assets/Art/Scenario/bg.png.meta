@@ -135,7 +135,7 @@ TextureImporter:
         width: 13
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -151,12 +151,12 @@ TextureImporter:
       name: bg_cloud_0
       rect:
         serializedVersion: 2
-        x: 6
-        y: 315
-        width: 56
-        height: 38
+        x: 0
+        y: 166
+        width: 327
+        height: 201
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -172,12 +172,12 @@ TextureImporter:
       name: bg_cloud_2
       rect:
         serializedVersion: 2
-        x: 72
-        y: 316
-        width: 62
-        height: 40
+        x: 136
+        y: 0
+        width: 376
+        height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -185,27 +185,6 @@ TextureImporter:
       bones: []
       spriteID: 182a767a3c5f9eda0800000000000000
       internalID: -5914926414898421119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: bg_cloud_3
-      rect:
-        serializedVersion: 2
-        x: 157
-        y: 311
-        width: 76
-        height: 52
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4ab70cca8083d2b40800000000000000
-      internalID: 5417047536705764260
       vertices: []
       indices: 
       edges: []

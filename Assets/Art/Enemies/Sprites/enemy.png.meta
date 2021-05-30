@@ -167,6 +167,51 @@ TextureImporter:
   - first:
       213: 291811704678330394
     second: FlyingBear_Arm
+  - first:
+      213: 2628227573147772350
+    second: Mouse_0
+  - first:
+      213: -4014997464752106336
+    second: Mouse_1
+  - first:
+      213: -3600896635343256685
+    second: Mouse_2
+  - first:
+      213: 6106103412482651502
+    second: Monkey_0
+  - first:
+      213: 7650740228278454368
+    second: Monkey_1
+  - first:
+      213: 3646460859434187711
+    second: Monkey_2
+  - first:
+      213: 7413053482268954483
+    second: Monkey_3
+  - first:
+      213: 7233781137380475028
+    second: Monkey_4
+  - first:
+      213: -5905181113508899107
+    second: Monkey_5
+  - first:
+      213: 693841567627704547
+    second: Monkey_6
+  - first:
+      213: 2404533701599617219
+    second: monkey_gun_4
+  - first:
+      213: 4615284204249767992
+    second: monkey_gun_3
+  - first:
+      213: -873823652872022853
+    second: monkey_gun_2
+  - first:
+      213: 6397240090995802846
+    second: monkey_gun_1
+  - first:
+      213: -5249952654354780928
+    second: monkey_gun_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1406,6 +1451,321 @@ TextureImporter:
       bones: []
       spriteID: a1037a60339bc0400800000000000000
       internalID: 291811704678330394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouse_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 186
+        width: 36
+        height: 25
+      alignment: 9
+      pivot: {x: 0.3611111, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb52c568d07597420800000000000000
+      internalID: 2628227573147772350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouse_1
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 186
+        width: 36
+        height: 24
+      alignment: 9
+      pivot: {x: 0.3611111, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a45b53041dd748c0800000000000000
+      internalID: -4014997464752106336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mouse_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 186
+        width: 36
+        height: 25
+      alignment: 9
+      pivot: {x: 0.3611111, y: 0.48}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3934779a69b070ec0800000000000000
+      internalID: -3600896635343256685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_0
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 189
+        width: 5
+        height: 5
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6534deb3bc3db450800000000000000
+      internalID: 6106103412482651502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 188
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0680457c3b3ec2a60800000000000000
+      internalID: 7650740228278454368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_2
+      rect:
+        serializedVersion: 2
+        x: 219
+        y: 188
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbbb0f5f4d4da9230800000000000000
+      internalID: 3646460859434187711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 189
+        width: 17
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37f0d97bdd470e660800000000000000
+      internalID: 7413053482268954483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_4
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 189
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4900c744e9d836460800000000000000
+      internalID: 7233781137380475028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_5
+      rect:
+        serializedVersion: 2
+        x: 283
+        y: 189
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6d4f270159c0ea0800000000000000
+      internalID: -5905181113508899107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Monkey_6
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 189
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e879d8ca3501a900800000000000000
+      internalID: 693841567627704547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_gun_4
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 151
+        width: 7
+        height: 33
+      alignment: 9
+      pivot: {x: 0.42857146, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c0ec4e69ae9e5120800000000000000
+      internalID: 2404533701599617219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_gun_3
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 151
+        width: 7
+        height: 33
+      alignment: 9
+      pivot: {x: 0.42857143, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83067cbe788cc0040800000000000000
+      internalID: 4615284204249767992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_gun_2
+      rect:
+        serializedVersion: 2
+        x: 338
+        y: 151
+        width: 7
+        height: 33
+      alignment: 9
+      pivot: {x: 0.42857146, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb49a36740e8fd3f0800000000000000
+      internalID: -873823652872022853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_gun_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 151
+        width: 7
+        height: 33
+      alignment: 9
+      pivot: {x: 0.42857146, y: 0.45454547}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed241bef7ff87c850800000000000000
+      internalID: 6397240090995802846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_gun_0
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 151
+        width: 7
+        height: 33
+      alignment: 9
+      pivot: {x: 0.42857146, y: 0.44117647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d609550eb6427b0800000000000000
+      internalID: -5249952654354780928
       vertices: []
       indices: 
       edges: []

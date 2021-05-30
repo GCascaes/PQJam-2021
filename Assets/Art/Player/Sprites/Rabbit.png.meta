@@ -134,6 +134,54 @@ TextureImporter:
   - first:
       213: -4963719191727941862
     second: Blood3
+  - first:
+      213: 3183211596485478060
+    second: PowerUp_SpreadShot_0
+  - first:
+      213: 9055494655892468172
+    second: PowerUp_SpreadShot_1
+  - first:
+      213: 8970114591845623677
+    second: PowerUp_SpreadShot_2
+  - first:
+      213: -2694260505849438984
+    second: PowerUp_SpreadShot_3
+  - first:
+      213: 1534561743055995772
+    second: PowerUp_HadukenShot_0
+  - first:
+      213: 3440732656311039888
+    second: PowerUp_HadukenShot_1
+  - first:
+      213: -3525051853480175612
+    second: PowerUp_HadukenShot_2
+  - first:
+      213: 4425737239727723075
+    second: PowerUp_HadukenShot_3
+  - first:
+      213: 5061046073733872026
+    second: PowerUp_QuickShot_0
+  - first:
+      213: 7371317636228903955
+    second: PowerUp_QuickShot_1
+  - first:
+      213: -2726926282285694435
+    second: PowerUp_QuickShot_2
+  - first:
+      213: -6548261780935951082
+    second: PowerUp_QuickShot_3
+  - first:
+      213: -526675896659230026
+    second: Haduken_0
+  - first:
+      213: 7643365973723892028
+    second: Haduken_1
+  - first:
+      213: -8369324871764654480
+    second: Haduken_2
+  - first:
+      213: -5600634297877806372
+    second: Haduken_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1020,7 +1068,7 @@ TextureImporter:
         width: 13
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1041,7 +1089,7 @@ TextureImporter:
         width: 7
         height: 19
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1062,7 +1110,7 @@ TextureImporter:
         width: 6
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1083,7 +1131,7 @@ TextureImporter:
         width: 4
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1104,7 +1152,7 @@ TextureImporter:
         width: 6
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1125,7 +1173,7 @@ TextureImporter:
         width: 7
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1146,7 +1194,7 @@ TextureImporter:
         width: 5
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1154,6 +1202,342 @@ TextureImporter:
       bones: []
       spriteID: a17544ca1b35d1bb0800000000000000
       internalID: -4963719191727941862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_SpreadShot_0
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 448
+        width: 15
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.4814815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca6cb65e41a0d2c20800000000000000
+      internalID: 3183211596485478060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_SpreadShot_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 448
+        width: 15
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.4814815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc13be559649bad70800000000000000
+      internalID: 9055494655892468172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_SpreadShot_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 448
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d77a18112bf3c7c70800000000000000
+      internalID: 8970114591845623677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_SpreadShot_3
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 448
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fcda7048501c9ad0800000000000000
+      internalID: -2694260505849438984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_HadukenShot_0
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 448
+        width: 15
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.4814815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c73c1cc56cbdb4510800000000000000
+      internalID: 1534561743055995772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_HadukenShot_1
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 448
+        width: 15
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.4814815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09771820f10ffbf20800000000000000
+      internalID: 3440732656311039888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_HadukenShot_2
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 448
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4085b7a0400841fc0800000000000000
+      internalID: -3525051853480175612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_HadukenShot_3
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 448
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 342503b22906b6d30800000000000000
+      internalID: 4425737239727723075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_QuickShot_0
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 418
+        width: 15
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.4814815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99fac8e6927c3640800000000000000
+      internalID: 5061046073733872026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_QuickShot_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 418
+        width: 15
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.4814815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314fef1d55e2c4660800000000000000
+      internalID: 7371317636228903955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_QuickShot_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 418
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d124faf7ef2082ad0800000000000000
+      internalID: -2726926282285694435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_QuickShot_3
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 418
+        width: 15
+        height: 26
+      alignment: 9
+      pivot: {x: 0.4666667, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61dbb0bba96ef15a0800000000000000
+      internalID: -6548261780935951082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haduken_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 369
+        width: 28
+        height: 15
+      alignment: 9
+      pivot: {x: 0.92857146, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2cddbff0fd0b8f0800000000000000
+      internalID: -526675896659230026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haduken_1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 369
+        width: 28
+        height: 15
+      alignment: 9
+      pivot: {x: 0.92857146, y: 0.53333336}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c39ce185bd0b21a60800000000000000
+      internalID: 7643365973723892028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haduken_2
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 367
+        width: 28
+        height: 18
+      alignment: 9
+      pivot: {x: 0.92857146, y: 0.5555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07640a82f5f2adb80800000000000000
+      internalID: -8369324871764654480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Haduken_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 369
+        width: 29
+        height: 16
+      alignment: 9
+      pivot: {x: 0.9310345, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd2cf1e87cc8642b0800000000000000
+      internalID: -5600634297877806372
       vertices: []
       indices: 
       edges: []

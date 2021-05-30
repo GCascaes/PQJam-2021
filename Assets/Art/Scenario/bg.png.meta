@@ -5,6 +5,18 @@ TextureImporter:
   - first:
       213: -4364034832326165938
     second: bg_0
+  - first:
+      213: 8783001233447891778
+    second: bg_black
+  - first:
+      213: -2956382079364231701
+    second: bg_cloud_0
+  - first:
+      213: -5914926414898421119
+    second: bg_cloud_2
+  - first:
+      213: 5417047536705764260
+    second: bg_cloud_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -110,6 +122,90 @@ TextureImporter:
       bones: []
       spriteID: e4a74cf0175df63c0800000000000000
       internalID: -4364034832326165938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_black
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 370
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243ba75661d73e970800000000000000
+      internalID: 8783001233447891778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_cloud_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 315
+        width: 56
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed0a239922d8f6d0800000000000000
+      internalID: -2956382079364231701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_cloud_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 316
+        width: 62
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182a767a3c5f9eda0800000000000000
+      internalID: -5914926414898421119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bg_cloud_3
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 311
+        width: 76
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ab70cca8083d2b40800000000000000
+      internalID: 5417047536705764260
       vertices: []
       indices: 
       edges: []

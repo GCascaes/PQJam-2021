@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 public class ContactDamageController : MonoBehaviour
 {
@@ -10,24 +11,52 @@ public class ContactDamageController : MonoBehaviour
     private float collisionStayDamageAgainTime;
     [SerializeField]
     private Collider2D contactDamageCollider;
+    [SerializeField]
+    private bool disableCollisionsWithTarget = true;
 
     private float lastDamageTime = 0;
 
-    private void OnCollisionEnter2D(Collision2D collision) => TryDamage(collision);
+    private void OnEnable()
+    {
+        if (!disableCollisionsWithTarget)
+            return;
 
-    private void OnCollisionStay2D(Collision2D collision) => TryDamage(collision);
+        var myColliders = GetComponents<Collider2D>().Where(x => !x.isTrigger);
+        
+        var colliders = GameObject
+            .FindGameObjectsWithTag(targetTag)
+            .SelectMany(x => x.GetComponents<Collider2D>().Where(x => !x.isTrigger))
+            .ToList();
 
-    private void TryDamage(Collision2D collision)
+        foreach (var collider in colliders)
+            foreach (var myCollider in myColliders)
+                Physics2D.IgnoreCollision(collider, myCollider);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!disableCollisionsWithTarget)
+            return;
+
+        if (collision.gameObject.CompareTag(targetTag))
+            Physics2D.IgnoreCollision(collision.collider, collision.otherCollider);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision) => TryDamage(collision);
+
+    private void OnTriggerStay2D(Collider2D collision) => TryDamage(collision);
+
+    private void TryDamage(Collider2D collider)
     {
         if (Time.realtimeSinceStartup - lastDamageTime < collisionStayDamageAgainTime)
             return;
 
-        if (!collision.gameObject.CompareTag(targetTag)
+        if (!collider.gameObject.CompareTag(targetTag)
             || contactDamageCollider is null
-            || collision.otherCollider != contactDamageCollider)
+            || !collider.IsTouching(contactDamageCollider))
             return;
 
-        if (collision.gameObject.TryGetComponent<HealthController>(out var healthController))
+        if (collider.gameObject.TryGetComponent<HealthController>(out var healthController))
             healthController.TakeDamage(contactDamage);
 
         lastDamageTime = Time.realtimeSinceStartup;

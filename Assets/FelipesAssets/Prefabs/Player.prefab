@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1102430822}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BarrierSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 1590928144}
   - component: {fileID: 1590928145}
   - component: {fileID: 1590928146}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}

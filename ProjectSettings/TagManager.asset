@@ -42,6 +42,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Scenario
+    uniqueID: 2885159635
+    locked: 0
   - name: Bullets
     uniqueID: 3568385201
     locked: 0

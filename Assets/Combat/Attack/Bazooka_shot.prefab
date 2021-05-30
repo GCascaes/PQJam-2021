@@ -10,7 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6818793263481472898}
   - component: {fileID: 6818793263481472899}
+  - component: {fileID: 2700756406633885594}
+  - component: {fileID: -3477458598964394656}
   - component: {fileID: 6818793263481472896}
+  - component: {fileID: 3053109325244541376}
   m_Layer: 0
   m_Name: Bazooka_shot
   m_TagString: Bullet
@@ -26,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6818793263481472897}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.9, y: 13, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -726582095
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_Sprite: {fileID: 5618028152753166986, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -83,6 +86,59 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &2700756406633885594
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6818793263481472897}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!60 &-3477458598964394656
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6818793263481472897}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.41860464, y: 0.4666667}
+    oldSize: {x: 21.5, y: 7.5}
+    newSize: {x: 21.5, y: 7.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -6, y: 1.1}
+      - {x: -6, y: 2.3}
+      - {x: -9, y: 0.3}
+      - {x: -6, y: -2}
+      - {x: -6, y: -0.8}
+      - {x: -1.5, y: -0.8}
+      - {x: -1.5, y: 1.1}
 --- !u!114 &6818793263481472896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,3 +157,18 @@ MonoBehaviour:
   - {fileID: -8918034418388536846, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
   - {fileID: -4987121757160251396, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
   time: 0.05
+--- !u!114 &3053109325244541376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6818793263481472897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a5343f3c0324f04a99ea7af68d66d80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletDamage: 5000
+  shotParticlePrefab: {fileID: 0}
+  hitParticlePrefab: {fileID: 0}

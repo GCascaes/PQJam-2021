@@ -19,6 +19,10 @@ public class EnemyAi : MonoBehaviour
     private float disengageTime;
     [SerializeField]
     private string targetTag;
+    [SerializeField]
+    private float gettingAngryTime;
+    [SerializeField]
+    private float gettingCuteTime;
 
     private EnemyState currentState;
     private Queue<EnemyState> stateChangeCommandQueue = new Queue<EnemyState>();
@@ -31,6 +35,8 @@ public class EnemyAi : MonoBehaviour
     private IFollowMovementAi followMovementAi;
     private IAttackAi attackAi;
 
+    private Animator animator;
+
     private void Awake()
     {
         stateChangeCommandQueue.Enqueue(initialState);
@@ -39,10 +45,7 @@ public class EnemyAi : MonoBehaviour
         followMovementAi = GetComponent<IFollowMovementAi>();
         attackAi = GetComponent<IAttackAi>();
 
-        if (seeTargetTriggerCollider != null)
-            seeTargetTriggerCollider.isTrigger = true;
-        if (disengageTriggerCollider != null)
-            disengageTriggerCollider.isTrigger = true;
+        animator = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -125,9 +128,11 @@ public class EnemyAi : MonoBehaviour
         if (isAngry)
             yield break;
 
-        // TODO Animate
+        if (animator != null)
+            animator.SetBool("isAngry", true);
+
         isAngry = true;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(gettingAngryTime);
     }
 
     private IEnumerator GetCute()
@@ -135,9 +140,11 @@ public class EnemyAi : MonoBehaviour
         if (!isAngry)
             yield break;
 
-        // TODO Animate
+        if (animator != null)
+            animator.SetBool("isAngry", false);
+
         isAngry = false;
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(gettingCuteTime);
     }
 
     private IEnumerator DisengageCooldown()

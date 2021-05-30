@@ -244,7 +244,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 190115368}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -84.50001, y: -0.09999657, z: -10}
+  m_LocalPosition: {x: -301.7, y: -34.209995, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1685874546}
@@ -804,6 +804,8 @@ MonoBehaviour:
   disengageTriggerCollider: {fileID: 523737865}
   disengageTime: 3
   targetTag: Player
+  gettingAngryTime: 0
+  gettingCuteTime: 0
 --- !u!70 &523737860
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -832,11 +834,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1574216a8e4ad8d4da0190cf118af758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingEnabled: 1
   bulletPrefab: {fileID: 5799282785307700406, guid: 272e15a24d20ef0428735fc7a47f5f86, type: 3}
+  shootingEnabled: 1
   hasGun: 1
+  continuousShootingAnimation: 0
   bulletVelocity: 200
   shotsPerSecond: 0.5
+  shootPoints: []
+  firstShootDelay: 0
+  shootsContinuously: 1
   flipsToAim: 1
 --- !u!50 &523737862
 Rigidbody2D:
@@ -1171,21 +1177,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 717721876, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -175.94
+      value: -165.95
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -44.2
+      value: -45.45
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1193,7 +1195,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1201,7 +1203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1213,7 +1215,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -1223,36 +1225,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bear_Tutorial
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 717721878, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
+    - target: {fileID: 2773148713492096343, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
+      propertyPath: firstShootDelay
+      value: 1.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
---- !u!1 &717721875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 50317107150628599, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
-  m_PrefabInstance: {fileID: 717721874}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &717721876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 717721875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7358483520ed4dc42a9efd88cc8cf423, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  targetTag: Player
-  contactDamage: 10
-  collisionStayDamageAgainTime: 5
-  contactDamageCollider: {fileID: 717721879}
-  disableCollisionsWithTarget: 1
---- !u!61 &717721879 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 717721879, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
-  m_PrefabInstance: {fileID: 717721874}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &767994574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,11 +2158,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -84.50001
+      value: -189.24805
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 4.000002
+      value: 3.9999962
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2909,11 +2887,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 18830164299632113, guid: d141e658a50d88149b70d59ff5106162, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -84.5
+      value: -301.7
       objectReference: {fileID: 0}
     - target: {fileID: 18830164299632113, guid: d141e658a50d88149b70d59ff5106162, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -12.9
+      value: -47.01
       objectReference: {fileID: 0}
     - target: {fileID: 18830164299632113, guid: d141e658a50d88149b70d59ff5106162, type: 3}
       propertyPath: m_LocalPosition.z

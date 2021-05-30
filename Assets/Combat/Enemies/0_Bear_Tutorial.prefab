@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2101053426
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2101053427}
+  m_Layer: 9
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2101053427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2101053426}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 50317107150628594}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &50317107150628599
 GameObject:
   m_ObjectHideFlags: 0
@@ -14,6 +44,10 @@ GameObject:
   - component: {fileID: 717721876}
   - component: {fileID: 717721877}
   - component: {fileID: 717721879}
+  - component: {fileID: 8968508986512608601}
+  - component: {fileID: 4032051078287598521}
+  - component: {fileID: 3277434494519544768}
+  - component: {fileID: 2773148713492096343}
   - component: {fileID: 717721878}
   m_Layer: 9
   m_Name: Bear_Tutorial
@@ -31,8 +65,9 @@ Transform:
   m_GameObject: {fileID: 50317107150628599}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 31.09, y: -2.134911, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 2101053427}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -179,7 +214,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 5.449005, y: 8.013023}
   m_EdgeRadius: 0
---- !u!114 &717721878
+--- !u!61 &8968508986512608601
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50317107150628599}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -25, y: 10}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4666667, y: 0.5263158}
+    oldSize: {x: 7.5, y: 9.5}
+    newSize: {x: 7.5, y: 9.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 50, y: 35}
+  m_EdgeRadius: 0
+--- !u!114 &4032051078287598521
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -196,3 +257,61 @@ MonoBehaviour:
   collisionStayDamageAgainTime: 5
   contactDamageCollider: {fileID: 717721879}
   disableCollisionsWithTarget: 1
+--- !u!114 &3277434494519544768
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50317107150628599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28553fce208cd04c9a12a2d8afd5033, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialState: 0
+  seeTargetTriggerCollider: {fileID: 8968508986512608601}
+  followTargetTriggerCollider: {fileID: 8968508986512608601}
+  attackTargetTriggerCollider: {fileID: 8968508986512608601}
+  disengageTriggerCollider: {fileID: 0}
+  disengageTime: 5
+  targetTag: Player
+  gettingAngryTime: 0
+  gettingCuteTime: 0
+--- !u!114 &2773148713492096343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50317107150628599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1574216a8e4ad8d4da0190cf118af758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6818793263481472897, guid: 280cbb9cbbdab594684e3fc5bf161318, type: 3}
+  shootingEnabled: 1
+  hasGun: 1
+  continuousShootingAnimation: 0
+  bulletVelocity: 50
+  shotsPerSecond: 0.2
+  shootPoints:
+  - {fileID: 2101053426}
+  firstShootDelay: 3
+  shootsContinuously: 0
+  flipsToAim: 0
+--- !u!114 &717721878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50317107150628599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 30
+  shouldDie: 1

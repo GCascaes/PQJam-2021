@@ -1,12 +1,17 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class HorizontalShotAttackAi : GunController, IAttackAi
 {
     [SerializeField]
+    private float firstShootDelay;
+    [SerializeField]
+    private bool shootsContinuously = true;
+    [SerializeField]
     private bool flipsToAim;
 
     private IMovementController movementController;
-
+    
     private GameObject target;
 
     protected override void Awake()
@@ -32,13 +37,21 @@ public class HorizontalShotAttackAi : GunController, IAttackAi
     public void AttackTarget(GameObject target)
     {
         this.target = target;
-        shootContinuously = true;
-        Shoot();
+        StopAllCoroutines();
+        StartCoroutine(AttackRoutine());
     }
 
     public void StopAttacking()
     {
         shootContinuously = false;
         target = null;
+        StopAllCoroutines();
+    }
+
+    private IEnumerator AttackRoutine()
+    {
+        yield return new WaitForSecondsRealtime(firstShootDelay);
+        shootContinuously = shootsContinuously;
+        Shoot();
     }
 }

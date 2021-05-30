@@ -1,17 +1,23 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
     [SerializeField]
-    private bool shootingEnabled;
-    [SerializeField]
     private GameObject bulletPrefab;
     [SerializeField]
+    private bool shootingEnabled;
+    [SerializeField]
     private bool hasGun;
+    [SerializeField]
+    private bool continuousShootingAnimation = true;
     [SerializeField]
     private float bulletVelocity;
     [SerializeField]
     private float shotsPerSecond;
+    [SerializeField]
+    private List<GameObject> shootPoints;
 
     internal bool shootContinuously = false;
 
@@ -43,11 +49,24 @@ public class GunController : MonoBehaviour
             return;
         }
 
-        UpdateAnimatorShooting(shouldShoot);
+        bool shouldShootThisFrame = shouldShoot 
+            && (Time.realtimeSinceStartup - lastShotTime > shootPeriod || lastShotTime == 0);
 
-        if (shouldShoot && Time.realtimeSinceStartup - lastShotTime > shootPeriod)
+        UpdateAnimatorShooting(continuousShootingAnimation ? shouldShoot : shouldShootThisFrame);
+
+        if (shouldShootThisFrame)
         {
-            BulletController.Instantiate(bulletPrefab, transform.position, transform.rotation, bulletVelocity, tag);
+            if (shootPoints.Any())
+            {
+                foreach(var shootPointTransform in shootPoints.Select(x => x.transform))
+                {
+                    BulletController.Instantiate(bulletPrefab, shootPointTransform.position, shootPointTransform.rotation, bulletVelocity, tag);
+                }
+            }
+            else
+            {
+                BulletController.Instantiate(bulletPrefab, transform.position, transform.rotation, bulletVelocity, tag);
+            }
             lastShotTime = Time.realtimeSinceStartup;
             IsShooting = true;
             shouldShoot = shootContinuously;

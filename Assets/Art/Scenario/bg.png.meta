@@ -10,13 +10,16 @@ TextureImporter:
     second: bg_black
   - first:
       213: -2956382079364231701
-    second: bg_cloud_0
+    second: tree_trunk_0
   - first:
       213: -5914926414898421119
-    second: bg_cloud_2
+    second: tree_trunk_1
   - first:
       213: 5417047536705764260
-    second: bg_cloud_3
+    second: tree_leaves_0
+  - first:
+      213: -5674677071505025871
+    second: tree_leaves_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -58,7 +61,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 2
@@ -106,37 +109,16 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bg_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 383
-        width: 512
-        height: 108
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 88}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4a74cf0175df63c0800000000000000
-      internalID: -4364034832326165938
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: bg_black
       rect:
         serializedVersion: 2
         x: 0
-        y: 370
-        width: 13
-        height: 10
+        y: 432
+        width: 48
+        height: 80
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 15, y: 16, z: 15, w: 16}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -148,16 +130,16 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bg_cloud_0
+      name: tree_trunk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 166
-        width: 327
-        height: 201
+        x: 82
+        y: 264
+        width: 45
+        height: 24
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 21, y: 8, z: 20, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -169,13 +151,34 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bg_cloud_2
+      name: tree_trunk_1
       rect:
         serializedVersion: 2
-        x: 136
-        y: 0
-        width: 376
-        height: 152
+        x: 137
+        y: 260
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 6, y: 7, z: 8, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182a767a3c5f9eda0800000000000000
+      internalID: -5914926414898421119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_leaves_0
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 276
+        width: 115
+        height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -183,8 +186,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 182a767a3c5f9eda0800000000000000
-      internalID: -5914926414898421119
+      spriteID: 4ab70cca8083d2b40800000000000000
+      internalID: 5417047536705764260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tree_leaves_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 271
+        width: 122
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b493e9e44f7f31b0800000000000000
+      internalID: -5674677071505025871
       vertices: []
       indices: 
       edges: []

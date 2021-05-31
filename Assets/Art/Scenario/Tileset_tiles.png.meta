@@ -65,6 +65,15 @@ TextureImporter:
   - first:
       213: 4656545515943145160
     second: Bush_1
+  - first:
+      213: -401990974741939824
+    second: Rope
+  - first:
+      213: -6994374854729056035
+    second: Box
+  - first:
+      213: -4216079796410009963
+    second: Sign
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -540,7 +549,7 @@ TextureImporter:
         width: 42
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -561,7 +570,7 @@ TextureImporter:
         width: 34
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -569,6 +578,69 @@ TextureImporter:
       bones: []
       spriteID: 8ceaa3ea97f5f9040800000000000000
       internalID: 4656545515943145160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rope
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 480
+        width: 3
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099f79b9657db6af0800000000000000
+      internalID: -401990974741939824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Box
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 448
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd043fd902dfeee90800000000000000
+      internalID: -6994374854729056035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 474
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596b74e43c97d75c0800000000000000
+      internalID: -4216079796410009963
       vertices: []
       indices: 
       edges: []

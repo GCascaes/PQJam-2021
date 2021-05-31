@@ -1,29 +1,23 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Parallax : MonoBehaviour
 {
-    public Transform[] backgrounds;
+    [SerializeField]
+    private Transform[] backgrounds;
 
     private float[] parallaxScales;
-
     public float smoothing = 1f;
-
-    private Transform camera;
-
+    private Transform cameraTransform;
     private Vector3 previousCamPos;
-
 
     private void Awake()
     {
-        camera = Camera.main.transform;
+        cameraTransform = Camera.main.transform;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        previousCamPos = camera.position;
+        previousCamPos = cameraTransform.position;
 
         parallaxScales = new float[backgrounds.Length];
 
@@ -31,16 +25,13 @@ public class Parallax : MonoBehaviour
         {
             parallaxScales[i] = backgrounds[i].position.z * -1;
         }
-
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         for(int i =0; i < backgrounds.Length; i++)
         {
-            float parallax = (previousCamPos.x - camera.position.x) * parallaxScales[i];
+            float parallax = (previousCamPos.x - cameraTransform.position.x) * parallaxScales[i];
 
             float backgroundTargetPosX = backgrounds[i].position.x + parallax;
 
@@ -49,6 +40,6 @@ public class Parallax : MonoBehaviour
             backgrounds[i].position = Vector3.Lerp(backgrounds[i].position, backgroundTargetPos, smoothing * Time.deltaTime);
         }
 
-        previousCamPos = camera.position;
+        previousCamPos = cameraTransform.position;
     }
 }

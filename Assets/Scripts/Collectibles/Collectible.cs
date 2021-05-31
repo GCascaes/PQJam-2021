@@ -6,7 +6,7 @@ public class Collectible : MonoBehaviour
     private CollectibleType collectibleType;
     [SerializeField]
     [Range(1, 99)]
-    private int quantity;
+    private int quantity = 1;
 
     public CollectibleType Type => collectibleType;
     public int Quantity => quantity;

@@ -17,7 +17,7 @@ public class GunController : MonoBehaviour
     [SerializeField]
     private float shotsPerSecond;
     [SerializeField]
-    private List<GameObject> shootPoints;
+    protected List<GameObject> shootPoints;
 
     internal bool shootContinuously = false;
 

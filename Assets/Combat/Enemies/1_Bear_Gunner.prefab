@@ -255,7 +255,7 @@ MonoBehaviour:
   disengageTriggerCollider: {fileID: 5758239018606632923}
   disengageTime: 3
   targetTag: Player
-  gettingAngryTime: 0
+  gettingAngryTime: 0.5
   gettingCuteTime: 0
 --- !u!114 &5758239018606632912
 MonoBehaviour:
@@ -311,7 +311,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1574216a8e4ad8d4da0190cf118af758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5799282785307700406, guid: 272e15a24d20ef0428735fc7a47f5f86, type: 3}
+  bulletPrefab: {fileID: 5799282785307700406, guid: dc860d6ab86bb59489ae1a5358d48aec, type: 3}
   shootingEnabled: 1
   hasGun: 1
   continuousShootingAnimation: 1
@@ -320,7 +320,7 @@ MonoBehaviour:
   shootPoints: []
   firstShootDelay: 0
   shootsContinuously: 1
-  flipsToAim: 1
+  aimingCapability: 1
 --- !u!114 &5758239018606632922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,7 +333,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac15bdcdb0c49d4cbda39dcc955c473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolPoints: []
+  patrolPoints:
+  - {fileID: 0}
+  - {fileID: 0}
   PatrolGuardTime: 10
 --- !u!114 &5758239018606632920
 MonoBehaviour:

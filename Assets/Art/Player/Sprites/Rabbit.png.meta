@@ -182,6 +182,48 @@ TextureImporter:
   - first:
       213: -5600634297877806372
     second: Haduken_3
+  - first:
+      213: -6340005269218220995
+    second: Heart_0
+  - first:
+      213: -2590738169349701142
+    second: Heart_1
+  - first:
+      213: -9193982543757479517
+    second: Heart_2
+  - first:
+      213: -2622363223253477755
+    second: Heart_3
+  - first:
+      213: -3267588361140641350
+    second: Carrot_0
+  - first:
+      213: 3069777752056378913
+    second: Carrot_1
+  - first:
+      213: 2885024945387466069
+    second: Carrot_2
+  - first:
+      213: 5136132034540079712
+    second: Carrot_3
+  - first:
+      213: -3743772804841676851
+    second: UI_PowerUp
+  - first:
+      213: 3209412282082176085
+    second: UI_Haduken
+  - first:
+      213: 1260779978318923706
+    second: UI_QuickShot
+  - first:
+      213: -5944424296857690179
+    second: UI_SpreadShot
+  - first:
+      213: -4617354302463592906
+    second: UI_PowerUpTimer_BG
+  - first:
+      213: 2508334095908759147
+    second: UI_PowerUpTimer_Content
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1538,6 +1580,300 @@ TextureImporter:
       bones: []
       spriteID: cd2cf1e87cc8642b0800000000000000
       internalID: -5600634297877806372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_0
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 394
+        width: 13
+        height: 20
+      alignment: 9
+      pivot: {x: 0.4615385, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34a4266cc6c308a0800000000000000
+      internalID: -6340005269218220995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_1
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 394
+        width: 13
+        height: 20
+      alignment: 9
+      pivot: {x: 0.4615385, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae18ddd7c59db0cd0800000000000000
+      internalID: -2590738169349701142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_2
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 394
+        width: 13
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4615385, y: 0.42105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a171389699686080800000000000000
+      internalID: -9193982543757479517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Heart_3
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 394
+        width: 13
+        height: 19
+      alignment: 9
+      pivot: {x: 0.4615385, y: 0.42105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5869de5da8e7b9bd0800000000000000
+      internalID: -2622363223253477755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carrot_0
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 419
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1e20ea2b137a2d0800000000000000
+      internalID: -3267588361140641350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carrot_1
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 419
+        width: 16
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 126b7b2e99a0a9a20800000000000000
+      internalID: 3069777752056378913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carrot_2
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 419
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.42105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55de5fdf6eaa90820800000000000000
+      internalID: 2885024945387466069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carrot_3
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 419
+        width: 16
+        height: 19
+      alignment: 9
+      pivot: {x: 0.5, y: 0.42105263}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06a044e7fd4374740800000000000000
+      internalID: 5136132034540079712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_PowerUp
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 492
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfd4a728727b0cc0800000000000000
+      internalID: -3743772804841676851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_Haduken
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 501
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ca843677f1a8c20800000000000000
+      internalID: 3209412282082176085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_QuickShot
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 492
+        width: 9
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7cf9bd5b03f7110800000000000000
+      internalID: 1260779978318923706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_SpreadShot
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 498
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf989fc899218da0800000000000000
+      internalID: -5944424296857690179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_PowerUpTimer_BG
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 503
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6363987c9bcdbefb0800000000000000
+      internalID: -4617354302463592906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UI_PowerUpTimer_Content
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 500
+        width: 12
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6664ac02946fc220800000000000000
+      internalID: 2508334095908759147
       vertices: []
       indices: 
       edges: []

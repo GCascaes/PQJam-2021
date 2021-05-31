@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4820173016790715443}
   - component: {fileID: 4820173016790715444}
   - component: {fileID: 4820173016790715445}
-  - component: {fileID: 5591798142155952088}
   m_Layer: 0
   m_Name: Panda
   m_TagString: Untagged
@@ -103,16 +102,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5591798142155952088
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4820173016790715446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d981c8eafb737864daa9722d11c37681, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  renderer: {fileID: 4820173016790715444}

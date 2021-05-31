@@ -224,6 +224,36 @@ TextureImporter:
   - first:
       213: -1876203279358043562
     second: Bird_3
+  - first:
+      213: -5449962855208669587
+    second: Plant_normal
+  - first:
+      213: 7678163000607376635
+    second: Plant_Rise_0
+  - first:
+      213: -8116994686274361041
+    second: Plant_Rise_1
+  - first:
+      213: -638751254482962141
+    second: Plant_Rise_2
+  - first:
+      213: 5772449978476777586
+    second: Plant_Rise_3
+  - first:
+      213: 151178162896240581
+    second: Plant_Rise_4
+  - first:
+      213: 3186840646763134149
+    second: Plant_Rise_5
+  - first:
+      213: -7231286060953343962
+    second: Plant_Rise_6
+  - first:
+      213: 942062859733737942
+    second: Plant_Idle
+  - first:
+      213: 3458384857497949586
+    second: Plant_Shot
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1862,6 +1892,216 @@ TextureImporter:
       bones: []
       spriteID: 65ad077de0366f5e0800000000000000
       internalID: -1876203279358043562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_normal
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 120
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6ea63888a7dd54b0800000000000000
+      internalID: -5449962855208669587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Rise_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 120
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf400c281905e8a60800000000000000
+      internalID: 7678163000607376635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Rise_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 120
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2922e8a654aa5f80800000000000000
+      internalID: -8116994686274361041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Rise_2
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 120
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32935b84e13b227f0800000000000000
+      internalID: -638751254482962141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Rise_3
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 120
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 270d1d2fbacdb1050800000000000000
+      internalID: 5772449978476777586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Rise_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 120
+        width: 15
+        height: 12
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cff939fcb7191200800000000000000
+      internalID: 151178162896240581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Rise_5
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 120
+        width: 15
+        height: 13
+      alignment: 9
+      pivot: {x: 0.26666668, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ccb7120faee93c20800000000000000
+      internalID: 3186840646763134149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Rise_6
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 120
+        width: 18
+        height: 15
+      alignment: 9
+      pivot: {x: 0.22222222, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62864abf3af45ab90800000000000000
+      internalID: -7231286060953343962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Idle
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 120
+        width: 18
+        height: 17
+      alignment: 9
+      pivot: {x: 0.22222222, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1a48efd21e21d00800000000000000
+      internalID: 942062859733737942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Plant_Shot
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 120
+        width: 16
+        height: 17
+      alignment: 9
+      pivot: {x: 0.25, y: -0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29551cf54b6aeff20800000000000000
+      internalID: 3458384857497949586
       vertices: []
       indices: 
       edges: []

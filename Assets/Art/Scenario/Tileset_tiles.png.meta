@@ -74,6 +74,9 @@ TextureImporter:
   - first:
       213: -4216079796410009963
     second: Sign
+  - first:
+      213: -246024434101024251
+    second: Sign_Skull
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -633,7 +636,7 @@ TextureImporter:
         width: 28
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -641,6 +644,27 @@ TextureImporter:
       bones: []
       spriteID: 596b74e43c97d75c0800000000000000
       internalID: -4216079796410009963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sign_Skull
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 427
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a8757a412f59cf0800000000000000
+      internalID: -246024434101024251
       vertices: []
       indices: 
       edges: []

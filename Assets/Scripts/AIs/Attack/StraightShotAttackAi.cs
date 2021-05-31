@@ -1,18 +1,25 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
-public class HorizontalShotAttackAi : GunController, IAttackAi
+public class StraightShotAttackAi : GunController, IAttackAi
 {
     [SerializeField]
     private float firstShootDelay;
     [SerializeField]
     private bool shootsContinuously = true;
     [SerializeField]
-    private bool flipsToAim;
+    private AimingCapability aimingCapability = AimingCapability.None;
 
     private IMovementController movementController;
-    
     private GameObject target;
+
+    public enum AimingCapability
+    {
+        None,
+        HorizontalFlip,
+        FullCircleAim,
+    }
 
     protected override void Awake()
     {
@@ -22,13 +29,23 @@ public class HorizontalShotAttackAi : GunController, IAttackAi
 
     protected override void FixedUpdate()
     {
-        if (flipsToAim
+        if (aimingCapability == AimingCapability.HorizontalFlip
             && target != null
             && movementController != null)
         {
             if ((target.transform.position.x > transform.position.x && !movementController.FacingRight)
                 || (target.transform.position.x < transform.position.x && movementController.FacingRight))
                 movementController.Flip();
+        }
+
+        if (aimingCapability == AimingCapability.FullCircleAim
+            && target != null)
+        {
+            foreach(var shootPoint in shootPoints)
+            {
+                var angleToTarget = Vector2.SignedAngle(shootPoint.transform.right, target.transform.position - shootPoint.transform.position);
+                shootPoint.transform.Rotate(shootPoint.transform.forward, angleToTarget);
+            }
         }
 
         base.FixedUpdate();

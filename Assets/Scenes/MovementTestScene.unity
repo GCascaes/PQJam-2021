@@ -238,10 +238,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5758239018606632919, guid: 22864a79294e2cd48b9d4c3fec022655, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 5799282785307700406, guid: dc860d6ab86bb59489ae1a5358d48aec, type: 3}
     - target: {fileID: 5758239018606632922, guid: 22864a79294e2cd48b9d4c3fec022655, type: 3}
       propertyPath: patrolPoints.Array.data[0]
       value: 
@@ -842,10 +838,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5085697387754065225, guid: 0ab4740fe63fb8140bbfa1883b5e1190, type: 3}
-      propertyPath: bulletPrefab
-      value: 
-      objectReference: {fileID: 5799282785307700406, guid: dc860d6ab86bb59489ae1a5358d48aec, type: 3}
     - target: {fileID: 5512438306651966699, guid: 0ab4740fe63fb8140bbfa1883b5e1190, type: 3}
       propertyPath: m_RootOrder
       value: 1

@@ -25,9 +25,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2236786138730742030}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.27, y: -2.31, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 5512438306651966699}
   m_RootOrder: 0
@@ -234,7 +234,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 51.88
+  m_Radius: 108.86
 --- !u!114 &1762733115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,16 +268,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1574216a8e4ad8d4da0190cf118af758, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 5799282785307700406, guid: 272e15a24d20ef0428735fc7a47f5f86, type: 3}
+  bulletPrefab: {fileID: 5799282785307700406, guid: dc860d6ab86bb59489ae1a5358d48aec, type: 3}
   shootingEnabled: 1
   hasGun: 1
   continuousShootingAnimation: 1
   bulletVelocity: 50
   shotsPerSecond: 2
-  shootPoints: []
+  shootPoints:
+  - {fileID: 2236786138730742030}
   firstShootDelay: 2
   shootsContinuously: 1
-  flipsToAim: 0
+  aimingCapability: 2
 --- !u!114 &7558024024199299144
 MonoBehaviour:
   m_ObjectHideFlags: 0

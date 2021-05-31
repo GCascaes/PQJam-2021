@@ -3,18 +3,13 @@ using UnityEngine;
 
 public class FlashController : MonoBehaviour
 {
-    //[SerializeField] float flashPower = 3;
-    [SerializeField] SpriteRenderer renderer;
+    private Material material;
+    private Coroutine flashCoroutine;
 
-    Material mat;
-    Coroutine flashCoroutine;
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        if (renderer == null)
-            renderer = GetComponent<SpriteRenderer>();
-
-        mat = renderer.material;
+        if (TryGetComponent<SpriteRenderer>(out var renderer))
+            material = renderer.material;
     }
 
     public void Flash(float time = .5f, float flashPower = 3, float flashWaitTime = 0.05f)
@@ -27,19 +22,17 @@ public class FlashController : MonoBehaviour
 
     private IEnumerator _Flash(float time, float flashPower, float flashWaitTime)
     {
-        
         WaitForSeconds wait = new WaitForSeconds(flashWaitTime);
         float timeDecurred = 0;
-        mat.SetFloat("_FlashPower", 0);
+        material.SetFloat("_FlashPower", 0);
 
         while (timeDecurred < time)
         {
-            mat.SetFloat("_FlashPower", flashPower);
+            material.SetFloat("_FlashPower", flashPower);
             yield return wait;
-            mat.SetFloat("_FlashPower", 0);
+            material.SetFloat("_FlashPower", 0);
             yield return wait;
-            timeDecurred+= (flashWaitTime*2);
+            timeDecurred += 2 * flashWaitTime;
         }
-
     }
 }

@@ -2386,6 +2386,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2285601996719003668, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2628227573147772350, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
+    - target: {fileID: 2285601996719003668, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285601996719003668, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2285601996719003668, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3097244047824410357, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
       propertyPath: m_Name
       value: Runner
@@ -2393,6 +2409,14 @@ PrefabInstance:
     - target: {fileID: 7712282417956777771, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712282417956777771, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7712282417956777771, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7712282417956777771, guid: 86a78add6e3069a47a5beb1a09dc488e, type: 3}
       propertyPath: m_LocalPosition.x

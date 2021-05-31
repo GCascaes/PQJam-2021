@@ -2152,6 +2152,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monkey
       objectReference: {fileID: 0}
+    - target: {fileID: 6807689296599213992, guid: 0ab4740fe63fb8140bbfa1883b5e1190, type: 3}
+      propertyPath: m_Size.x
+      value: 16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807689296599213992, guid: 0ab4740fe63fb8140bbfa1883b5e1190, type: 3}
+      propertyPath: m_Size.y
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6807689296599213992, guid: 0ab4740fe63fb8140bbfa1883b5e1190, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ab4740fe63fb8140bbfa1883b5e1190, type: 3}
 --- !u!1001 &2408094198980378967

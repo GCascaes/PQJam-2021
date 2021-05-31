@@ -205,7 +205,7 @@ TextureImporter:
     second: monkey_gun_3
   - first:
       213: -873823652872022853
-    second: monkey_gun_2
+    second: monkey_gun_0
   - first:
       213: 6397240090995802846
     second: monkey_gun_1
@@ -254,6 +254,12 @@ TextureImporter:
   - first:
       213: 3458384857497949586
     second: Plant_Shot
+  - first:
+      213: 3301016807618899958
+    second: monkey_gun_2
+  - first:
+      213: 837950126944485190
+    second: monkey_gun_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1711,12 +1717,12 @@ TextureImporter:
       name: monkey_gun_4
       rect:
         serializedVersion: 2
-        x: 379
-        y: 151
-        width: 7
-        height: 33
+        x: 473
+        y: 170
+        width: 33
+        height: 7
       alignment: 9
-      pivot: {x: 0.42857146, y: 0.45454547}
+      pivot: {x: 0.54545456, y: 0.42857146}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1732,12 +1738,12 @@ TextureImporter:
       name: monkey_gun_3
       rect:
         serializedVersion: 2
-        x: 358
-        y: 151
-        width: 7
-        height: 33
+        x: 435
+        y: 171
+        width: 33
+        height: 7
       alignment: 9
-      pivot: {x: 0.42857143, y: 0.45454547}
+      pivot: {x: 0.54545456, y: 0.42857146}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1750,15 +1756,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: monkey_gun_2
+      name: monkey_gun_0
       rect:
         serializedVersion: 2
-        x: 338
-        y: 151
-        width: 7
-        height: 33
+        x: 317
+        y: 170
+        width: 33
+        height: 7
       alignment: 9
-      pivot: {x: 0.42857146, y: 0.45454547}
+      pivot: {x: 0.6060606, y: 0.42857146}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1766,48 +1772,6 @@ TextureImporter:
       bones: []
       spriteID: bb49a36740e8fd3f0800000000000000
       internalID: -873823652872022853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monkey_gun_1
-      rect:
-        serializedVersion: 2
-        x: 315
-        y: 151
-        width: 7
-        height: 33
-      alignment: 9
-      pivot: {x: 0.42857146, y: 0.45454547}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed241bef7ff87c850800000000000000
-      internalID: 6397240090995802846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: monkey_gun_0
-      rect:
-        serializedVersion: 2
-        x: 288
-        y: 151
-        width: 7
-        height: 33
-      alignment: 9
-      pivot: {x: 0.42857146, y: 0.44117647}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 00d609550eb6427b0800000000000000
-      internalID: -5249952654354780928
       vertices: []
       indices: 
       edges: []
@@ -2102,6 +2066,48 @@ TextureImporter:
       bones: []
       spriteID: 29551cf54b6aeff20800000000000000
       internalID: 3458384857497949586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_gun_2
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 171
+        width: 33
+        height: 7
+      alignment: 9
+      pivot: {x: 0.54545456, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffe7b70c419fcd20800000000000000
+      internalID: 3301016807618899958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monkey_gun_1
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 171
+        width: 33
+        height: 7
+      alignment: 9
+      pivot: {x: 0.54545456, y: 0.42857143}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ff408633ff0ab00800000000000000
+      internalID: 837950126944485190
       vertices: []
       indices: 
       edges: []

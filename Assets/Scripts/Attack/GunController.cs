@@ -1,17 +1,20 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class GunController : MonoBehaviour
 {
     [SerializeField]
-    private GameObject bulletPrefab;
+    internal GameObject bulletPrefab;
     [SerializeField]
     private bool shootingEnabled;
     [SerializeField]
     private bool hasGun;
     [SerializeField]
     private bool continuousShootingAnimation = true;
+    [SerializeField]
+    private float shootingAnimationDelay = 0;
     [SerializeField]
     private float bulletVelocity;
     [SerializeField]
@@ -20,6 +23,7 @@ public class GunController : MonoBehaviour
     protected List<GameObject> shootPoints;
 
     internal bool shootContinuously = false;
+    internal float currentBulletVelocity;
 
     private bool canShoot;
     private bool shouldShoot;
@@ -41,7 +45,6 @@ public class GunController : MonoBehaviour
     {
         if (!hasGun)
             return;
-
         if (!canShoot)
         {
             shouldShoot = false;
@@ -49,39 +52,23 @@ public class GunController : MonoBehaviour
             return;
         }
 
-        bool shouldShootThisFrame = shouldShoot 
+        bool shouldStartShootingThisFrame = shouldShoot
+            && !IsShooting
             && (Time.realtimeSinceStartup - lastShotTime > shootPeriod || lastShotTime == 0);
 
-        UpdateAnimatorShooting(continuousShootingAnimation ? shouldShoot : shouldShootThisFrame);
-
-        if (shouldShootThisFrame)
-        {
-            if (shootPoints.Any())
-            {
-                foreach(var shootPointTransform in shootPoints.Select(x => x.transform))
-                {
-                    BulletController.Instantiate(bulletPrefab, shootPointTransform.position, shootPointTransform.rotation, bulletVelocity, tag);
-                }
-            }
-            else
-            {
-                BulletController.Instantiate(bulletPrefab, transform.position, transform.rotation, bulletVelocity, tag);
-            }
-            lastShotTime = Time.realtimeSinceStartup;
-            IsShooting = true;
-            shouldShoot = shootContinuously;
-        }
-        else if (!shouldShoot)
-        {
-            IsShooting = false;
-        }
+        if (shouldStartShootingThisFrame)
+            StartCoroutine(StartShooting());
     }
 
-    public void Shoot()
+    public void Shoot(float overrideBulletVelocity = 0)
     {
         if (!hasGun || !canShoot)
             return;
 
+        if (overrideBulletVelocity <= 0 || overrideBulletVelocity > bulletVelocity)
+            overrideBulletVelocity = bulletVelocity;
+
+        currentBulletVelocity = overrideBulletVelocity;
         shouldShoot = true;
     }
 
@@ -100,6 +87,36 @@ public class GunController : MonoBehaviour
     public void EnableShooting() => canShoot = true;
     
     public void DisableShooting() => canShoot = false;
+
+    private IEnumerator StartShooting()
+    {
+        IsShooting = true;
+        UpdateAnimatorShooting(IsShooting);
+
+        yield return new WaitForSecondsRealtime(shootingAnimationDelay);
+
+        if (shootPoints.Any())
+        {
+            foreach (var shootPointTransform in shootPoints.Select(x => x.transform))
+            {
+                ProjectileController.Instantiate(bulletPrefab, shootPointTransform.position, shootPointTransform.rotation, currentBulletVelocity, tag);
+            }
+        }
+        else
+        {
+            ProjectileController.Instantiate(bulletPrefab, transform.position, transform.rotation, currentBulletVelocity, tag);
+        }
+
+        lastShotTime = Time.realtimeSinceStartup;
+        shouldShoot = shootContinuously;
+
+        yield return new WaitForFixedUpdate();
+
+        if (!continuousShootingAnimation || !shouldShoot)
+            UpdateAnimatorShooting(false);
+
+        IsShooting = false;
+    }
 
     private void UpdateAnimator()
     {

@@ -64,7 +64,7 @@ public class DefenseController : MonoBehaviour
         if (!isDefending)
             return;
 
-        DestroyBarrier();
+        Destroy(barrier);
         isDefending = false;
 
         if (defenseDisableShooting && gunController != null)
@@ -102,8 +102,6 @@ public class DefenseController : MonoBehaviour
     }
 
     private void SpawnBarrier() => barrier = Instantiate(barrierPrefab, barrierSpawnPoint.transform);
-
-    private void DestroyBarrier() => Destroy(barrier);
 
     private bool TryStopCoroutine(IEnumerator coroutine)
     {

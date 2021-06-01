@@ -347,15 +347,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4820173016790715443, guid: dfddb2ed65c0eba43a7355cc7fcf2f4e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4820173016790715443, guid: dfddb2ed65c0eba43a7355cc7fcf2f4e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -100.3
+      value: -99.35
       objectReference: {fileID: 0}
     - target: {fileID: 4820173016790715443, guid: dfddb2ed65c0eba43a7355cc7fcf2f4e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: -9.76
       objectReference: {fileID: 0}
     - target: {fileID: 4820173016790715443, guid: dfddb2ed65c0eba43a7355cc7fcf2f4e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -897,7 +897,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5512438306651966699, guid: 0ab4740fe63fb8140bbfa1883b5e1190, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5512438306651966699, guid: 0ab4740fe63fb8140bbfa1883b5e1190, type: 3}
       propertyPath: m_LocalPosition.x
@@ -988,7 +988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -177.7
+      value: -168.7
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1494,32 +1494,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!1 &1341780809 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4820173016790715446, guid: dfddb2ed65c0eba43a7355cc7fcf2f4e, type: 3}
-  m_PrefabInstance: {fileID: 255436859}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1341780810
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1341780809}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e28553fce208cd04c9a12a2d8afd5033, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  initialState: 0
-  seeTargetTriggerCollider: {fileID: 0}
-  followTargetTriggerCollider: {fileID: 0}
-  attackTargetTriggerCollider: {fileID: 0}
-  disengageTriggerCollider: {fileID: 0}
-  disengageTime: 5
-  targetTag: Player
-  gettingAngryTime: 0
-  gettingCuteTime: 0
 --- !u!4 &1362445674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 18830164299632113, guid: d141e658a50d88149b70d59ff5106162, type: 3}
@@ -2590,6 +2564,10 @@ PrefabInstance:
     - target: {fileID: 18830164299632113, guid: d141e658a50d88149b70d59ff5106162, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18830164299632118, guid: d141e658a50d88149b70d59ff5106162, type: 3}
+      propertyPath: holdJumpFallAttenuation
+      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d141e658a50d88149b70d59ff5106162, type: 3}

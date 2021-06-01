@@ -1,18 +1,19 @@
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class ProjectileController : MonoBehaviour
 {
     [SerializeField]
-    private float bulletDamage;
+    private float projectileDamage;
     [SerializeField]
     private GameObject shotParticlePrefab;
     [SerializeField]
     private GameObject hitParticlePrefab;
 
     private float bulletVelocity;
-    private string shootingEntityTag;
+    
+    protected string shootingEntityTag { get; private set; }
 
-    public static BulletController Instantiate(
+    public static ProjectileController Instantiate(
         GameObject projectilePrefab,
         Vector2 position,
         Quaternion rotation,
@@ -20,7 +21,7 @@ public class BulletController : MonoBehaviour
         string shootingEntityTag)
     {
         var projectile = Instantiate(projectilePrefab, position, rotation);
-        var controller = projectile.GetComponent<BulletController>();
+        var controller = projectile.GetComponent<ProjectileController>();
         controller.bulletVelocity = bulletVelocity;
         controller.shootingEntityTag = shootingEntityTag;
         return controller;
@@ -30,9 +31,12 @@ public class BulletController : MonoBehaviour
     {
         var body = GetComponent<Rigidbody2D>();
         body.velocity = body.transform.right * bulletVelocity;
+
+        if (shotParticlePrefab != null)
+            Instantiate(shotParticlePrefab, transform.position, transform.rotation);
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("LevelBounds")
             || collision.CompareTag("Bullet")
@@ -41,7 +45,10 @@ public class BulletController : MonoBehaviour
             return;
 
         if (collision.gameObject.TryGetComponent<HealthController>(out var healthController))
-            healthController.TakeDamage(bulletDamage);
+            healthController.TakeDamage(projectileDamage);
+
+        if (hitParticlePrefab != null)
+            Instantiate(hitParticlePrefab, transform.position, transform.rotation);
 
         Destroy(gameObject);
     }

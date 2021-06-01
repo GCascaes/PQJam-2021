@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5799282785307700405}
   - component: {fileID: -4249505109425067562}
   m_Layer: 0
-  m_Name: enemy_bullet 1
+  m_Name: enemy_bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,6 +151,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5343f3c0324f04a99ea7af68d66d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletDamage: 10
-  shotParticlePrefab: {fileID: 0}
-  hitParticlePrefab: {fileID: 0}
+  projectileDamage: 10
+  shotParticlePrefab: {fileID: 8966502053865613386, guid: 871331f3e9e52b544a76d2bd5ed255b3, type: 3}
+  hitParticlePrefab: {fileID: 560866288915167944, guid: 29d6533f344eca847ad0db22486990e2, type: 3}

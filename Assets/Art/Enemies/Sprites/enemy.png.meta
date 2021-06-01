@@ -205,13 +205,13 @@ TextureImporter:
     second: monkey_gun_3
   - first:
       213: -873823652872022853
-    second: monkey_gun_0
+    second: Impact_1
   - first:
       213: 6397240090995802846
-    second: monkey_gun_1
+    second: Impact_0
   - first:
       213: -5249952654354780928
-    second: monkey_gun_0
+    second: Impact_1
   - first:
       213: 2913524087310496407
     second: Bird_0
@@ -259,7 +259,109 @@ TextureImporter:
     second: monkey_gun_2
   - first:
       213: 837950126944485190
-    second: monkey_gun_1
+    second: Impact_0
+  - first:
+      213: 9104573590882192267
+    second: Impact_2
+  - first:
+      213: 8286694865827488561
+    second: Impact_3
+  - first:
+      213: 1188522602995718346
+    second: princess_intro_0
+  - first:
+      213: 7839568191704882399
+    second: princess_intro_1
+  - first:
+      213: 5514865846885421349
+    second: princess_intro_2
+  - first:
+      213: -8847439290993974905
+    second: princess_intro_3
+  - first:
+      213: 4438883070483911775
+    second: princess_idle_0
+  - first:
+      213: -6299952504395804165
+    second: princess_idle_1
+  - first:
+      213: 4986175367969224905
+    second: princess_idle_2
+  - first:
+      213: -5540602366928942064
+    second: princess_idle_3
+  - first:
+      213: 7290397448937021631
+    second: princess_jump_0
+  - first:
+      213: 1517159602137848311
+    second: princess_jump_1
+  - first:
+      213: 6718393428023613166
+    second: princess_hadukenjump_0
+  - first:
+      213: 3542562276365296959
+    second: princess_hadukenjump_1
+  - first:
+      213: 3311342888198476727
+    second: princess_victory
+  - first:
+      213: 6926496891276311611
+    second: princess_ShunGokuSatsu
+  - first:
+      213: 8411001344538491614
+    second: princess_defeat_0
+  - first:
+      213: 2424803976238007477
+    second: princess_defeat_1
+  - first:
+      213: -3364948838626612112
+    second: princess_defeat_2
+  - first:
+      213: -3083848057631456639
+    second: princess_taunt_0
+  - first:
+      213: -1931941406562562999
+    second: princess_taunt_1
+  - first:
+      213: 7841471482539279820
+    second: princess_taunt_2
+  - first:
+      213: 7037360208468098495
+    second: princess_taunt_3
+  - first:
+      213: 7133275569475982171
+    second: princess_taunt_4
+  - first:
+      213: -7105023106683385393
+    second: princess_taunt_5
+  - first:
+      213: 8648467710150622940
+    second: princess_taunt_6
+  - first:
+      213: -1771954648685333813
+    second: princess_taunt_7
+  - first:
+      213: 7501276781535020509
+    second: princess_haduken_0
+  - first:
+      213: 7846432988621660617
+    second: princess_haduken_1
+  - first:
+      213: -2646291127698360097
+    second: princess_haduken_2
+  - first:
+      213: -9016385981773998868
+    second: princess_punch_0
+  - first:
+      213: 4364136842719513329
+    second: princess_punch_1
+  - first:
+      213: -8725010812509110683
+    second: princess_punch_2
+  - first:
+      213: 4520531906509905671
+    second: princess_punch_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2108,6 +2210,762 @@ TextureImporter:
       bones: []
       spriteID: 64ff408633ff0ab00800000000000000
       internalID: 837950126944485190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impact_0
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 17
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed241bef7ff87c850800000000000000
+      internalID: 6397240090995802846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impact_1
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 9
+        width: 28
+        height: 33
+      alignment: 9
+      pivot: {x: 0.5, y: 0.4848485}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d609550eb6427b0800000000000000
+      internalID: -5249952654354780928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impact_2
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 8
+        width: 33
+        height: 33
+      alignment: 9
+      pivot: {x: 0.54545456, y: 0.5151515}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8b8feb5171f95e70800000000000000
+      internalID: 9104573590882192267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Impact_3
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 9
+        width: 36
+        height: 35
+      alignment: 9
+      pivot: {x: 0.5555556, y: 0.51428574}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13363bf5311400370800000000000000
+      internalID: 8286694865827488561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_intro_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 77
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac81517a20b7e7010800000000000000
+      internalID: 1188522602995718346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_intro_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 77
+        width: 23
+        height: 30
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc550b0cbdbbcc60800000000000000
+      internalID: 7839568191704882399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_intro_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 77
+        width: 25
+        height: 30
+      alignment: 9
+      pivot: {x: 0.59999996, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5211a8bc44db88c40800000000000000
+      internalID: 5514865846885421349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_intro_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 77
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 781687037d4973580800000000000000
+      internalID: -8847439290993974905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_idle_0
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 77
+        width: 23
+        height: 30
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5450b762a41a9d30800000000000000
+      internalID: 4438883070483911775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_idle_1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 77
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6363636, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf1d7a963921298a0800000000000000
+      internalID: -6299952504395804165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_idle_2
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 77
+        width: 23
+        height: 29
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.3448276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c8bb9b4414723540800000000000000
+      internalID: 4986175367969224905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_idle_3
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 77
+        width: 23
+        height: 30
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c038da083db13b0800000000000000
+      internalID: -5540602366928942064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_jump_0
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 75
+        width: 22
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.31428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb02e478ad1bc2560800000000000000
+      internalID: 7290397448937021631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_jump_1
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 75
+        width: 23
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6956522, y: 0.31428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f9dff0be980e0510800000000000000
+      internalID: 1517159602137848311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_hadukenjump_0
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 74
+        width: 23
+        height: 35
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.31428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee69aaa2a378c3d50800000000000000
+      internalID: 6718393428023613166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_hadukenjump_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 74
+        width: 24
+        height: 35
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0.31428573}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f35e37dfe95b92130800000000000000
+      internalID: 3542562276365296959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_victory
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 117
+        width: 19
+        height: 29
+      alignment: 9
+      pivot: {x: 0.6315789, y: 0.3448276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3169400d044fd20800000000000000
+      internalID: 3311342888198476727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_ShunGokuSatsu
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 116
+        width: 22
+        height: 31
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.32258064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c3f56793cdf1060800000000000000
+      internalID: 6926496891276311611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_defeat_0
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 119
+        width: 23
+        height: 30
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edabc82d821e9b470800000000000000
+      internalID: 8411001344538491614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_defeat_1
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 119
+        width: 23
+        height: 29
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.3448276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b40f958e52a6a120800000000000000
+      internalID: 2424803976238007477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_defeat_2
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 119
+        width: 23
+        height: 29
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.3448276}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07c2c4a0cdc4d41d0800000000000000
+      internalID: -3364948838626612112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_taunt_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 38
+        width: 23
+        height: 30
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182499fc788f335d0800000000000000
+      internalID: -3083848057631456639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_taunt_1
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 38
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c48fec68d5035e0800000000000000
+      internalID: -1931941406562562999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_taunt_2
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 38
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.51724136, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc50c1974c082dc60800000000000000
+      internalID: 7841471482539279820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_taunt_3
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 38
+        width: 30
+        height: 30
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdb536f2d9b9a160800000000000000
+      internalID: 7037360208468098495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_taunt_4
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 38
+        width: 29
+        height: 30
+      alignment: 9
+      pivot: {x: 0.51724136, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b539693365c7ef260800000000000000
+      internalID: 7133275569475982171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_taunt_5
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 38
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc9c135e023e56d90800000000000000
+      internalID: -7105023106683385393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_taunt_6
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 38
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6818182, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdeb6f29f87850870800000000000000
+      internalID: 8648467710150622940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_taunt_7
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 38
+        width: 23
+        height: 30
+      alignment: 9
+      pivot: {x: 0.65217394, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2320f92a0c867e0800000000000000
+      internalID: -1771954648685333813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_haduken_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 0
+        width: 21
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd5c7454d73e91860800000000000000
+      internalID: 7501276781535020509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_haduken_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 0
+        width: 21
+        height: 30
+      alignment: 9
+      pivot: {x: 0.61904764, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c163b02b3124ec60800000000000000
+      internalID: 7846432988621660617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_haduken_2
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 0
+        width: 21
+        height: 30
+      alignment: 9
+      pivot: {x: 0.61904764, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd875417d3c764bd0800000000000000
+      internalID: -2646291127698360097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_punch_0
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 0
+        width: 22
+        height: 30
+      alignment: 9
+      pivot: {x: 0.6363636, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce49c8e68bc5fd280800000000000000
+      internalID: -9016385981773998868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_punch_1
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 0
+        width: 27
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5185185, y: 0.35714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1facd751657809c30800000000000000
+      internalID: 4364136842719513329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_punch_2
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 0
+        width: 24
+        height: 28
+      alignment: 9
+      pivot: {x: 0.45833334, y: 0.35714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56eb3f2a4e88ae680800000000000000
+      internalID: -8725010812509110683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: princess_punch_3
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 0
+        width: 25
+        height: 28
+      alignment: 9
+      pivot: {x: 0.56, y: 0.35714287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f975371d72cbe30800000000000000
+      internalID: 4520531906509905671
       vertices: []
       indices: 
       edges: []

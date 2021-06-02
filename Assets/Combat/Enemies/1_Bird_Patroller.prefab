@@ -142,7 +142,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &8593113997130437691
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   targetTag: Player
   gettingAngryTime: 0
   gettingCuteTime: 0
+  collidersToDisableWhenCute: []
 --- !u!114 &2093298414
 MonoBehaviour:
   m_ObjectHideFlags: 0

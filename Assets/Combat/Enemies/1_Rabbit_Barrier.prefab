@@ -208,7 +208,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &2120932003
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -358,11 +358,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103b533e3b999e842bc0f22704506274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airControl: 0
   maxVelocity: 0
   maxShootingVelocity: 0
   acceleration: 0
   decceleration: 0
+  airControl: 0
   baseJumpHeight: 0
   holdJumpHeightMultiplier: 0
   holdJumpFallAttenuation: 0
@@ -392,6 +392,7 @@ MonoBehaviour:
   targetTag: Player
   gettingAngryTime: 0
   gettingCuteTime: 0
+  collidersToDisableWhenCute: []
 --- !u!114 &2120932012
 MonoBehaviour:
   m_ObjectHideFlags: 0

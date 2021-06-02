@@ -153,4 +153,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileDamage: 10
   shotParticlePrefab: {fileID: 0}
-  hitParticlePrefab: {fileID: 7145050114450883896, guid: 054c33dbfc0ce0c4cbb55d4d88a3b042, type: 3}
+  hitParticlePrefab: {fileID: 3082499236936779716, guid: 687691f2dd453514da61775373eb5f55, type: 3}

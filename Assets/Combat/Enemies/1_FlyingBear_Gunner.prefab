@@ -364,6 +364,7 @@ MonoBehaviour:
   targetTag: Player
   gettingAngryTime: 0
   gettingCuteTime: 0
+  collidersToDisableWhenCute: []
 --- !u!114 &683694791
 MonoBehaviour:
   m_ObjectHideFlags: 0

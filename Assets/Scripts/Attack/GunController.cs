@@ -22,8 +22,8 @@ public class GunController : MonoBehaviour
     [SerializeField]
     protected List<GameObject> shootPoints;
 
-    internal bool shootContinuously = false;
-    internal float currentBulletVelocity;
+    protected bool shootContinuously = false;
+    protected float currentBulletVelocity;
 
     private bool canShoot;
     private bool shouldShoot;
@@ -37,6 +37,7 @@ public class GunController : MonoBehaviour
     {
         canShoot = shootingEnabled;
         shootPeriod = 1 / shotsPerSecond;
+        currentBulletVelocity = bulletVelocity;
         animator = GetComponent<Animator>();
         UpdateAnimator();
     }
@@ -60,15 +61,11 @@ public class GunController : MonoBehaviour
             StartCoroutine(StartShooting());
     }
 
-    public void Shoot(float overrideBulletVelocity = 0)
+    public void Shoot()
     {
         if (!hasGun || !canShoot)
             return;
 
-        if (overrideBulletVelocity <= 0 || overrideBulletVelocity > bulletVelocity)
-            overrideBulletVelocity = bulletVelocity;
-
-        currentBulletVelocity = overrideBulletVelocity;
         shouldShoot = true;
     }
 
@@ -125,7 +122,7 @@ public class GunController : MonoBehaviour
         animator.SetBool("HasGun", hasGun);
     }
 
-    private void UpdateAnimatorShooting(bool shooting)
+    protected void UpdateAnimatorShooting(bool shooting)
     {
         if (animator == null)
             return;

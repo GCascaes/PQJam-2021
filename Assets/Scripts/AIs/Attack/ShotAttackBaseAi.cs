@@ -2,12 +2,8 @@
 using System.Linq;
 using UnityEngine;
 
-public class ShotAttackAi : GunController, IAttackAi
+public abstract class ShotAttackBaseAi : GunController, IAttackAi
 {
-    [SerializeField]
-    private float firstShootDelay;
-    [SerializeField]
-    private bool shootsContinuously = true;
     [SerializeField]
     private AimingCapability aimingCapability = AimingCapability.None;
 
@@ -59,16 +55,12 @@ public class ShotAttackAi : GunController, IAttackAi
         shootContinuously = false;
         target = null;
         StopAllCoroutines();
+        UpdateAnimatorShooting(false);
     }
 
-    private IEnumerator AttackRoutine()
-    {
-        yield return new WaitForSecondsRealtime(firstShootDelay);
-        shootContinuously = shootsContinuously;
-        Shoot();
-    }
+    protected abstract IEnumerator AttackRoutine();
 
-    private void AimHorizontally()
+    protected void AimHorizontally()
     {
         if (target is null || movementController is null)
             return;
@@ -78,7 +70,7 @@ public class ShotAttackAi : GunController, IAttackAi
             movementController.Flip();
     }
 
-    private void AimStraightShot()
+    protected void AimStraightShot()
     {
         if (target is null)
             return;
@@ -90,7 +82,7 @@ public class ShotAttackAi : GunController, IAttackAi
         }
     }
 
-    private void AimBallistically()
+    protected void AimBallistically()
     {
         if (target is null)
             return;

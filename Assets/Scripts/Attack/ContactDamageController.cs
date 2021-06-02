@@ -48,6 +48,9 @@ public class ContactDamageController : MonoBehaviour
 
     private void TryDamage(Collider2D collider)
     {
+        if (collider is null || contactDamage <= 0)
+            return;
+
         if (Time.realtimeSinceStartup - lastDamageTime < collisionStayDamageAgainTime)
             return;
 

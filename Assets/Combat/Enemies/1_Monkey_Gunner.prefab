@@ -109,8 +109,8 @@ GameObject:
   - component: {fileID: 9088410638561248117}
   - component: {fileID: 3888167653948789282}
   - component: {fileID: 1762733115}
-  - component: {fileID: 5085697387754065225}
   - component: {fileID: 7558024024199299144}
+  - component: {fileID: 5085697387754065225}
   m_Layer: 0
   m_Name: 1_Monkey_Gunner
   m_TagString: Untagged
@@ -256,6 +256,20 @@ MonoBehaviour:
   targetTag: Player
   gettingAngryTime: 2
   gettingCuteTime: 2
+--- !u!114 &7558024024199299144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5512438306651966702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MaxHealth: 50
+  shouldDie: 1
 --- !u!114 &5085697387754065225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,24 +286,11 @@ MonoBehaviour:
   shootingEnabled: 1
   hasGun: 1
   continuousShootingAnimation: 1
+  shootingAnimationDelay: 0
   bulletVelocity: 50
   shotsPerSecond: 2
   shootPoints:
   - {fileID: 2236786138730742030}
+  aimingCapability: 2
   firstShootDelay: 2
   shootsContinuously: 1
-  aimingCapability: 2
---- !u!114 &7558024024199299144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5512438306651966702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 50
-  shouldDie: 1

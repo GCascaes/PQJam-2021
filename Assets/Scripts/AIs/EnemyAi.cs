@@ -23,6 +23,8 @@ public class EnemyAi : MonoBehaviour
     private float gettingAngryTime;
     [SerializeField]
     private float gettingCuteTime;
+    [SerializeField]
+    private List<Collider2D> collidersToDisableWhenCute;
 
     private EnemyState currentState;
     private Queue<EnemyState> stateChangeCommandQueue = new Queue<EnemyState>();
@@ -46,6 +48,12 @@ public class EnemyAi : MonoBehaviour
         attackAi = GetComponent<IAttackAi>();
 
         animator = GetComponent<Animator>();
+
+        if (!isAngry)
+        {
+            foreach(var collider in collidersToDisableWhenCute)
+                collider.enabled = false;
+        }
     }
 
     private void FixedUpdate()
@@ -131,6 +139,9 @@ public class EnemyAi : MonoBehaviour
         if (animator != null)
             animator.SetBool("isAngry", true);
 
+        foreach (var collider in collidersToDisableWhenCute)
+            collider.enabled = true;
+
         isAngry = true;
         yield return new WaitForSeconds(gettingAngryTime);
     }
@@ -142,6 +153,9 @@ public class EnemyAi : MonoBehaviour
 
         if (animator != null)
             animator.SetBool("isAngry", false);
+
+        foreach (var collider in collidersToDisableWhenCute)
+            collider.enabled = false;
 
         isAngry = false;
         yield return new WaitForSeconds(gettingCuteTime);

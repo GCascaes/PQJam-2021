@@ -31,7 +31,7 @@ public class GunController : MonoBehaviour
     private float lastShotTime;
     private Animator animator;
 
-    public bool IsShooting { get; private set; } = false;
+    public bool IsShooting { get; private set; } = false; // TODO IsShooting tá bugado, e o player consegue flippar quando tá atirando
 
     protected virtual void Awake()
     {

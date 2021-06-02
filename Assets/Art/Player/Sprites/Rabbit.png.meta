@@ -224,6 +224,45 @@ TextureImporter:
   - first:
       213: 2508334095908759147
     second: UI_PowerUpTimer_Content
+  - first:
+      213: 2352524432387709112
+    second: Vulture
+  - first:
+      213: -6909050942735390455
+    second: Vulture_Thanks
+  - first:
+      213: 1782027383640405595
+    second: Vulture_Down_0
+  - first:
+      213: 8411437499491574473
+    second: Vulture_Down_1
+  - first:
+      213: -920816916813138551
+    second: Vulture_Down_2
+  - first:
+      213: 485702450621688462
+    second: Vulture_Fly_0
+  - first:
+      213: -3527035997691220189
+    second: Vulture_Fly_1
+  - first:
+      213: -7164616501985761473
+    second: Vulture_Fly_2
+  - first:
+      213: 5579026557668771108
+    second: Vulture_Fly_3
+  - first:
+      213: 5259812385454827619
+    second: Vulture_Fly_4
+  - first:
+      213: 538591957836471743
+    second: Vulture_Fly_5
+  - first:
+      213: -2943785946334563330
+    second: BagOfMoney
+  - first:
+      213: 2360272494174775266
+    second: Rabbit_won
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1845,7 +1884,7 @@ TextureImporter:
         width: 14
         height: 4
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1866,7 +1905,7 @@ TextureImporter:
         width: 12
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1874,6 +1913,279 @@ TextureImporter:
       bones: []
       spriteID: b6664ac02946fc220800000000000000
       internalID: 2508334095908759147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 319
+        width: 27
+        height: 36
+      alignment: 9
+      pivot: {x: 0.6296296, y: 0.2777778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b895edc188d5a020800000000000000
+      internalID: 2352524432387709112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Thanks
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 320
+        width: 32
+        height: 36
+      alignment: 9
+      pivot: {x: 0.53125, y: 0.2777778}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909ed27f5ce1e10a0800000000000000
+      internalID: -6909050942735390455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Down_0
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 321
+        width: 30
+        height: 31
+      alignment: 9
+      pivot: {x: 0.56666666, y: 0.32258064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b56b7edb6780bb810800000000000000
+      internalID: 1782027383640405595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Down_1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 321
+        width: 30
+        height: 31
+      alignment: 9
+      pivot: {x: 0.56666666, y: 0.32258064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c2689f07dd6bb470800000000000000
+      internalID: 8411437499491574473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Down_2
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 321
+        width: 30
+        height: 31
+      alignment: 9
+      pivot: {x: 0.56666666, y: 0.32258064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 985be2294e99833f0800000000000000
+      internalID: -920816916813138551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Fly_0
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 261
+        width: 48
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5833334, y: 0.3137255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8aa7d33ecf8db600800000000000000
+      internalID: 485702450621688462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Fly_1
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 260
+        width: 44
+        height: 51
+      alignment: 9
+      pivot: {x: 0.5909091, y: 0.33333334}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f699772737d0fc0800000000000000
+      internalID: -3527035997691220189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Fly_2
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 262
+        width: 44
+        height: 54
+      alignment: 9
+      pivot: {x: 0.65909094, y: 0.25925925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37ac3f404b229c90800000000000000
+      internalID: -7164616501985761473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Fly_3
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 260
+        width: 41
+        height: 44
+      alignment: 9
+      pivot: {x: 0.63414633, y: 0.36363637}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4254152681fac6d40800000000000000
+      internalID: 5579026557668771108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Fly_4
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 260
+        width: 40
+        height: 45
+      alignment: 9
+      pivot: {x: 0.625, y: 0.35555556}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3682c343f7b9ef840800000000000000
+      internalID: 5259812385454827619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Vulture_Fly_5
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 262
+        width: 49
+        height: 51
+      alignment: 9
+      pivot: {x: 0.59183675, y: 0.27450982}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd99b53886797700800000000000000
+      internalID: 538591957836471743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BagOfMoney
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 379
+        width: 31
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3f0f557429527d0800000000000000
+      internalID: -2943785946334563330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Rabbit_won
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 403
+        width: 24
+        height: 28
+      alignment: 9
+      pivot: {x: 0.6666667, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7a964045f51c020800000000000000
+      internalID: 2360272494174775266
       vertices: []
       indices: 
       edges: []

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class HorizontalGroundPatrolAi : PatrolBaseAi, IPatrolMovementAi
+public class FlightPatrolAi : PatrolBaseAi, IPatrolMovementAi
 {
-    private GroundMovementController movementController;
+    private FlightMovementController movementController;
 
     protected override void Awake()
     {
-        movementController = GetComponent<GroundMovementController>();
+        movementController = GetComponent<FlightMovementController>();
         base.Awake();
     }
 
@@ -16,10 +16,10 @@ public class HorizontalGroundPatrolAi : PatrolBaseAi, IPatrolMovementAi
         if (movementController is null)
             yield break;
 
-        while (Mathf.Abs(position.x - transform.position.x)
+        while (Vector2.Distance(position, transform.position)
             > 0.5 * Mathf.Pow(movementController.CurrentVelocity, 2) / movementController.Decceleration)
         {
-            movementController.SmoothMove(Mathf.Sign(position.x - transform.position.x), false, false);
+            movementController.SmoothFly(position - transform.position);
             yield return new WaitForFixedUpdate();
         }
     }

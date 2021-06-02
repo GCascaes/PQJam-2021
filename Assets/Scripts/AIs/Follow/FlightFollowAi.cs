@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
+public class FlightFollowAi : FollowBaseAi, IFollowMovementAi
 {
-    private GroundMovementController movementController;
+    private FlightMovementController movementController;
 
     private void Awake()
     {
-        movementController = GetComponent<GroundMovementController>();
+        movementController = GetComponent<FlightMovementController>();
     }
 
     protected override IEnumerator LookAt(GameObject target)
@@ -32,10 +32,10 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
         while (IsFollowing)
         {
-            while (Mathf.Abs(target.transform.position.x - transform.position.x)
-                > DistanceToKeepFromTarget + 0.5*Mathf.Pow(movementController.CurrentVelocity, 2)/movementController.Decceleration)
+            while (Vector2.Distance(target.transform.position, transform.position)
+                > DistanceToKeepFromTarget + 0.5 * Mathf.Pow(movementController.CurrentVelocity, 2) / movementController.Decceleration)
             {
-                movementController.SmoothMove(Mathf.Sign(target.transform.position.x - transform.position.x), false, false);
+                movementController.SmoothFly(target.transform.position - transform.position);
                 yield return new WaitForFixedUpdate();
             }
 

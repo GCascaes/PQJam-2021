@@ -41,7 +41,7 @@ public class ProjectileController : MonoBehaviour
         if (collision.CompareTag("LevelBounds")
             || collision.CompareTag("Bullet")
             || collision.CompareTag(shootingEntityTag)
-            || collision.isTrigger)
+            || (collision.isTrigger && !collision.CompareTag("DefenseBarrier")))
             return;
 
         if (collision.gameObject.TryGetComponent<HealthController>(out var healthController))

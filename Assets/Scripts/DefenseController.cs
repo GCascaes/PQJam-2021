@@ -28,13 +28,13 @@ public class DefenseController : MonoBehaviour
     private GameObject barrier;
 
     private GunController gunController;
-    private GroundMovementController movementController;
+    private IMovementController movementController;
 
     private void Start()
     {
         canDefend = defenseEnabled;
         gunController = GetComponent<GunController>();
-        movementController = GetComponent<GroundMovementController>();
+        movementController = GetComponent<IMovementController>();
     }
 
     public void StartDefending()
@@ -101,7 +101,11 @@ public class DefenseController : MonoBehaviour
         canDefend = previousCanDefendState;
     }
 
-    private void SpawnBarrier() => barrier = Instantiate(barrierPrefab, barrierSpawnPoint.transform);
+    private void SpawnBarrier()
+    {
+        var spawnPointTransform = barrierSpawnPoint != null ? barrierSpawnPoint.transform : transform;
+        barrier = Instantiate(barrierPrefab, spawnPointTransform);
+    }
 
     private bool TryStopCoroutine(IEnumerator coroutine)
     {

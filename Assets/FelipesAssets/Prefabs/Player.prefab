@@ -259,7 +259,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d981c8eafb737864daa9722d11c37681, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderer: {fileID: 18830164299632112}
 --- !u!114 &1590928143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,11 +271,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8bb1983e06fabc40b3760bfb8e92c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootingEnabled: 1
   bulletPrefab: {fileID: 5799282785307700406, guid: 272e15a24d20ef0428735fc7a47f5f86, type: 3}
+  shootingEnabled: 1
   hasGun: 0
+  continuousShootingAnimation: 1
+  shootingAnimationDelay: 0
   bulletVelocity: 150
   shotsPerSecond: 5
+  shootPoints: []
 --- !u!114 &1590928144
 MonoBehaviour:
   m_ObjectHideFlags: 0

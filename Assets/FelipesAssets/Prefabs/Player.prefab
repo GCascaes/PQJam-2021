@@ -156,7 +156,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0.05
+  m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 70
   m_Material: {fileID: 0}
@@ -235,7 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 200
-  invincibilityTime: 1
+  invincibilityTime: 0.5
   shouldDie: 0
 --- !u!114 &18830164299632118
 MonoBehaviour:
@@ -259,6 +259,9 @@ MonoBehaviour:
   holdJumpFallAttenuation: 0.1
   doubleJumpVelocityModifier: 0.5
   doubleJumps: 0
+  jumpAfterFallGraceTime: 0.1
+  dashVelocity: 0
+  dashDistance: 0
   groundLayers:
     serializedVersion: 2
     m_Bits: 8

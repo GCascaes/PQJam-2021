@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 
@@ -17,6 +18,12 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
     [SerializeField]
     private int doubleJumps;
     [SerializeField]
+    private float jumpAfterFallGraceTime;
+    [SerializeField]
+    private float dashVelocity;
+    [SerializeField]
+    private float dashDistance;
+    [SerializeField]
     private LayerMask groundLayers;
 
     private int currentJumps = 0;
@@ -27,7 +34,11 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
     private float holdJumpAcceleration;
     private float holdJumpFallAcceleration;
 
+    private bool shouldDash = false;
+    private bool isDashing = false;
     private float movementDirection = 0;
+    private float dashTime = 0;
+    private float dashStartTime = 0;
 
     protected override void Awake()
     {
@@ -36,6 +47,8 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
         baseJumpVelocity = Mathf.Sqrt(2 * (-Physics2D.gravity.y) * body.gravityScale * baseJumpHeight / 1);
         holdJumpAcceleration = (-Physics2D.gravity.y) * body.gravityScale - Mathf.Pow(baseJumpVelocity, 2) / (2 * holdJumpHeightMultiplier * baseJumpHeight);
         holdJumpFallAcceleration = holdJumpFallAttenuation * (-Physics2D.gravity.y) * body.gravityScale;
+
+        dashTime = dashDistance / dashVelocity;
     }
 
     private void FixedUpdate()
@@ -58,8 +71,7 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
         if (bodyColliders.Any(x => x.IsTouchingLayers(groundLayers)))
             return;
 
-        SetJumping(true);
-        currentJumps = 1;
+        StartCoroutine(Fall());
     }
 
     public void SmoothMove(float direction, bool jump, bool holdJump)
@@ -73,10 +85,34 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
         movementDirection = direction;
     }
 
+    public void Dash() => shouldDash = true;
+
     private void HandleMoving()
     {
         if (isJumping && !airControl)
             return;
+
+        // Start Dashing
+        if (shouldDash && !isDashing)
+        {
+            shouldDash = false;
+            isDashing = true;
+            dashStartTime = Time.timeSinceLevelLoad;
+
+            body.velocity = new Vector2((FacingRight ? 1 : -1) * dashVelocity, body.velocity.y);
+            return;
+        }
+
+        // Maintain Dashing
+        if (isDashing && !(Time.timeSinceLevelLoad - dashStartTime > dashTime))
+        {
+            body.velocity = new Vector2((FacingRight ? 1 : -1) * dashVelocity, body.velocity.y);
+            return;
+        }
+
+        // StopDashing
+        shouldDash = false;
+        isDashing = false;
 
         float direction = movementDirection != 0 ? Mathf.Sign(movementDirection) : 0;
 
@@ -100,6 +136,17 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
             Jump();
         else if (holdJump)
             HoldJump();
+    }
+
+    private IEnumerator Fall()
+    {
+        yield return new WaitForSecondsRealtime(jumpAfterFallGraceTime);
+
+        if (isJumping || bodyColliders.Any(x => x.IsTouchingLayers(groundLayers)))
+            yield break;
+
+        SetJumping(true);
+        currentJumps = 1;
     }
 
     private void Jump()

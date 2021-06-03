@@ -55,12 +55,13 @@ public class MovementControllerBase : MonoBehaviour, IMovementController
     protected void UpdateCurrentVelocity(float direction)
     {
         float targetVelocity = direction * MaxVelocity;
+
         if (targetVelocity == currentVelocity)
         {
             // Maintain current velocity
         }
-        else if ((direction > 0 && targetVelocity > currentVelocity)
-            || (direction < 0 && targetVelocity < currentVelocity))
+        else if ((direction > 0 && targetVelocity > currentVelocity && currentVelocity >= 0)
+            || (direction < 0 && targetVelocity < currentVelocity && currentVelocity <= 0))
         {
             // Accelerate in direction of movement
             float newVelocity = currentVelocity + direction * Acceleration * Time.fixedDeltaTime;
@@ -73,11 +74,18 @@ public class MovementControllerBase : MonoBehaviour, IMovementController
             float newVelocity = currentVelocity - direction * Decceleration * Time.fixedDeltaTime;
             currentVelocity = Mathf.Sign(newVelocity) * Mathf.Max(Mathf.Abs(newVelocity), Mathf.Abs(targetVelocity));
         }
-        else if (direction == 0 && currentVelocity != 0)
+        else if (direction == 0 && currentVelocity != 0
+            || (direction > 0 && targetVelocity > currentVelocity && currentVelocity < 0)
+            || (direction < 0 && targetVelocity < currentVelocity && currentVelocity > 0))
         {
             // Deccelerate to zero
             float newVelocity = currentVelocity - Mathf.Sign(currentVelocity) * Mathf.Min(Decceleration * Time.fixedDeltaTime, Mathf.Abs(currentVelocity));
-            currentVelocity = Mathf.Sign(newVelocity) * Mathf.Max(Mathf.Abs(newVelocity), Mathf.Abs(targetVelocity));
+
+            var actualNewVelocity = currentVelocity >= 0
+                ? Mathf.Max(0, newVelocity, targetVelocity)
+                : Mathf.Min(0, newVelocity, targetVelocity);
+
+            currentVelocity = actualNewVelocity;
         }
     }
 }

@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 5758239018606632919}
   - component: {fileID: 5758239018606632922}
   - component: {fileID: 5758239018606632920}
+  - component: {fileID: -6196950752929531807}
   m_Layer: 9
   m_Name: 1_Bear_Gunner
   m_TagString: Enemy
@@ -352,3 +353,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToKeepFromTarget: 50
+--- !u!114 &-6196950752929531807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5758239018606632492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a747db71127816458cdec43116830be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
+  isAware: 0
+  attackClip: {fileID: 8300000, guid: 473d03fc48a77414ea0eb9bc1481103d, type: 3}
+  awareClip: {fileID: 8300000, guid: fbb1ec6c05910ff428ea0c547c4dbe9a, type: 3}
+  volume: 0.7
+  pitch: 1

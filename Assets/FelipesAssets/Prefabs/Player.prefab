@@ -45,12 +45,12 @@ GameObject:
   - component: {fileID: 18830164299632114}
   - component: {fileID: 18830164299632109}
   - component: {fileID: 18830164299632119}
+  - component: {fileID: 1590928146}
   - component: {fileID: 18830164299632118}
   - component: {fileID: 5697218298145468524}
   - component: {fileID: 1590928143}
   - component: {fileID: 1590928144}
   - component: {fileID: 1590928145}
-  - component: {fileID: 1590928146}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -222,6 +222,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e54986b9531f2247a1e62c2d882ee47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1590928146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18830164299632108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 200
+  invincibilityTime: 1
+  shouldDie: 0
 --- !u!114 &18830164299632118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,11 +249,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103b533e3b999e842bc0f22704506274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airControl: 1
   maxVelocity: 100
   maxShootingVelocity: 25
   acceleration: 100
   decceleration: 300
+  airControl: 1
   baseJumpHeight: 15
   holdJumpHeightMultiplier: 3
   holdJumpFallAttenuation: 0.1
@@ -310,17 +325,3 @@ MonoBehaviour:
   defenseCooldown: 1.5
   defenseDisableShooting: 1
   defenseDisableMoving: 1
---- !u!114 &1590928146
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18830164299632108}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MaxHealth: 0
-  shouldDie: 0

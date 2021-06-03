@@ -8,13 +8,9 @@ public class ContactDamageController : MonoBehaviour
     [SerializeField]
     private float contactDamage;
     [SerializeField]
-    private float collisionStayDamageAgainTime;
-    [SerializeField]
     private Collider2D contactDamageCollider;
     [SerializeField]
     private bool disableCollisionsWithTarget = true;
-
-    private float lastDamageTime = 0;
 
     private void OnEnable()
     {
@@ -51,9 +47,6 @@ public class ContactDamageController : MonoBehaviour
         if (collider is null || contactDamage <= 0)
             return;
 
-        if (Time.realtimeSinceStartup - lastDamageTime < collisionStayDamageAgainTime)
-            return;
-
         if (!collider.gameObject.CompareTag(targetTag)
             || contactDamageCollider is null
             || !collider.IsTouching(contactDamageCollider))
@@ -61,7 +54,5 @@ public class ContactDamageController : MonoBehaviour
 
         if (collider.gameObject.TryGetComponent<HealthController>(out var healthController))
             healthController.TakeDamage(contactDamage);
-
-        lastDamageTime = Time.realtimeSinceStartup;
     }
 }

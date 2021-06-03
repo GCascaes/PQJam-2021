@@ -27,7 +27,7 @@ public class EnemyAi : MonoBehaviour
     private List<Collider2D> collidersToDisableWhenCute;
 
     private EnemyState currentState;
-    private Queue<EnemyState> stateChangeCommandQueue = new Queue<EnemyState>();
+    private readonly Queue<EnemyState> stateChangeCommandQueue = new Queue<EnemyState>();
     private bool changingState = false;
     private bool isAngry;
     
@@ -38,6 +38,8 @@ public class EnemyAi : MonoBehaviour
     private IAttackAi attackAi;
 
     private Animator animator;
+
+    public EnemyState CurrentState => currentState;
 
     private void Awake()
     {

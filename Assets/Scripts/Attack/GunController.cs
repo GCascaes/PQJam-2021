@@ -92,6 +92,9 @@ public class GunController : MonoBehaviour
 
         yield return new WaitForSecondsRealtime(shootingAnimationDelay);
 
+        //
+        GetComponent<EnemySound>().EnemyGunSound();
+
         if (shootPoints.Any())
         {
             foreach (var shootPointTransform in shootPoints.Select(x => x.transform))
@@ -101,6 +104,7 @@ public class GunController : MonoBehaviour
         }
         else
         {
+
             ProjectileController.Instantiate(bulletPrefab, transform.position, transform.rotation, currentBulletVelocity, tag);
         }
 

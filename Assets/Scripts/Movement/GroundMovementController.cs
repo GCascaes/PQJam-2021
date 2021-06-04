@@ -40,6 +40,8 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
     private float dashTime = 0;
     private float dashStartTime = 0;
 
+    public float DashTime => dashTime;
+
     protected override void Awake()
     {
         base.Awake();

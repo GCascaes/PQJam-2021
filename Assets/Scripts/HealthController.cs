@@ -8,6 +8,8 @@ public class HealthController : MonoBehaviour
     [SerializeField]
     private float invincibilityTime;
     [SerializeField]
+    private float invincibleFlashPower;
+    [SerializeField]
     private bool shouldDie;
 
     private float currentHealth;
@@ -45,7 +47,7 @@ public class HealthController : MonoBehaviour
         isInvincible = true;
 
         if (flashController != null)
-            flashController.Flash(duration);
+            flashController.Flash(duration, invincibleFlashPower);
 
         yield return new WaitForSecondsRealtime(duration);
         

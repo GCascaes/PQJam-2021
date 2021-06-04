@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class ContactDamageController : MonoBehaviour
@@ -11,6 +12,13 @@ public class ContactDamageController : MonoBehaviour
     private Collider2D contactDamageCollider;
     [SerializeField]
     private bool disableCollisionsWithTarget = true;
+
+    private float currentContactDamage;
+
+    private void Awake()
+    {
+        currentContactDamage = contactDamage;
+    }
 
     private void OnEnable()
     {
@@ -53,6 +61,18 @@ public class ContactDamageController : MonoBehaviour
             return;
 
         if (collider.gameObject.TryGetComponent<HealthController>(out var healthController))
-            healthController.TakeDamage(contactDamage);
+            healthController.TakeDamage(currentContactDamage);
+    }
+
+    public void AlterDamage(float damageFactor, float duration)
+    {
+        StartCoroutine(AlterDamageTemporarily(damageFactor, duration));
+    }
+
+    private IEnumerator AlterDamageTemporarily(float damageFactor, float duration)
+    {
+        currentContactDamage = contactDamage * damageFactor;
+        yield return new WaitForSecondsRealtime(duration);
+        currentContactDamage = contactDamage;
     }
 }

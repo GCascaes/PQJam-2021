@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class SoundManager : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SoundManager : MonoBehaviour
     [Range(0, 1)] [SerializeField] float maxBgmVolume = 1;
     [Range(0, 1)] public float sfxVolume = 1;
 
+    Coroutine fadeBGM;
     static SoundManager _instance;
 
     public float bgmVolume { get { return maxBgmVolume; } }
@@ -33,25 +35,30 @@ public class SoundManager : MonoBehaviour
     /// Toca um Sound Effect
     /// </summary>
     /// <param name=""></param>
-    public void PlaySFX(AudioClip clip,float volume = 1, float pitchVariation = 0)
+    public void PlaySFX(AudioClip clip,float volume = 1, float pitch = 1)
     {
         GameObject goTemp = new GameObject();
         AudioSource audioTemp = goTemp.AddComponent<AudioSource>();
         
-        audioTemp.pitch = Random.Range(1 - pitchVariation, 1 + pitchVariation);
+        audioTemp.pitch = pitch;
         audioTemp.volume = sfxVolume* volume;
         audioTemp.clip = clip;
         audioTemp.Play();
         Destroy(goTemp, clip.length + 0.1f);
     }
 
-    public void PlayBGM(AudioClip audioClip)
+    public void PlayBGM(AudioClip audioClip, float volume = 1, float pitch = 1, bool loop = true)
     {
+        if (fadeBGM != null)
+            StopCoroutine(fadeBGM);
+
         if (audioClip)
         {
             if (audioClip == bgmAudioSource.clip)
                 return;
-            bgmAudioSource.loop = true;
+            bgmAudioSource.volume = maxBgmVolume * volume;
+            bgmAudioSource.pitch = pitch;
+            bgmAudioSource.loop = loop;
             bgmAudioSource.clip = audioClip;
             bgmAudioSource.Play();
         }
@@ -63,23 +70,23 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    public void PlayBGMOnce(AudioClip audioClip)
+    internal void FadeBGM(float time)
     {
-        if (audioClip)
-        {
-            if (audioClip == bgmAudioSource.clip)
-                return;
+        if (fadeBGM != null)
+            StopCoroutine(fadeBGM);
+        fadeBGM = StartCoroutine(_FadeBGM(time));
+    }
 
-            bgmAudioSource.loop = false;
-            bgmAudioSource.clip = audioClip;
-            bgmAudioSource.Play();
-        }
-        else
+    private IEnumerator _FadeBGM(float time)
+    {
+        float decurredTime = 0;
+        while(decurredTime < time)
         {
-            bgmAudioSource.clip = null;
-            bgmAudioSource.Stop();
+            bgmAudioSource.volume *= 0.95f;
+            decurredTime += Time.deltaTime;
+            yield return null;
         }
-
+        bgmAudioSource.volume = 0;
     }
 
     /// <summary>

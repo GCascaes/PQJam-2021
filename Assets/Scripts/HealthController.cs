@@ -11,35 +11,58 @@ public class HealthController : MonoBehaviour
     private float invincibleFlashPower;
     [SerializeField]
     private bool shouldDie;
+    [SerializeField] ParticleSystem deathParticle;
+    [SerializeField] bool isPlayer;
 
     private float currentHealth;
     private bool isInvincible = false;
+    Coroutine invencibleCoroutine;
 
     private FlashController flashController;
 
     private void Awake()
     {
-        currentHealth = maxHealth;
         flashController = GetComponent<FlashController>();
     }
 
+    private void Start()
+    {
+        if (isPlayer)
+            maxHealth = GameManager.instance.playerHealth;
+        currentHealth = maxHealth;
+    }
     public void TakeDamage(float damage)
     {
-        if (isInvincible)
+        if (isInvincible && isPlayer)
             return;
 
         currentHealth -= damage;
         if (shouldDie && currentHealth <= 0)
+        {
+            if (deathParticle)
+                Instantiate(deathParticle.gameObject, transform.position, Quaternion.identity);
+
+            if (isPlayer)
+                GameManager.instance.Death();
             Destroy(gameObject);
 
-        StopAllCoroutines();
-        StartCoroutine(InvincibilityCooldown(invincibilityTime));
+        }
+        else
+            MakeInvincible(.5f);
+
+        if (PlayerUI.instance != null && isPlayer)
+            PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);
+
+        //StopAllCoroutines();
+        //StartCoroutine(InvincibilityCooldown(invincibilityTime));
     }
 
     public void MakeInvincible(float duration)
     {
-        StopAllCoroutines();
-        StartCoroutine(InvincibilityCooldown(duration));
+        if (invencibleCoroutine != null)
+            StopCoroutine(invencibleCoroutine);
+        //StopAllCoroutines();
+        invencibleCoroutine = StartCoroutine(InvincibilityCooldown(duration));
     }
 
     private IEnumerator InvincibilityCooldown(float duration)

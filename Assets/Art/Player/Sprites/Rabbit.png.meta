@@ -263,6 +263,33 @@ TextureImporter:
   - first:
       213: 2360272494174775266
     second: Rabbit_won
+  - first:
+      213: 6084400312665446994
+    second: exclamation_0
+  - first:
+      213: 2980485622468251870
+    second: exclamation_1
+  - first:
+      213: 998167035074406647
+    second: exclamation_2
+  - first:
+      213: 7460490479736251973
+    second: exclamation_3
+  - first:
+      213: -3666083735264482371
+    second: exclamation_4
+  - first:
+      213: -5111551914342793777
+    second: music_0
+  - first:
+      213: 5794285808887874836
+    second: music_1
+  - first:
+      213: -1813786087511847846
+    second: music_2
+  - first:
+      213: -4412530033602247060
+    second: music_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -304,7 +331,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 2
@@ -2186,6 +2213,195 @@ TextureImporter:
       bones: []
       spriteID: 2e7a964045f51c020800000000000000
       internalID: 2360272494174775266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: exclamation_0
+      rect:
+        serializedVersion: 2
+        x: 363
+        y: 323
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25a13bb09d1207450800000000000000
+      internalID: 6084400312665446994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: exclamation_1
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 319
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed01161e1efcc5920800000000000000
+      internalID: 2980485622468251870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: exclamation_2
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 316
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f86d1041a33add00800000000000000
+      internalID: 998167035074406647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: exclamation_3
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 321
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 546ecde509cf88760800000000000000
+      internalID: 7460490479736251973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: exclamation_4
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 320
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb29ba34447f1dc0800000000000000
+      internalID: -3666083735264482371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: music_0
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 359
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd31a6bd9e1019b0800000000000000
+      internalID: -5111551914342793777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: music_1
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 359
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41549d56e30796050800000000000000
+      internalID: 5794285808887874836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: music_2
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 359
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c8f4bc92324d6e0800000000000000
+      internalID: -1813786087511847846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: music_3
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 359
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c664562205b83c2c0800000000000000
+      internalID: -4412530033602247060
       vertices: []
       indices: 
       edges: []

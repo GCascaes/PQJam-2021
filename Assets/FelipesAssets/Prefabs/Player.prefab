@@ -252,7 +252,7 @@ MonoBehaviour:
   maxVelocity: 100
   maxShootingVelocity: 25
   acceleration: 100
-  decceleration: 300
+  decceleration: 50000
   airControl: 1
   baseJumpHeight: 15
   holdJumpHeightMultiplier: 3

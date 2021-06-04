@@ -48,7 +48,7 @@ public class HealthController : MonoBehaviour
 
         }
         else
-            MakeInvincible(.5f);
+            MakeInvincible(invincibilityTime);
 
         if (PlayerUI.instance != null && isPlayer)
             PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);

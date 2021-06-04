@@ -28,7 +28,7 @@ public class PlayerUI : MonoBehaviour
     {
         for (int i = 0; i < GameManager.instance.numOfHearts; i++)
         {
-            AddHearth();
+            AddHeart();
         }
         for (int i = 0; i < GameManager.instance.numOfShields; i++)
         {
@@ -50,7 +50,7 @@ public class PlayerUI : MonoBehaviour
     }
     
 
-    public void AddHearth()
+    public void AddHeart()
     {
         GameObject go = Instantiate(heartPrefab, heartParent);
         hearts.Add(go);

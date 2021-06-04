@@ -43,5 +43,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d0bbb83dde3cd7418d91ddae1888220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealth: 200
   numOfHearts: 3
   numOfShields: 3

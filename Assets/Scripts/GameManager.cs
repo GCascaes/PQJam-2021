@@ -1,15 +1,18 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public float playerHealth;
     public int numOfHearts = 3;
     public int numOfShields = 3;
     public int numOfDeaths { get; private set; }
 
 
     static GameManager _instance;
+
     public static GameManager instance { get { return _instance; } }
 
     private void Awake()
@@ -28,5 +31,13 @@ public class GameManager : MonoBehaviour
     public void Death()
     {
         numOfDeaths++;
+        StartCoroutine(_Death());
+    }
+
+    private IEnumerator _Death()
+    {
+        yield return new WaitForSeconds(1f);
+        yield return ScreenFader.instance.FadeOut(1f);
+        Loading.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

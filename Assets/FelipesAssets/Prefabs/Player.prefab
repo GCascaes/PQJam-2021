@@ -236,7 +236,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 200
   invincibilityTime: 0.5
+  invincibleFlashPower: 0
   shouldDie: 0
+  deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
+  isPlayer: 1
 --- !u!114 &18830164299632118
 MonoBehaviour:
   m_ObjectHideFlags: 0

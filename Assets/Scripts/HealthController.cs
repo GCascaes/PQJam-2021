@@ -11,6 +11,8 @@ public class HealthController : MonoBehaviour
     private float invincibleFlashPower;
     [SerializeField]
     private bool shouldDie;
+    [SerializeField] ParticleSystem deathParticle;
+    [SerializeField] bool isPlayer;
 
     private float currentHealth;
     private bool isInvincible = false;
@@ -23,16 +25,27 @@ public class HealthController : MonoBehaviour
         flashController = GetComponent<FlashController>();
     }
 
+    private void Start()
+    {
+        if (isPlayer)
+            maxHealth = GameManager.instance.playerHealth;
+    }
     public void TakeDamage(float damage)
     {
-        
-
         if (isInvincible)
             return;
 
         currentHealth -= damage;
         if (shouldDie && currentHealth <= 0)
+        {
+            if(deathParticle)
+                Instantiate(deathParticle.gameObject, transform);
+
+            if (isPlayer)
+                GameManager.instance.Death();
             Destroy(gameObject);
+
+        }
 
         if (PlayerUI.instance != null)
             PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);

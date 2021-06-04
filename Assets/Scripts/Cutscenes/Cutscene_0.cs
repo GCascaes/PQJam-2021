@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Cutscene_0 : MonoBehaviour
 {
-    [SerializeField] GameObject _player;
+    GameObject _player;
     [SerializeField] float _playerSpeed;
     [SerializeField] CinemachineVirtualCamera camera;
     [SerializeField] Transform _playerEndPosition;
@@ -28,6 +28,7 @@ public class Cutscene_0 : MonoBehaviour
 
     IEnumerator Start()
     {
+        _player = GameObject.FindGameObjectWithTag("Player");
         WaitForSeconds halfSecond = new WaitForSeconds(.5f);
         PlayerUI.instance.HideUI();
         _player.GetComponent<InputController>().enabled = false;

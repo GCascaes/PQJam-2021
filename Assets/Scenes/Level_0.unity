@@ -1723,7 +1723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53.50292
+      value: -53.449314
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31285,6 +31285,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerEndPosition: {fileID: 1784198099}
   _playerSpeed: 55
+  tutorialBear: {fileID: 50317106109861468}
+  bazookaShotPrefab: {fileID: 6818793263481472897, guid: 62ffca952ae535343a55f00c79badbd1, type: 3}
 --- !u!61 &1635715014
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -32311,7 +32313,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 297761703447499198, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 7.5, y: 9.5}

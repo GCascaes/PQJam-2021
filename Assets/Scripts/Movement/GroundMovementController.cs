@@ -41,6 +41,7 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
     private float dashStartTime = 0;
 
     public float DashTime => dashTime;
+    public float DashDistance => dashDistance;
 
     protected override void Awake()
     {
@@ -88,6 +89,14 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
     }
 
     public void Dash() => shouldDash = true;
+
+    public override void Flip()
+    {
+        if (isDashing)
+            return;
+
+        base.Flip();
+    }
 
     private void HandleMoving()
     {

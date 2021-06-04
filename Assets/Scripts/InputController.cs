@@ -29,11 +29,11 @@ public class InputController : MonoBehaviour
     private void Update()
     {
         move = Input.GetAxisRaw("Horizontal");
-        
+
         if (Input.GetButtonDown("Jump"))
             shouldJump = true;
         holdJump = Input.GetButton("Jump");
-        
+
         shoot = Input.GetButton("Fire1");
 
         if (Input.GetButtonDown("Defend"))

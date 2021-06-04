@@ -46,7 +46,7 @@ public class MovementControllerBase : MonoBehaviour, IMovementController
 
     public void EnableMovement() => movementEnabled = true;
 
-    public void Flip()
+    public virtual void Flip()
     {
         facingRight = !facingRight;
         transform.Rotate(transform.up, 180);

@@ -1,3 +1,4 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,6 +7,9 @@ using UnityEngine;
 public class Cutscene_0 : MonoBehaviour
 {
     [SerializeField] GameObject _player;
+    [SerializeField] float _playerSpeed;
+    [SerializeField] CinemachineVirtualCamera camera;
+    [SerializeField] Transform _playerEndPosition;
     [SerializeField] ParticleSystem _exclamation;
     [SerializeField] ParticleSystem _music;
     [SerializeField] Transform _vulture;
@@ -39,8 +43,9 @@ public class Cutscene_0 : MonoBehaviour
         {
             yield return null;
         }
-        SoundManager.instance.PlaySFX(baloonClip, 1, baloonClipClipPitch);
-        _exclamation.Play();
+        camera.Follow = null;
+        StartCoroutine(MovePlayer());
+        
 
         while (!CutsceneManager.instance.MoveObjectToPosition(_vulture, _vultureEndPosition.position, _vultureSpeed))
         {
@@ -53,6 +58,17 @@ public class Cutscene_0 : MonoBehaviour
         _player.GetComponent<InputController>().enabled = true;
         PlayerUI.instance.ShowUI();
         SoundManager.instance.PlayBGM(levelMusic,_musicVolume);
+        camera.Follow = _player.transform;
+    }
+
+    private IEnumerator MovePlayer()
+    {
+        while (!CutsceneManager.instance.MoveObjectToPosition(_player.transform, _playerEndPosition.position, _playerSpeed))
+        {
+            yield return null;
+        }
+        SoundManager.instance.PlaySFX(baloonClip, 1, baloonClipClipPitch);
+        _exclamation.Play();
     }
 
     // Update is called once per frame

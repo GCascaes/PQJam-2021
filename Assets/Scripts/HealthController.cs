@@ -25,12 +25,17 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        
+
         if (isInvincible)
             return;
 
         currentHealth -= damage;
         if (shouldDie && currentHealth <= 0)
             Destroy(gameObject);
+
+        if (PlayerUI.instance != null)
+            PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);
 
         StopAllCoroutines();
         StartCoroutine(InvincibilityCooldown(invincibilityTime));

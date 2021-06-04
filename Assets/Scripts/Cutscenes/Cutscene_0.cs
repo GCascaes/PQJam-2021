@@ -25,6 +25,7 @@ public class Cutscene_0 : MonoBehaviour
     IEnumerator Start()
     {
         WaitForSeconds halfSecond = new WaitForSeconds(.5f);
+        PlayerUI.instance.HideUI();
         _player.GetComponent<InputController>().enabled = false;
         yield return null;
         CutsceneManager.instance.StartCutscene();
@@ -50,10 +51,8 @@ public class Cutscene_0 : MonoBehaviour
         Destroy(_vulture.gameObject);
         CutsceneManager.instance.EndCutscene();
         _player.GetComponent<InputController>().enabled = true;
+        PlayerUI.instance.ShowUI();
         SoundManager.instance.PlayBGM(levelMusic,_musicVolume);
-
-
-
     }
 
     // Update is called once per frame

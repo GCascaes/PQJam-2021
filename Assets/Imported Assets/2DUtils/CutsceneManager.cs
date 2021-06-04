@@ -1,5 +1,4 @@
 using DG.Tweening;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -21,13 +20,6 @@ public class CutsceneManager : MonoBehaviour
             _instance = this;
         else
             Destroy(gameObject);
-
-        //topCutOnPosition = topCut.localPosition;
-        //bottomCutOnPosition = bottomCut.localPosition;
-        //topCutOffPosition = new Vector3(topCutOnPosition.x, topCutOnPosition.y + 100, topCutOnPosition.z);
-        //bottomCutOffPosition = new Vector3(bottomCutOnPosition.x, bottomCutOnPosition.y - 100, bottomCutOnPosition.z);
-        //topCut.localPosition = topCutOffPosition;
-        //bottomCut.localPosition = bottomCutOffPosition;
     }
 
     private void Start()

@@ -9,6 +9,8 @@ public class ContactDamageController : MonoBehaviour
     [SerializeField]
     private float contactDamage;
     [SerializeField]
+    private bool percentualDamage;
+    [SerializeField]
     private Collider2D contactDamageCollider;
     [SerializeField]
     private bool disableCollisionsWithTarget = true;
@@ -54,7 +56,7 @@ public class ContactDamageController : MonoBehaviour
 
     private void TryDamage(Collider2D collider)
     {
-        if (collider is null || contactDamage <= 0)
+        if (collider is null || contactDamage <= 0 || !enabled)
             return;
 
         if (!collider.gameObject.CompareTag(targetTag)
@@ -63,18 +65,26 @@ public class ContactDamageController : MonoBehaviour
             return;
 
         if (collider.gameObject.TryGetComponent<HealthController>(out var healthController))
-            healthController.TakeDamage(currentContactDamage);
+        {
+            if (percentualDamage)
+                healthController.TakeDamagePercent(currentContactDamage);
+            else
+                healthController.TakeDamage(currentContactDamage);
+        }
     }
 
-    public void AlterDamage(float damageFactor, float duration)
+    public void AlterDamage(float newDamage, float duration, bool isPercentual = false)
     {
-        StartCoroutine(AlterDamageTemporarily(damageFactor, duration));
+        StartCoroutine(AlterDamageTemporarily(newDamage, duration, isPercentual));
     }
 
-    private IEnumerator AlterDamageTemporarily(float damageFactor, float duration)
+    private IEnumerator AlterDamageTemporarily(float newDamage, float duration, bool isPercentual)
     {
-        currentContactDamage = contactDamage * damageFactor;
+        var oldPercentual = percentualDamage;
+        percentualDamage = isPercentual;
+        currentContactDamage = newDamage;
         yield return new WaitForSecondsRealtime(duration);
         currentContactDamage = contactDamage;
+        percentualDamage = oldPercentual;
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class HealthController : MonoBehaviour
@@ -28,6 +29,8 @@ public class HealthController : MonoBehaviour
     private readonly List<Action> halfLifePercentHealthActions = new List<Action>();
     private readonly List<Action> quarterLifePercentHealthActions = new List<Action>();
     private readonly List<Action> lowLifePercentHealthActions = new List<Action>();
+
+    private readonly List<Action> onDeathActions = new List<Action>();
 
     public enum LowHealthLevel
     {
@@ -83,7 +86,16 @@ public class HealthController : MonoBehaviour
 
             if (isPlayer)
                 GameManager.instance.Death();
-            Destroy(gameObject);
+
+            if (onDeathActions.Any())
+            {
+                foreach (var action in onDeathActions)
+                    action.Invoke();
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
         else
         {
@@ -116,6 +128,8 @@ public class HealthController : MonoBehaviour
                 break;
         }
     }
+
+    public void RegisterDeathAction(Action action) => onDeathActions.Add(action);
 
     private IEnumerator InvincibilityCooldown(float duration)
     {

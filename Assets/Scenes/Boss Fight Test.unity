@@ -2138,74 +2138,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1428688368, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: jumpCooldown
-      value: 5
+    - target: {fileID: 1573965013, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: maxHealth
+      value: 400
       objectReference: {fileID: 0}
     - target: {fileID: 1573965013, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: shouldDie
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1573965015, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.y
-      value: 0.33333334
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573965015, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573965023, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: maxVelocity
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573965023, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: acceleration
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573965023, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: dashVelocity
-      value: 60
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573965023, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: decceleration
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573965023, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: maxShootingVelocity
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: punchChance
-      value: 60
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: punchDamage
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: tauntChance
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: tauntDuration
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: idleTimeBetweenAttacks
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: akumaSpecialDamagePercent
-      value: 50
+      propertyPath: akumaSpecialDuration
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: lowHealthVelocityIncreasePercent
-      value: 200
+      value: 50
       objectReference: {fileID: 0}
-    - target: {fileID: 2056898213, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: bulletVelocity
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 3176854046947999757, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 1188522602995718346, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
     - target: {fileID: 3176854046947999758, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_Name
       value: Princess

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class BossAi : MonoBehaviour
@@ -11,6 +12,8 @@ public class BossAi : MonoBehaviour
     [SerializeField]
     private float punchEndTime;
     [SerializeField]
+    private float punchDamage;
+    [SerializeField]
     private float hadoukenInterval;
     [SerializeField]
     [Range(0, 100)]
@@ -18,9 +21,11 @@ public class BossAi : MonoBehaviour
     [SerializeField]
     private float tauntDuration;
     [SerializeField]
-    private float AkumaSpecialDuration;
+    private float akumaSpecialDuration;
     [SerializeField]
     private float akumaSpecialDamagePercent;
+    [SerializeField]
+    private GameObject akumaSpecialParticlePrefab;
     [SerializeField]
     private float idleTimeBetweenAttacks;
     [SerializeField]
@@ -38,6 +43,7 @@ public class BossAi : MonoBehaviour
 
     private bool bossStarted = false;
     private bool akumaSpecialAllowed = false;
+    private bool tryingAkumaSpecial = false;
 
     private void Awake()
     {
@@ -51,19 +57,30 @@ public class BossAi : MonoBehaviour
 
         healthController.RegisterLowHealthAction(
             HealthController.LowHealthLevel.HalfLife,
-            () => movementController.IncreaseVelocity(lowHealthVelocityIncreasePercent));
+            () => LevelUp());
         healthController.RegisterLowHealthAction(
             HealthController.LowHealthLevel.QuarterLife,
-            () => movementController.IncreaseVelocity(lowHealthVelocityIncreasePercent));
+            () => LevelUp());
         healthController.RegisterLowHealthAction(
             HealthController.LowHealthLevel.QuarterLife,
-            () => akumaSpecialAllowed = true);
+            () => LevelUp(enableSpecial: true));
+
+        healthController.RegisterDeathAction(() => Death());
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         CheckStartBoss(collision);
         CheckAkumaSpecial(collision);
+    }
+
+    private void LevelUp(bool enableSpecial = false)
+    {
+        movementController.IncreaseVelocity(lowHealthVelocityIncreasePercent);
+        idleTimeBetweenAttacks *= 1 - lowHealthVelocityIncreasePercent / 100;
+
+        if (enableSpecial)
+            akumaSpecialAllowed = true;
     }
 
     private void CheckStartBoss(Collider2D collision)
@@ -81,7 +98,7 @@ public class BossAi : MonoBehaviour
 
     private void CheckAkumaSpecial(Collider2D collision)
     {
-        if (!akumaSpecialAllowed || !collision.CompareTag("Player"))
+        if (!akumaSpecialAllowed || !tryingAkumaSpecial || !collision.CompareTag("Player"))
             return;
 
         if (!collision.IsTouching(contactDamageController.ContactDamageCollider))
@@ -106,6 +123,9 @@ public class BossAi : MonoBehaviour
 
             switch (attackChance)
             {
+                case var _ when akumaSpecialAllowed && ShouldPunch():
+                    yield return Punch();
+                    break;
                 case var _ when attackChance < tauntChance:
                     yield return Taunt();
                     break;
@@ -145,9 +165,20 @@ public class BossAi : MonoBehaviour
         
         movementController.Dash();
         healthController.MakeInvincible(movementController.DashTime);
-        contactDamageController.AlterDamage(5f, movementController.DashTime);
+
+        if (akumaSpecialAllowed)
+        {
+            contactDamageController.AlterDamage(akumaSpecialDamagePercent, movementController.DashTime, isPercentual: true);
+            tryingAkumaSpecial = true;
+        }
+        else
+        {
+            contactDamageController.AlterDamage(punchDamage, movementController.DashTime);
+        }
+
         yield return new WaitForSecondsRealtime(movementController.DashTime);
 
+        tryingAkumaSpecial = false;
         animator.SetBool("Punch", false);
         yield return new WaitForSecondsRealtime(punchEndTime);
     }
@@ -163,11 +194,13 @@ public class BossAi : MonoBehaviour
     }
 
     private void AkumaSpecial()
-    {
-        if (target.TryGetComponent<HealthController>(out var targetHealthController))
-        {
-            targetHealthController.TakeDamagePercent(akumaSpecialDamagePercent);
+        => Instantiate(akumaSpecialParticlePrefab, transform.position, transform.rotation);
 
-        }
+    private void Death()
+    {
+        StopAllCoroutines();
+        followMovementAi.StopFollowing();
+        contactDamageController.enabled = false;
+        animator.SetBool("Defeat", true);
     }
 }

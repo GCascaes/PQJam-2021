@@ -7,8 +7,6 @@ public class LevelManager : MonoBehaviour
     [SerializeField] protected AudioClip _levelMusic;
     [SerializeField] protected float _musicVolume;
     [SerializeField] CinemachineVirtualCamera _camera;
-    [SerializeField] Transform playerEndLevelStartPosition;
-    [SerializeField] Transform playerEndLevelEndPosition;
     [SerializeField] float playerEndLevelSpeed = 30;
     [SerializeField] CheckPoint[] checkPoints;
     [SerializeField] AudioClip[] otherMusics;
@@ -35,19 +33,18 @@ public class LevelManager : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").transform.position = GameManager.instance.spawnPosition;
     }
 
-    public virtual void LevelEnd()
+    public virtual void LevelEnd(LevelEnd levelEnd)
     {
-        
-        StartCoroutine(_LevelEnd());
+        StartCoroutine(_LevelEnd(levelEnd));
     }
 
-    private IEnumerator _LevelEnd()
+    private IEnumerator _LevelEnd(LevelEnd levelEnd)
     {
         SoundManager.instance.FadeBGM(.5f);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<InputController>().enabled = false;
         player.GetComponent<HealthController>().EndLevel();
-        while (!CutsceneManager.instance.MoveObjectToPosition(player.transform, playerEndLevelStartPosition.position, playerEndLevelSpeed))
+        while (!CutsceneManager.instance.MoveObjectToPosition(player.transform, levelEnd.playerEndLevelStartPosition, playerEndLevelSpeed))
         {
             yield return null;
         }
@@ -58,7 +55,7 @@ public class LevelManager : MonoBehaviour
         player.GetComponent<Animator>().SetBool("Win", false);
 
         StartCoroutine(ScreenFader.instance.FadeOut(1));
-        while (!CutsceneManager.instance.MoveObjectToPosition(player.transform, playerEndLevelEndPosition.position, playerEndLevelSpeed))
+        while (!CutsceneManager.instance.MoveObjectToPosition(player.transform, levelEnd.playerEndLevelEndPosition, playerEndLevelSpeed))
         {
             yield return null;
         }

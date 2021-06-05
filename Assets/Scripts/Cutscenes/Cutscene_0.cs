@@ -8,7 +8,7 @@ public class Cutscene_0 : MonoBehaviour
 {
     GameObject _player;
     [SerializeField] float _playerSpeed;
-    [SerializeField] CinemachineVirtualCamera camera;
+    
     [SerializeField] Transform _playerEndPosition;
     [SerializeField] ParticleSystem _exclamation;
     [SerializeField] ParticleSystem _music;
@@ -18,8 +18,8 @@ public class Cutscene_0 : MonoBehaviour
     [SerializeField] AudioClip vultureAudioClip;
     [SerializeField] float vultureAudioClipPitch;
     [SerializeField] float _vultureSpeed;
-    [SerializeField] AudioClip levelMusic;
-    [SerializeField] float _musicVolume;
+    //[SerializeField] AudioClip levelMusic;
+    //[SerializeField] float _musicVolume;
     [SerializeField] AudioClip baloonClip;
     [SerializeField] float baloonClipClipPitch;
 
@@ -28,14 +28,16 @@ public class Cutscene_0 : MonoBehaviour
 
     IEnumerator Start()
     {
+        if (GameManager.instance.numOfDeaths > 0)
+            yield break;
+
         _player = GameObject.FindGameObjectWithTag("Player");
-        WaitForSeconds halfSecond = new WaitForSeconds(.5f);
         PlayerUI.instance.HideUI();
         _player.GetComponent<InputController>().enabled = false;
         yield return null;
         CutsceneManager.instance.StartCutscene();
-        yield return ScreenFader.instance.FadeIn(.5f);
-        yield return halfSecond;
+        //yield return ScreenFader.instance.FadeIn(.5f);
+        yield return new WaitForSeconds(1.4f);
         SoundManager.instance.PlaySFX(baloonClip, 1, baloonClipClipPitch);
         _music.Play();
         yield return new WaitForSeconds(_music.main.duration + .3f);
@@ -44,7 +46,7 @@ public class Cutscene_0 : MonoBehaviour
         {
             yield return null;
         }
-        camera.Follow = null;
+        LevelManager.instance.camera.Follow = null;
         StartCoroutine(MovePlayer());
         
 
@@ -58,8 +60,8 @@ public class Cutscene_0 : MonoBehaviour
         CutsceneManager.instance.EndCutscene();
         _player.GetComponent<InputController>().enabled = true;
         PlayerUI.instance.ShowUI();
-        SoundManager.instance.PlayBGM(levelMusic,_musicVolume);
-        camera.Follow = _player.transform;
+        SoundManager.instance.PlayBGM(LevelManager.instance.levelMusic , LevelManager.instance.musicVolume);
+        LevelManager.instance.camera.Follow = _player.transform;
     }
 
     private IEnumerator MovePlayer()

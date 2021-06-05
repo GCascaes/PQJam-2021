@@ -38,7 +38,6 @@ public class PlayerUI : MonoBehaviour
 
     public void UpdateHeartBar(float maxHp, float currentHP)
     {
-        Debug.Log(currentHP);
         float hpPercentage = currentHP / maxHp;
 
         float percentagePerHeart = 1f/(float)hearts.Count;

@@ -54,8 +54,9 @@ public class SoundManager : MonoBehaviour
 
         if (audioClip)
         {
-            if (audioClip == bgmAudioSource.clip)
-                return;
+            //if (audioClip == bgmAudioSource.clip)
+            //    return;
+
             bgmAudioSource.volume = maxBgmVolume * volume;
             bgmAudioSource.pitch = pitch;
             bgmAudioSource.loop = loop;

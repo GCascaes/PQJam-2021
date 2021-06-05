@@ -170,6 +170,9 @@ TextureImporter:
   - first:
       213: 1404933446938508320
     second: House
+  - first:
+      213: 3892189132631182931
+    second: Tutorial_Shot
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1409,6 +1412,27 @@ TextureImporter:
       bones: []
       spriteID: 02cb5ddb6835f7310800000000000000
       internalID: 1404933446938508320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutorial_Shot
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 389
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e0e19f465d30630800000000000000
+      internalID: 3892189132631182931
       vertices: []
       indices: 
       edges: []

@@ -169,6 +169,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a5343f3c0324f04a99ea7af68d66d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileDamage: 10
+  projectileDamage: 99999
   shotParticlePrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 3082499236936779716, guid: 687691f2dd453514da61775373eb5f55, type: 3}

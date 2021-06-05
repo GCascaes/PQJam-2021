@@ -290,6 +290,33 @@ TextureImporter:
   - first:
       213: -4412530033602247060
     second: music_3
+  - first:
+      213: -6784760887088292975
+    second: RabbitAngry_Idle_0
+  - first:
+      213: 1380207025676884003
+    second: RabbitAngry_Idle_1
+  - first:
+      213: -3414083989709710222
+    second: RabbitAngry_Idle_2
+  - first:
+      213: 1085384838482270021
+    second: RabbitAngry_Idle_3
+  - first:
+      213: 2055742757583872008
+    second: RabbitAngry_Walking_0
+  - first:
+      213: 4726977542391243371
+    second: RabbitAngry_Walking_1
+  - first:
+      213: -951058532269445753
+    second: RabbitAngry_Walking_2
+  - first:
+      213: -8300838849972273836
+    second: RabbitAngry_Jump_0
+  - first:
+      213: -1758110064620784475
+    second: RabbitAngry_Jump_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2402,6 +2429,195 @@ TextureImporter:
       bones: []
       spriteID: c664562205b83c2c0800000000000000
       internalID: -4412530033602247060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 210
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.7619048, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b532f9befa7d1a0800000000000000
+      internalID: -6784760887088292975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 210
+        width: 19
+        height: 28
+      alignment: 9
+      pivot: {x: 0.7368421, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32818f92afa772310800000000000000
+      internalID: 1380207025676884003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 210
+        width: 21
+        height: 27
+      alignment: 9
+      pivot: {x: 0.7619048, y: 0.25925925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27c110033bcbe90d0800000000000000
+      internalID: -3414083989709710222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 210
+        width: 21
+        height: 27
+      alignment: 9
+      pivot: {x: 0.7619048, y: 0.25925925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 547945e82cf001f00800000000000000
+      internalID: 1085384838482270021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Walking_0
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 210
+        width: 21
+        height: 26
+      alignment: 9
+      pivot: {x: 0.7619048, y: 0.26923078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8006e5f6527778c10800000000000000
+      internalID: 2055742757583872008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Walking_1
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 210
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.7619048, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62aa7bb709999140800000000000000
+      internalID: 4726977542391243371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Walking_2
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 209
+        width: 22
+        height: 27
+      alignment: 9
+      pivot: {x: 0.72727275, y: 0.2962963}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78da977cd492dc2f0800000000000000
+      internalID: -951058532269445753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 209
+        width: 21
+        height: 28
+      alignment: 9
+      pivot: {x: 0.7619048, y: 0.25}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45df3a1bb0f7dcc80800000000000000
+      internalID: -8300838849972273836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RabbitAngry_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 209
+        width: 21
+        height: 27
+      alignment: 9
+      pivot: {x: 0.7619048, y: 0.25925925}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a43d3a0630f997e0800000000000000
+      internalID: -1758110064620784475
       vertices: []
       indices: 
       edges: []

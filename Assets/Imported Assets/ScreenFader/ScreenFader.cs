@@ -34,7 +34,7 @@ public class ScreenFader : MonoBehaviour
             StartCoroutine(FadeIn(startFadeInTime));
     }
 
-    public IEnumerator FadeIn(float timeToFadeIn, OnFadeEnd callback = null)
+    public IEnumerator FadeIn(float timeToFadeIn = .5f, OnFadeEnd callback = null)
     {
         executeFadeIn = true;
 
@@ -57,7 +57,7 @@ public class ScreenFader : MonoBehaviour
             callback.Invoke();
     }
 
-    public IEnumerator FadeOut(float timeToFadeOut, OnFadeEnd callback = null)
+    public IEnumerator FadeOut(float timeToFadeOut = .5f, OnFadeEnd callback = null)
     {
         executeFadeIn = false;
 

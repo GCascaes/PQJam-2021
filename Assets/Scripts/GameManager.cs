@@ -10,15 +10,13 @@ public class GameManager : MonoBehaviour
     public int numOfShields = 3;
     public int numOfDeaths { get; private set; }
 
-
-    static GameManager _instance;
-
-    public static GameManager instance { get { return _instance; } }
+    bool deathStarted;
+    public static GameManager instance { get; private set; }
 
     private void Awake()
     {
-        if (_instance == null)
-            _instance = this;
+        if (instance == null)
+            instance = this;
         else
             Destroy(gameObject);
     }
@@ -30,17 +28,24 @@ public class GameManager : MonoBehaviour
 
     public void Death()
     {
+        if (deathStarted)
+            return;
+        deathStarted = true;
         numOfDeaths++;
         StartCoroutine(_Death());
     }
 
     private IEnumerator _Death()
     {
+        
         WaitForSeconds wait = new WaitForSeconds(1f);
         yield return wait;
         SoundManager.instance.FadeBGM(1);
         yield return ScreenFader.instance.FadeOut(1f);
         yield return wait;
-        Loading.LoadScene(SceneManager.GetActiveScene().name);
+        string sceneToLoad = SceneManager.GetActiveScene().name;
+        Loading.LoadScene(sceneToLoad);
+        deathStarted = false;
+
     }
 }

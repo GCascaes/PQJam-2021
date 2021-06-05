@@ -47,7 +47,8 @@ public class LevelManager : MonoBehaviour
         }
         yield return null;
         player.GetComponent<Animator>().SetBool("Win", true);
-        yield return new WaitForSeconds(2);
+        SoundManager.instance.PlaySFX(GameManager.instance.endLevelMusic, GameManager.instance.endLevelMusicVolume);
+        yield return new WaitForSeconds(GameManager.instance.endLevelMusic.length);
         player.GetComponent<Animator>().SetBool("Win", false);
 
         StartCoroutine(ScreenFader.instance.FadeOut(1));

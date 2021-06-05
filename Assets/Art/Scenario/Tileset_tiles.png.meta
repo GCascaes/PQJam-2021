@@ -163,7 +163,7 @@ TextureImporter:
     second: Tileset_tiles_51
   - first:
       213: 8886767284980608362
-    second: Tutorial_Move
+    second: Tutorial_Left
   - first:
       213: -1891363463177349785
     second: Tutorial_Jump
@@ -173,6 +173,9 @@ TextureImporter:
   - first:
       213: 3892189132631182931
     second: Tutorial_Shot
+  - first:
+      213: -1433041816622915473
+    second: Tutorial_Right
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1354,7 +1357,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tutorial_Move
+      name: Tutorial_Left
       rect:
         serializedVersion: 2
         x: 28
@@ -1425,7 +1428,7 @@ TextureImporter:
         width: 28
         height: 22
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1433,6 +1436,27 @@ TextureImporter:
       bones: []
       spriteID: 35e0e19f465d30630800000000000000
       internalID: 3892189132631182931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutorial_Right
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 389
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6029e37f00dc1ce0800000000000000
+      internalID: -1433041816622915473
       vertices: []
       indices: 
       edges: []

@@ -8,7 +8,10 @@ public class GameManager : MonoBehaviour
     public float playerHealth;
     public int numOfHearts = 3;
     public int numOfShields = 3;
-    public int numOfDeaths { get; private set; }
+    public AudioClip endLevelMusic;
+    public float endLevelMusicVolume;
+
+    public int numOfDeaths;// { get; private set; }
 
     bool deathStarted;
     public static GameManager instance { get; private set; }

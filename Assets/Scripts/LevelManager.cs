@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] Transform playerEndLevelStartPosition;
     [SerializeField] Transform playerEndLevelEndPosition;
     [SerializeField] float playerEndLevelSpeed = 30;
+    [SerializeField] AudioClip[] otherMusics;
 
     public AudioClip levelMusic { get { return _levelMusic; } }
     public float musicVolume { get { return _musicVolume; } }
@@ -57,5 +58,13 @@ public class LevelManager : MonoBehaviour
         {
             yield return null;
         }
+    }
+
+    public void ChangeMusic(int id)
+    {
+        if (otherMusics == null || otherMusics.Length > id || id<0)
+            return;
+
+        SoundManager.instance.PlayBGM(otherMusics[id], SoundManager.instance.currentBGMVolume);
     }
 }

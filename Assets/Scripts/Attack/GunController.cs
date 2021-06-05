@@ -27,11 +27,12 @@ public class GunController : MonoBehaviour
 
     private bool canShoot;
     private bool shouldShoot;
+    private bool shootingRoutineRunning = false;
     private float shootPeriod;
     private float lastShotTime;
     private Animator animator;
 
-    public bool IsShooting { get; private set; } = false; // TODO IsShooting tá bugado, e o player consegue flippar quando tá atirando
+    public bool IsShooting { get; private set; } = false;
 
     protected virtual void Awake()
     {
@@ -54,7 +55,7 @@ public class GunController : MonoBehaviour
         }
 
         bool shouldStartShootingThisFrame = shouldShoot
-            && !IsShooting
+            && !shootingRoutineRunning
             && (Time.realtimeSinceStartup - lastShotTime > shootPeriod || lastShotTime == 0);
 
         if (shouldStartShootingThisFrame)
@@ -87,6 +88,7 @@ public class GunController : MonoBehaviour
 
     private IEnumerator StartShooting()
     {
+        shootingRoutineRunning = true;
         IsShooting = true;
         UpdateAnimatorShooting(IsShooting);
 
@@ -112,7 +114,8 @@ public class GunController : MonoBehaviour
         if (!continuousShootingAnimation || !shouldShoot)
             UpdateAnimatorShooting(false);
 
-        IsShooting = false;
+        IsShooting = shouldShoot;
+        shootingRoutineRunning = false;
     }
 
     private void UpdateAnimator()

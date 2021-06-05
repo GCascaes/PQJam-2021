@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 
 public class BossAi : MonoBehaviour
@@ -8,13 +7,22 @@ public class BossAi : MonoBehaviour
     private float punchPrepareTime;
     [SerializeField]
     private float punchEndTime;
+    [SerializeField]
+    private float hadoukenInterval;
+    [SerializeField]
+    [Range(0, 100)]
+    private int punchChance;
+    [SerializeField]
+    private float idleTimeBetweenAttacks;
 
     private Animator animator;
     private HealthController healthController;
     private GunController gunController;
     private ContactDamageController contactDamageController;
     private GroundMovementController movementController;
-    
+
+    private GameObject target;
+
     private IFollowMovementAi followMovementAi;
 
     private bool bossStarted = false;
@@ -35,8 +43,10 @@ public class BossAi : MonoBehaviour
         if (bossStarted || !collision.CompareTag("Player"))
             return;
 
+        target = collision.gameObject;
+
         if (followMovementAi != null)
-            followMovementAi.FollowTarget(collision.gameObject);
+            followMovementAi.FollowTarget(target);
 
         StartCoroutine(BossTestCoroutine());
     }
@@ -51,14 +61,17 @@ public class BossAi : MonoBehaviour
 
         while (true)
         {
-            yield return Punch();
-            yield return new WaitForSecondsRealtime(3);
-            gunController.Shoot();
-            yield return new WaitForSecondsRealtime(3);
-            movementController.SmoothMove(0, true, false);
-            gunController.Shoot();
-            yield return new WaitForSecondsRealtime(3);
+            yield return ShouldPunch() && Random.Range(0, 100) <= punchChance ? Punch() : Hadouken();
+            yield return new WaitForSecondsRealtime(idleTimeBetweenAttacks);
         }
+    }
+
+    private bool ShouldPunch()
+    {
+        if (target is null)
+            return false;
+
+        return Mathf.Abs(target.transform.position.x - transform.position.x) < movementController.DashDistance;
     }
 
     private IEnumerator Punch()
@@ -73,5 +86,15 @@ public class BossAi : MonoBehaviour
 
         animator.SetBool("Punch", false);
         yield return new WaitForSecondsRealtime(punchEndTime);
+    }
+
+    private IEnumerator Hadouken()
+    {
+        gunController.Shoot();
+        yield return new WaitForSecondsRealtime(hadoukenInterval);
+        movementController.SmoothMove(0, true, false);
+        gunController.Shoot();
+        yield return new WaitForSecondsRealtime(hadoukenInterval);
+        gunController.Shoot();
     }
 }

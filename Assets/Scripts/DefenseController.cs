@@ -20,7 +20,10 @@ public class DefenseController : MonoBehaviour
 
     private bool isDefending = false;
     private bool canDefend;
-    private float defenseStartTime = 0;
+
+    private float defenseEnergyPercent = 100;
+    private float defenseEnergyConsumptionPerFixedUpdate;
+    private float defenseEnergyRestorePerFixedUpdate;
 
     private IEnumerator durationTrackerCoroutine;
     private IEnumerator cooldownTrackerCoroutine;
@@ -33,6 +36,10 @@ public class DefenseController : MonoBehaviour
     private void Start()
     {
         canDefend = defenseEnabled;
+
+        defenseEnergyConsumptionPerFixedUpdate = 100 * Time.fixedDeltaTime / defenseDuration;
+        defenseEnergyRestorePerFixedUpdate = 100 * Time.fixedDeltaTime / defenseCooldown;
+
         gunController = GetComponent<GunController>();
         movementController = GetComponent<IMovementController>();
     }
@@ -44,7 +51,6 @@ public class DefenseController : MonoBehaviour
 
         SpawnBarrier();
         isDefending = true;
-        defenseStartTime = Time.realtimeSinceStartup;
 
         if (defenseDisableShooting && gunController != null)
             gunController.DisableShooting();
@@ -76,27 +82,35 @@ public class DefenseController : MonoBehaviour
         TryStopCoroutine(durationTrackerCoroutine);
         TryStopCoroutine(cooldownTrackerCoroutine);
 
-        var cooldown = Mathf.Min(Time.realtimeSinceStartup - defenseStartTime, defenseCooldown);
-
-        cooldownTrackerCoroutine = DefenseCooldownTracker(cooldown);
+        cooldownTrackerCoroutine = DefenseCooldownTracker();
         StartCoroutine(cooldownTrackerCoroutine);
     }
 
     private IEnumerator DefenseDurationTracker()
     {
-        yield return new WaitForSecondsRealtime(defenseDuration);
+        do
+        {
+            defenseEnergyPercent -= defenseEnergyConsumptionPerFixedUpdate;
+            yield return new WaitForFixedUpdate();
+        }
+        while (isDefending && defenseEnergyPercent > 0);
+
         StopDefending();
     }
 
-    private IEnumerator DefenseCooldownTracker(float cooldown = 0)
+    private IEnumerator DefenseCooldownTracker()
     {
         var previousCanDefendState = canDefend;
         canDefend = false;
 
-        if (cooldown <= 0)
-            cooldown = defenseCooldown;
+        do
+        {
+            defenseEnergyPercent += defenseEnergyRestorePerFixedUpdate;
+            yield return new WaitForFixedUpdate();
+        }
+        while (defenseEnergyPercent < 100);
 
-        yield return new WaitForSecondsRealtime(cooldown);
+        defenseEnergyPercent = 100;
 
         canDefend = previousCanDefendState;
     }

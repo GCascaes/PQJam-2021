@@ -32,6 +32,10 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
         while (IsFollowing)
         {
+            if ((target.transform.position.x > transform.position.x && !movementController.FacingRight)
+                || (target.transform.position.x < transform.position.x && movementController.FacingRight))
+                movementController.Flip();
+
             while (Mathf.Abs(target.transform.position.x - transform.position.x)
                 > DistanceToKeepFromTarget + 0.5*Mathf.Pow(movementController.CurrentVelocity, 2)/movementController.Decceleration)
             {

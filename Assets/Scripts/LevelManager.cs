@@ -1,7 +1,5 @@
 using Cinemachine;
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour
@@ -12,7 +10,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] Transform playerEndLevelStartPosition;
     [SerializeField] Transform playerEndLevelEndPosition;
     [SerializeField] float playerEndLevelSpeed = 30;
+    [SerializeField] CheckPoint[] checkPoints;
     [SerializeField] AudioClip[] otherMusics;
+    [SerializeField] string nextLevel;
 
     public AudioClip levelMusic { get { return _levelMusic; } }
     public float musicVolume { get { return _musicVolume; } }
@@ -31,10 +31,13 @@ public class LevelManager : MonoBehaviour
     protected virtual void LevelStart()
     {
         SoundManager.instance.PlayBGM(_levelMusic, _musicVolume);
+        if (GameManager.instance.hasCheckPoint)
+            GameObject.FindGameObjectWithTag("Player").transform.position = GameManager.instance.spawnPosition;
     }
 
     public virtual void LevelEnd()
     {
+        
         StartCoroutine(_LevelEnd());
     }
 
@@ -43,6 +46,7 @@ public class LevelManager : MonoBehaviour
         SoundManager.instance.FadeBGM(.5f);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<InputController>().enabled = false;
+        player.GetComponent<HealthController>().EndLevel();
         while (!CutsceneManager.instance.MoveObjectToPosition(player.transform, playerEndLevelStartPosition.position, playerEndLevelSpeed))
         {
             yield return null;
@@ -58,6 +62,8 @@ public class LevelManager : MonoBehaviour
         {
             yield return null;
         }
+        GameManager.instance.hasCheckPoint = false;
+        Loading.LoadScene(nextLevel);
     }
 
     public void ChangeMusic(int id)

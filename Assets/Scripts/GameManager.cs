@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public float endLevelMusicVolume;
 
     public int numOfDeaths;// { get; private set; }
+    //public CheckPoint currentCheckPoint { get; set; }
+    public bool hasCheckPoint { get; set; }
+    public Vector3 spawnPosition { get; set; }
 
     bool deathStarted;
     public static GameManager instance { get; private set; }

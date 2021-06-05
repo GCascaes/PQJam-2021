@@ -142,4 +142,9 @@ public class HealthController : MonoBehaviour
 
         isInvincible = false;
     }
+
+    public void EndLevel()
+    {
+        isInvincible = true;
+    }
 }

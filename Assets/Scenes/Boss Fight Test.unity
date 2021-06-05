@@ -2138,34 +2138,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1573965013, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: maxHealth
-      value: 400
-      objectReference: {fileID: 0}
-    - target: {fileID: 1573965013, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: shouldDie
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: punchChance
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: punchDamage
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: tauntChance
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: akumaSpecialDuration
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: lowHealthVelocityIncreasePercent
-      value: 50
-      objectReference: {fileID: 0}
     - target: {fileID: 3176854046947999758, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_Name
       value: Princess

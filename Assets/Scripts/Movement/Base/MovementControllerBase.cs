@@ -52,6 +52,14 @@ public class MovementControllerBase : MonoBehaviour, IMovementController
         transform.Rotate(transform.up, 180);
     }
 
+    public virtual void IncreaseVelocity(float percentage)
+    {
+        maxVelocity *= 1 + percentage / 100;
+        maxShootingVelocity *= 1 + percentage / 100;
+        acceleration *= 1 + percentage / 100;
+        decceleration *= 1 + percentage / 100;
+    }
+
     protected void UpdateCurrentVelocity(float direction)
     {
         float targetVelocity = direction * MaxVelocity;

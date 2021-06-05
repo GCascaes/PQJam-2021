@@ -51,7 +51,7 @@ GameObject:
   - component: {fileID: 1573965023}
   - component: {fileID: 2056898212}
   - component: {fileID: 2056898213}
-  - component: {fileID: 2056898214}
+  - component: {fileID: 1428688368}
   m_Layer: 9
   m_Name: Princess
   m_TagString: Enemy
@@ -114,7 +114,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1188522602995718346, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
+  m_Sprite: {fileID: 6926496891276311611, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -175,7 +175,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &1573965014
 CapsuleCollider2D:
@@ -209,8 +209,8 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.6818182, y: 0.33333334}
-    oldSize: {x: 11, y: 15}
+    pivot: {x: 0.6818182, y: 0.32258064}
+    oldSize: {x: 11, y: 15.5}
     newSize: {x: 11, y: 15}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -250,10 +250,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 500
+  maxHealth: 200
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 0
+  deathParticle: {fileID: 0}
+  isPlayer: 0
 --- !u!114 &1573965016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,9 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103b533e3b999e842bc0f22704506274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxVelocity: 100
+  maxVelocity: 60
   maxShootingVelocity: 25
-  acceleration: 80
+  acceleration: 40
   decceleration: 300
   airControl: 1
   baseJumpHeight: 50
@@ -293,7 +295,7 @@ MonoBehaviour:
   doubleJumpVelocityModifier: 0
   doubleJumps: 0
   jumpAfterFallGraceTime: 0.1
-  dashVelocity: 150
+  dashVelocity: 80
   dashDistance: 80
   groundLayers:
     serializedVersion: 2
@@ -312,6 +314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   punchPrepareTime: 0.5
   punchEndTime: 0.5
+  hadoukenInterval: 1
+  punchChance: 70
+  idleTimeBetweenAttacks: 3
 --- !u!114 &2056898213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,11 +334,11 @@ MonoBehaviour:
   hasGun: 1
   continuousShootingAnimation: 0
   shootingAnimationDelay: 0.3
-  bulletVelocity: 120
+  bulletVelocity: 100
   shotsPerSecond: 1
   shootPoints:
   - {fileID: 1177249103}
---- !u!114 &2056898214
+--- !u!114 &1428688368
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -342,7 +347,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 3176854046947999758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e8af9a5ee4008443b047485ddc8e1c2, type: 3}
+  m_Script: {fileID: 11500000, guid: c1b22e381278d854fa448070f47b7447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToKeepFromTarget: 40
+  bulletHeigthToAvoid: 10
+  jumpCooldown: 2

@@ -5,6 +5,8 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 {
     private GroundMovementController movementController;
 
+    protected GroundMovementController MovementController => movementController;
+
     private void Awake()
     {
         movementController = GetComponent<GroundMovementController>();
@@ -17,9 +19,7 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
         while (IsLooking)
         {
-            if ((target.transform.position.x > transform.position.x && !movementController.FacingRight)
-                || (target.transform.position.x < transform.position.x && movementController.FacingRight))
-                movementController.Flip();
+            CheckShouldFlip(target);
 
             yield return new WaitForFixedUpdate();
         }
@@ -32,18 +32,29 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
         while (IsFollowing)
         {
-            if ((target.transform.position.x > transform.position.x && !movementController.FacingRight)
-                || (target.transform.position.x < transform.position.x && movementController.FacingRight))
-                movementController.Flip();
+            CheckShouldFlip(target);
 
-            while (Mathf.Abs(target.transform.position.x - transform.position.x)
-                > DistanceToKeepFromTarget + 0.5*Mathf.Pow(movementController.CurrentVelocity, 2)/movementController.Decceleration)
-            {
-                movementController.SmoothMove(Mathf.Sign(target.transform.position.x - transform.position.x), false, false);
-                yield return new WaitForFixedUpdate();
-            }
+            float direction = GetDirectionToFollowTarget(target);
+            
+            MovementController.SmoothMove(direction, false, false);
 
             yield return new WaitForFixedUpdate();
         }
+    }
+
+    protected float GetDirectionToFollowTarget(GameObject target)
+    {
+        float distanceToTarget = Mathf.Abs(target.transform.position.x - transform.position.x);
+        double deccelerationDistance = 0.5 * Mathf.Pow(MovementController.CurrentVelocity, 2) / MovementController.Decceleration;
+        float directionToTarget = Mathf.Sign(target.transform.position.x - transform.position.x);
+
+        return distanceToTarget > DistanceToKeepFromTarget + deccelerationDistance ? directionToTarget : 0;
+    }
+
+    protected void CheckShouldFlip(GameObject target)
+    {
+        if ((target.transform.position.x > transform.position.x && !movementController.FacingRight)
+            || (target.transform.position.x < transform.position.x && movementController.FacingRight))
+            movementController.Flip();
     }
 }

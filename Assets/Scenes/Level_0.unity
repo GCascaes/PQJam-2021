@@ -1753,7 +1753,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53.569843
+      value: -53.50292
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31986,7 +31986,7 @@ SpriteRenderer:
   m_SortingLayerID: -1409807661
   m_SortingLayer: -2
   m_SortingOrder: -1
-  m_Sprite: {fileID: 8886767284980608362, guid: e306c1aa7fdc79545852d45a8fb5ef95, type: 3}
+  m_Sprite: {fileID: -1433041816622915473, guid: e306c1aa7fdc79545852d45a8fb5ef95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -32135,10 +32135,6 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 50317107150628594, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 472.8
       objectReference: {fileID: 0}
@@ -32181,10 +32177,6 @@ PrefabInstance:
     - target: {fileID: 50317107150628599, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_Name
       value: 0_Bear_Tutorial (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 50317107150628599, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
@@ -32420,7 +32412,7 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 8886767284980608362, guid: e306c1aa7fdc79545852d45a8fb5ef95, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 14, y: 11}

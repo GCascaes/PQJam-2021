@@ -46,3 +46,6 @@ MonoBehaviour:
   playerHealth: 200
   numOfHearts: 3
   numOfShields: 3
+  endLevelMusic: {fileID: 8300000, guid: 19c8bd9fe3c62eb4fa53ae3648c035ad, type: 3}
+  endLevelMusicVolume: 0.5
+  numOfDeaths: 0

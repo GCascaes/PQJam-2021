@@ -36,8 +36,11 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator _Death()
     {
-        yield return new WaitForSeconds(1f);
+        WaitForSeconds wait = new WaitForSeconds(1f);
+        yield return wait;
+        SoundManager.instance.FadeBGM(1);
         yield return ScreenFader.instance.FadeOut(1f);
+        yield return wait;
         Loading.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

@@ -40,6 +40,7 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
     private float dashTime = 0;
     private float dashStartTime = 0;
 
+    public bool IsDashing => isDashing;
     public float DashTime => dashTime;
     public float DashDistance => dashDistance;
 
@@ -96,6 +97,14 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
             return;
 
         base.Flip();
+    }
+
+    public override void IncreaseVelocity(float percentage)
+    {
+        dashVelocity *= 1 + percentage / 100;
+        dashTime = dashDistance / dashVelocity;
+
+        base.IncreaseVelocity(percentage);
     }
 
     private void HandleMoving()

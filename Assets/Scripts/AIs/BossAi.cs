@@ -26,6 +26,7 @@ public class BossAi : MonoBehaviour
     private IFollowMovementAi followMovementAi;
 
     private bool bossStarted = false;
+    private bool akumaSpecialAllowed = false;
 
     private void Awake()
     {
@@ -36,6 +37,16 @@ public class BossAi : MonoBehaviour
         movementController = GetComponent<GroundMovementController>();
 
         followMovementAi = GetComponent<IFollowMovementAi>();
+
+        healthController.RegisterLowHealthAction(
+            HealthController.LowHealthLevel.HalfLife,
+            () => movementController.IncreaseVelocity(20));
+        healthController.RegisterLowHealthAction(
+            HealthController.LowHealthLevel.QuarterLife,
+            () => movementController.IncreaseVelocity(20));
+        healthController.RegisterLowHealthAction(
+            HealthController.LowHealthLevel.QuarterLife,
+            () => akumaSpecialAllowed = true);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

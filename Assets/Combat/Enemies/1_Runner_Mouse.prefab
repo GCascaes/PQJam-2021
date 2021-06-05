@@ -194,8 +194,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 30
+  maxHealth: 0
+  invincibilityTime: 0
+  invincibleFlashPower: 0
   shouldDie: 1
+  deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
+  isPlayer: 0
 --- !u!114 &5735325634708763476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +221,7 @@ MonoBehaviour:
   targetTag: Player
   gettingAngryTime: 0
   gettingCuteTime: 0
+  collidersToDisableWhenCute: []
 --- !u!114 &8262910216901876973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,16 +234,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 103b533e3b999e842bc0f22704506274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  airControl: 1
   maxVelocity: 80
   maxShootingVelocity: 30
   acceleration: 100
   decceleration: 300
+  airControl: 1
   baseJumpHeight: 0
   holdJumpHeightMultiplier: 0
   holdJumpFallAttenuation: 0
   doubleJumpVelocityModifier: 0
   doubleJumps: 0
+  jumpAfterFallGraceTime: 0
+  dashVelocity: 0
+  dashDistance: 0
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
@@ -256,7 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Player
   contactDamage: 10
-  collisionStayDamageAgainTime: 5
+  percentualDamage: 0
   contactDamageCollider: {fileID: 7954108574801676870}
   disableCollisionsWithTarget: 1
 --- !u!114 &1686181971588964377

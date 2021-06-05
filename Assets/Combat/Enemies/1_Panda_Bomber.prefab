@@ -264,8 +264,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 200
+  maxHealth: 0
+  invincibilityTime: 0
+  invincibleFlashPower: 0
   shouldDie: 1
+  deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
+  isPlayer: 0
 --- !u!114 &1341780812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,6 +292,9 @@ MonoBehaviour:
   holdJumpFallAttenuation: 0
   doubleJumpVelocityModifier: 0
   doubleJumps: 0
+  jumpAfterFallGraceTime: 0
+  dashVelocity: 0
+  dashDistance: 0
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
@@ -327,7 +334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Player
   contactDamage: 15
-  collisionStayDamageAgainTime: 3
+  percentualDamage: 0
   contactDamageCollider: {fileID: 1341780815}
   disableCollisionsWithTarget: 1
 --- !u!114 &6288591246992216417

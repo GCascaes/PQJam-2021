@@ -239,7 +239,7 @@ MonoBehaviour:
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
-  deathParticle: {fileID: 0}
+  deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
   isPlayer: 0
 --- !u!114 &5758239018606632913
 MonoBehaviour:

@@ -4,6 +4,9 @@ using UnityEngine;
 public class BossAi : MonoBehaviour
 {
     [SerializeField]
+    [Range(0, 100)]
+    private int punchChance;
+    [SerializeField]
     private float punchPrepareTime;
     [SerializeField]
     private float punchEndTime;
@@ -11,9 +14,13 @@ public class BossAi : MonoBehaviour
     private float hadoukenInterval;
     [SerializeField]
     [Range(0, 100)]
-    private int punchChance;
+    private int tauntChance;
+    [SerializeField]
+    private float tauntDuration;
     [SerializeField]
     private float idleTimeBetweenAttacks;
+    [SerializeField]
+    private float lowHealthVelocityIncreasePercent;
 
     private Animator animator;
     private HealthController healthController;
@@ -40,10 +47,10 @@ public class BossAi : MonoBehaviour
 
         healthController.RegisterLowHealthAction(
             HealthController.LowHealthLevel.HalfLife,
-            () => movementController.IncreaseVelocity(20));
+            () => movementController.IncreaseVelocity(lowHealthVelocityIncreasePercent));
         healthController.RegisterLowHealthAction(
             HealthController.LowHealthLevel.QuarterLife,
-            () => movementController.IncreaseVelocity(20));
+            () => movementController.IncreaseVelocity(lowHealthVelocityIncreasePercent));
         healthController.RegisterLowHealthAction(
             HealthController.LowHealthLevel.QuarterLife,
             () => akumaSpecialAllowed = true);
@@ -72,9 +79,21 @@ public class BossAi : MonoBehaviour
 
         while (true)
         {
-            yield return ShouldPunch() && Random.Range(0, 100) <= punchChance ? Punch() : Hadouken();
+            var attackChance = Random.Range(0, 100);
+
+            if (attackChance < tauntChance)
+                yield return Taunt();
+            else
+                yield return ShouldPunch() && attackChance <= punchChance ? Punch() : Hadouken();
+
             yield return new WaitForSecondsRealtime(idleTimeBetweenAttacks);
         }
+    }
+
+    private IEnumerator Taunt()
+    {
+        animator.SetTrigger("Taunt");
+        yield return new WaitForSecondsRealtime(tauntDuration);
     }
 
     private bool ShouldPunch()

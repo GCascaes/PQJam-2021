@@ -2146,6 +2146,14 @@ PrefabInstance:
       propertyPath: shouldDie
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1573965015, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 1573965015, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 1573965023, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: maxVelocity
       value: 40
@@ -2171,13 +2179,29 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: tauntChance
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: tauntDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: idleTimeBetweenAttacks
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: lowHealthVelocityIncreasePercent
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 2056898213, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: bulletVelocity
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 3176854046947999757, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1188522602995718346, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
     - target: {fileID: 3176854046947999758, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_Name
       value: Princess
@@ -2188,11 +2212,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3176854046948000242, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 133.5
+      value: 129.8
       objectReference: {fileID: 0}
     - target: {fileID: 3176854046948000242, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.3
+      value: -15.1
       objectReference: {fileID: 0}
     - target: {fileID: 3176854046948000242, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_LocalPosition.z

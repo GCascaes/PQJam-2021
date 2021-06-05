@@ -72,7 +72,12 @@ public class MovementControllerBase : MonoBehaviour, IMovementController
         {
             // Deccelerate in direction of movement
             float newVelocity = currentVelocity - direction * Decceleration * Time.fixedDeltaTime;
-            currentVelocity = Mathf.Sign(newVelocity) * Mathf.Max(Mathf.Abs(newVelocity), Mathf.Abs(targetVelocity));
+
+            var actualNewVelocity = currentVelocity >= 0
+                ? Mathf.Max(0, newVelocity, targetVelocity)
+                : Mathf.Min(0, newVelocity, targetVelocity);
+
+            currentVelocity = actualNewVelocity;
         }
         else if (direction == 0 && currentVelocity != 0
             || (direction > 0 && targetVelocity > currentVelocity && currentVelocity < 0)

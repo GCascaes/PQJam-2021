@@ -1077,6 +1077,10 @@ PrefabInstance:
       propertyPath: m_CollisionDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3176854046947999757, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6926496891276311611, guid: 56bd38b0be426d24b8a9f267ae8ab55e, type: 3}
     - target: {fileID: 3176854046947999758, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_Name
       value: Princess
@@ -1087,11 +1091,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3176854046948000242, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 143.8
+      value: 148
       objectReference: {fileID: 0}
     - target: {fileID: 3176854046948000242, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.8
+      value: -14.3
       objectReference: {fileID: 0}
     - target: {fileID: 3176854046948000242, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_LocalPosition.z

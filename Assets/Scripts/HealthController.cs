@@ -11,12 +11,15 @@ public class HealthController : MonoBehaviour
     private float invincibleFlashPower;
     [SerializeField]
     private bool shouldDie;
-    [SerializeField] ParticleSystem deathParticle;
-    [SerializeField] bool isPlayer;
+    [SerializeField]
+    private ParticleSystem deathParticle;
+    [SerializeField]
+    private bool isPlayer;
 
     private float currentHealth;
     private bool isInvincible = false;
-    Coroutine invencibleCoroutine;
+
+    private Coroutine invencibleCoroutine;
 
     private FlashController flashController;
 
@@ -48,20 +51,16 @@ public class HealthController : MonoBehaviour
 
         }
         else
-            MakeInvincible(.5f);
+            MakeInvincible(invincibilityTime);
 
         if (PlayerUI.instance != null && isPlayer)
             PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);
-
-        //StopAllCoroutines();
-        //StartCoroutine(InvincibilityCooldown(invincibilityTime));
     }
 
     public void MakeInvincible(float duration)
     {
         if (invencibleCoroutine != null)
             StopCoroutine(invencibleCoroutine);
-        //StopAllCoroutines();
         invencibleCoroutine = StartCoroutine(InvincibilityCooldown(duration));
     }
 

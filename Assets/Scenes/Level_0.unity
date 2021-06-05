@@ -21013,7 +21013,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onEnter:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1735442443}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: LevelEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!61 &1199079325
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21024,7 +21036,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -31813,11 +31825,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e60c052d38a8b54c81af675a80e6035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelMusic: {fileID: 8300000, guid: e53f3faed1d652c44964059356006a3f, type: 3}
+  _levelMusic: {fileID: 8300000, guid: d5d26a8e5bbe61d46af0fc6f922b2a58, type: 3}
   _musicVolume: 0.5
   _camera: {fileID: 521473696}
-  playerEndLevelStartPosition: {fileID: 0}
-  playerEndLevelEndPosition: {fileID: 0}
+  playerEndLevelStartPosition: {fileID: 99942763}
+  playerEndLevelEndPosition: {fileID: 1050677518}
   playerEndLevelSpeed: 55
   numOfDeathsToSpawnGun: 2
   gunSign: {fileID: 1477563331}
@@ -32177,6 +32189,10 @@ PrefabInstance:
     - target: {fileID: 50317107150628599, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
       propertyPath: m_Name
       value: 0_Bear_Tutorial (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 50317107150628599, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b322dd632a4192247bbba3633e4a82ea, type: 3}

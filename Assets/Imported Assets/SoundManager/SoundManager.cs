@@ -6,8 +6,8 @@ public class SoundManager : MonoBehaviour
     [Header("Audio Sources")]
     [SerializeField] AudioSource bgmAudioSource;
 
-    [Header("BGM Clips")]
-    [SerializeField] AudioClip[] bgmAudioClips;
+    //[Header("BGM Clips")]
+    //[SerializeField] AudioClip[] bgmAudioClips;
 
     [Header("Volume Settings")]
     [Range(0, 1)] [SerializeField] float maxBgmVolume = 1;
@@ -18,7 +18,7 @@ public class SoundManager : MonoBehaviour
 
     public float bgmVolume { get { return maxBgmVolume; } }
     public static SoundManager instance { get { return _instance; } }
-    public class MusicInQueue { public string bgmName; public bool saveInGameManager; }
+    //public class MusicInQueue { public string bgmName; public bool saveInGameManager; }
 
     public void Awake()
     {
@@ -26,12 +26,13 @@ public class SoundManager : MonoBehaviour
             _instance = this;
         else if (_instance != this)
             Destroy(gameObject);
+
+        SetBGMVolume(maxBgmVolume);
     }
 
     void Start()
     {
         DontDestroyOnLoad(gameObject);
-        SetBGMVolume(maxBgmVolume);
     }
 
     /// <summary>
@@ -102,25 +103,25 @@ public class SoundManager : MonoBehaviour
         bgmAudioSource.volume =  maxBgmVolume;
     }
 
-    public void CheckCurrentBGM()
-    {
-        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
-        {
-            PlayBGM(bgmAudioClips[(int)BGM_List.Tutorial]);
-        }
-        else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 2)
-        {
-            PlayBGM(bgmAudioClips[(int) BGM_List.Castle]);
-        }
+    //public void CheckCurrentBGM()
+    //{
+    //    if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
+    //    {
+    //        PlayBGM(bgmAudioClips[(int)BGM_List.Tutorial]);
+    //    }
+    //    else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 2)
+    //    {
+    //        PlayBGM(bgmAudioClips[(int) BGM_List.Castle]);
+    //    }
            
-    }
+    //}
     
-    private enum BGM_List
-    {
-        Tutorial,
-        Forest,
-        Mountain,
-        Cave,
-        Castle
-    }
+    //private enum BGM_List
+    //{
+    //    Tutorial,
+    //    Forest,
+    //    Mountain,
+    //    Cave,
+    //    Castle
+    //}
 }

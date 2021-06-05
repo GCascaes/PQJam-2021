@@ -29,6 +29,7 @@ public class LevelManager : MonoBehaviour
 
     protected virtual void LevelStart()
     {
+        SoundManager.instance.PlayBGM(_levelMusic, _musicVolume);
     }
 
     public virtual void LevelEnd()

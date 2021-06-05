@@ -48,6 +48,9 @@ public class HealthController : MonoBehaviour
         currentHealth = maxHealth;
     }
 
+    public void TakeDamagePercent(float akumaSpecialDamagePercent)
+        => TakeDamage(currentHealth * (akumaSpecialDamagePercent / 100));
+
     public void TakeDamage(float damage)
     {
         if (isInvincible && isPlayer)
@@ -122,7 +125,7 @@ public class HealthController : MonoBehaviour
             flashController.Flash(duration, invincibleFlashPower);
 
         yield return new WaitForSecondsRealtime(duration);
-        
+
         isInvincible = false;
     }
 }

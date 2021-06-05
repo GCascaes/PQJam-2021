@@ -15,6 +15,8 @@ public class ContactDamageController : MonoBehaviour
 
     private float currentContactDamage;
 
+    public Collider2D ContactDamageCollider => contactDamageCollider;
+
     private void Awake()
     {
         currentContactDamage = contactDamage;

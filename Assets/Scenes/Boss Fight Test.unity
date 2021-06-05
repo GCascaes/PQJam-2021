@@ -2191,6 +2191,10 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
+      propertyPath: akumaSpecialDamagePercent
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056898212, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: lowHealthVelocityIncreasePercent
       value: 200
       objectReference: {fileID: 0}

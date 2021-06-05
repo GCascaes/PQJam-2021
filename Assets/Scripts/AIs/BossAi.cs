@@ -18,6 +18,10 @@ public class BossAi : MonoBehaviour
     [SerializeField]
     private float tauntDuration;
     [SerializeField]
+    private float AkumaSpecialDuration;
+    [SerializeField]
+    private float akumaSpecialDamagePercent;
+    [SerializeField]
     private float idleTimeBetweenAttacks;
     [SerializeField]
     private float lowHealthVelocityIncreasePercent;
@@ -58,6 +62,12 @@ public class BossAi : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        CheckStartBoss(collision);
+        CheckAkumaSpecial(collision);
+    }
+
+    private void CheckStartBoss(Collider2D collision)
+    {
         if (bossStarted || !collision.CompareTag("Player"))
             return;
 
@@ -66,10 +76,23 @@ public class BossAi : MonoBehaviour
         if (followMovementAi != null)
             followMovementAi.FollowTarget(target);
 
-        StartCoroutine(BossTestCoroutine());
+        StartCoroutine(BossFightAi());
     }
 
-    private IEnumerator BossTestCoroutine()
+    private void CheckAkumaSpecial(Collider2D collision)
+    {
+        if (!akumaSpecialAllowed || !collision.CompareTag("Player"))
+            return;
+
+        if (!collision.IsTouching(contactDamageController.ContactDamageCollider))
+            return;
+
+        akumaSpecialAllowed = false;
+
+        AkumaSpecial();
+    }
+
+    private IEnumerator BossFightAi()
     {
         bossStarted = true;
 
@@ -81,10 +104,21 @@ public class BossAi : MonoBehaviour
         {
             var attackChance = Random.Range(0, 100);
 
-            if (attackChance < tauntChance)
-                yield return Taunt();
-            else
-                yield return ShouldPunch() && attackChance <= punchChance ? Punch() : Hadouken();
+            switch (attackChance)
+            {
+                case var _ when attackChance < tauntChance:
+                    yield return Taunt();
+                    break;
+                case var _ when attackChance > punchChance:
+                    yield return Hadouken();
+                    break;
+                case var _ when ShouldPunch():
+                    yield return Punch();
+                    break;
+                default:
+                    yield return Hadouken();
+                    break;
+            }
 
             yield return new WaitForSecondsRealtime(idleTimeBetweenAttacks);
         }
@@ -126,5 +160,14 @@ public class BossAi : MonoBehaviour
         gunController.Shoot();
         yield return new WaitForSecondsRealtime(hadoukenInterval);
         gunController.Shoot();
+    }
+
+    private void AkumaSpecial()
+    {
+        if (target.TryGetComponent<HealthController>(out var targetHealthController))
+        {
+            targetHealthController.TakeDamagePercent(akumaSpecialDamagePercent);
+
+        }
     }
 }

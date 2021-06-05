@@ -6,6 +6,9 @@ public class SoundManager : MonoBehaviour
     [Header("Audio Sources")]
     [SerializeField] AudioSource bgmAudioSource;
 
+    [Header("BGM Clips")]
+    [SerializeField] AudioClip[] bgmAudioClips;
+
     [Header("Volume Settings")]
     [Range(0, 1)] [SerializeField] float maxBgmVolume = 1;
     [Range(0, 1)] public float sfxVolume = 1;
@@ -99,5 +102,25 @@ public class SoundManager : MonoBehaviour
         bgmAudioSource.volume =  maxBgmVolume;
     }
 
+    public void CheckCurrentBGM()
+    {
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            PlayBGM(bgmAudioClips[(int)BGM_List.Tutorial]);
+        }
+        else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            PlayBGM(bgmAudioClips[(int) BGM_List.Castle]);
+        }
+           
+    }
     
+    private enum BGM_List
+    {
+        Tutorial,
+        Forest,
+        Mountain,
+        Cave,
+        Castle
+    }
 }

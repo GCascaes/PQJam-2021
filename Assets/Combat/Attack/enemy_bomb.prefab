@@ -155,5 +155,5 @@ MonoBehaviour:
   shotParticlePrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 3082499236936779716, guid: 687691f2dd453514da61775373eb5f55, type: 3}
   spawnAudio: {fileID: 8300000, guid: 8cfdbcdc3cf7cf44aa17aba82f7b5507, type: 3}
-  volume: 0.3
-  pitch: 1
+  volume: 0
+  pitch: -1

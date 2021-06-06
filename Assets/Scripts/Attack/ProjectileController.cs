@@ -63,7 +63,10 @@ public class ProjectileController : MonoBehaviour
             healthController.TakeDamage(projectileDamage);
 
         if (hitParticlePrefab != null)
+        {
+
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
+        }
 
         Destroy(gameObject);
     }

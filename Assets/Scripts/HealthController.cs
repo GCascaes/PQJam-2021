@@ -85,7 +85,7 @@ public class HealthController : MonoBehaviour
                 Instantiate(deathParticle.gameObject, transform.position, Quaternion.identity);
 
             if (isPlayer)
-                GameManager.instance.Death(maxHealth);
+                GameManager.instance.Death((int)maxHealth);
 
             if (onDeathActions.Any())
             {

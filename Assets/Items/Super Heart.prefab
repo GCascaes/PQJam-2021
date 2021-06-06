@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8733909182556193379}
   - component: {fileID: 6069972771754521697}
   - component: {fileID: 8733909182556193378}
+  - component: {fileID: 4158689085406449487}
   m_Layer: 0
   m_Name: Super Heart
   m_TagString: Untagged
@@ -146,3 +147,16 @@ MonoBehaviour:
   pickupAudio: {fileID: 8300000, guid: ed1292448f0751145bb7d262bf9bfbb1, type: 3}
   pickupAudioVolume: 1
   pickupAudioPitch: 1
+--- !u!114 &4158689085406449487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8733909182556193377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27de2cd9aad3f884995a7e045bda85e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 0

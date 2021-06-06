@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     bool deathStarted;
     public static GameManager instance { get; private set; }
+    public List<int> itemsId = new List<int>(); 
 
     private void Awake()
     {

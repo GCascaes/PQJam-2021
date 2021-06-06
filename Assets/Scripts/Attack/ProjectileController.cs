@@ -11,7 +11,7 @@ public class ProjectileController : MonoBehaviour
 
     private float bulletVelocity;
     
-    protected string shootingEntityTag { get; private set; }
+    protected string ShootingEntityTag { get; private set; }
 
     public static ProjectileController Instantiate(
         GameObject projectilePrefab,
@@ -23,7 +23,7 @@ public class ProjectileController : MonoBehaviour
         var projectile = Instantiate(projectilePrefab, position, rotation);
         var controller = projectile.GetComponent<ProjectileController>();
         controller.bulletVelocity = bulletVelocity;
-        controller.shootingEntityTag = shootingEntityTag;
+        controller.ShootingEntityTag = shootingEntityTag;
         return controller;
     }
 
@@ -40,7 +40,7 @@ public class ProjectileController : MonoBehaviour
     {
         if (collision.CompareTag("LevelBounds")
             || collision.CompareTag("Bullet")
-            || collision.CompareTag(shootingEntityTag)
+            || collision.CompareTag(ShootingEntityTag)
             || (collision.isTrigger && !collision.CompareTag("DefenseBarrier")))
             return;
 

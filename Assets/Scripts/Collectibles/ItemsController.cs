@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class ItemsController : MonoBehaviour
 {
-    private GunPowerUpController gunController;
+    private GunController gunController;
     private HealthController healthController;
+    private PowerUpController powerUpController;
 
     private void Awake()
     {
-        gunController = GetComponent<GunPowerUpController>();
+        gunController = GetComponent<GunController>();
         healthController = GetComponent<HealthController>();
+        powerUpController = GetComponent<PowerUpController>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,16 +32,16 @@ public class ItemsController : MonoBehaviour
                 GameManager.instance.AddMaxHealth(10 * collectible.Quantity);
                 break;
             case CollectibleType.SpreadShot:
-                if (gunController != null)
-                    gunController.ActivateSpreadShot();
+                if (powerUpController != null)
+                    powerUpController.CollectPowerUp(PowerUpType.SpreadShot);
                 break;
             case CollectibleType.SuperShot:
-                if (gunController != null)
-                    gunController.ActivateSuperShot();
+                if (powerUpController != null)
+                    powerUpController.CollectPowerUp(PowerUpType.SuperShot);
                 break;
             case CollectibleType.QuickShot:
-                if (gunController != null)
-                    gunController.ActivateQuickShot();
+                if (powerUpController != null)
+                    powerUpController.CollectPowerUp(PowerUpType.QuickShot);
                 break;
         }
 

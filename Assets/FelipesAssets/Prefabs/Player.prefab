@@ -212,7 +212,7 @@ MonoBehaviour:
   invincibilityTime: 0.5
   invincibleFlashPower: 3
   shouldDie: 0
-  deathAudio: {fileID: 0}
+  deathAudio: {fileID: 8300000, guid: 3b164c6b7d87e3b4ca5c09b03508cdd2, type: 3}
   deathAudioVolume: 0
   deathAudioPitch: 1
   deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
@@ -232,7 +232,7 @@ MonoBehaviour:
   maxVelocity: 100
   maxShootingVelocity: 100
   acceleration: 100
-  decceleration: 50000
+  decceleration: 500000
   airControl: 1
   baseJumpHeight: 15
   holdJumpHeightMultiplier: 3

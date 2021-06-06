@@ -16,8 +16,6 @@ public class PlayerUI : MonoBehaviour
     List<GameObject> hearts = new List<GameObject>();
     List<GameObject> shields = new List<GameObject>();
 
-
-
     static PlayerUI _instance;
     public static PlayerUI instance { get { return _instance; } }
 
@@ -31,6 +29,8 @@ public class PlayerUI : MonoBehaviour
 
     private void Start()
     {
+        powerUpSprite.gameObject.SetActive(false);
+
         for (int i = 0; i < GameManager.instance.numOfHearts; i++)
         {
             AddHeart();
@@ -78,6 +78,11 @@ public class PlayerUI : MonoBehaviour
 
     public void SetPowerUpUI (PowerUpType powerUp)
     {
+        if (powerUp == PowerUpType.None)
+            powerUpSprite.gameObject.SetActive(false);
+        else
+            powerUpSprite.gameObject.SetActive(true);
+
         powerUpSprite.sprite = powerUps
             .Where(x => x.powerUp == powerUp)
             .SingleOrDefault()

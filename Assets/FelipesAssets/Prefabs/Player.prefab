@@ -271,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5799282785307700406, guid: 272e15a24d20ef0428735fc7a47f5f86, type: 3}
   shootingEnabled: 1
-  hasGun: 0
+  hasGun: 1
   continuousShootingAnimation: 1
   shootingAnimationDelay: 0
   bulletVelocity: 150

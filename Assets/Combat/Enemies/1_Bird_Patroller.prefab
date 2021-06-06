@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 2093298414}
   - component: {fileID: 2093298416}
   - component: {fileID: 2093298417}
+  - component: {fileID: 3423235026150472278}
   m_Layer: 9
   m_Name: 1_Bird_Patroller
   m_TagString: Enemy
@@ -187,12 +188,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   maxHealth: 0
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
   deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
-  isPlayer: 0
+  destroyOnDeath: 1
 --- !u!114 &2093298415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,3 +267,17 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   PatrolGuardTime: 1
+--- !u!114 &3423235026150472278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3532821178869361176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f486be56e8c6348a7004b8bf7c4a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropChancePercent: 30
+  itemPrefab: {fileID: 4564424838903885222, guid: 9443ae1f0b0b7f047b55d5d1b431acc4, type: 3}

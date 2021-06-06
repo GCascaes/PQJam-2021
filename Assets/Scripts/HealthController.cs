@@ -7,6 +7,8 @@ using UnityEngine;
 public class HealthController : MonoBehaviour
 {
     [SerializeField]
+    private bool isPlayer;
+    [SerializeField]
     private float maxHealth;
     [SerializeField]
     private float invincibilityTime;
@@ -17,7 +19,7 @@ public class HealthController : MonoBehaviour
     [SerializeField]
     private ParticleSystem deathParticle;
     [SerializeField]
-    private bool isPlayer;
+    private bool destroyOnDeath = true;
 
     private float currentHealth;
     private bool isInvincible = false;
@@ -62,22 +64,8 @@ public class HealthController : MonoBehaviour
         var previousHealthPercent = 100 * currentHealth / maxHealth;
         currentHealth -= damage;
         var currentHealthPercent = 100 * currentHealth / maxHealth;
-
-        if (previousHealthPercent > 50 && currentHealthPercent <= 50)
-        {
-            foreach (var action in halfLifePercentHealthActions)
-                action.Invoke();
-        }
-        else if (previousHealthPercent > 25 && currentHealthPercent <= 25)
-        {
-            foreach (var action in quarterLifePercentHealthActions)
-                action.Invoke();
-        }
-        else if (previousHealthPercent > 10 && currentHealthPercent <= 10)
-        {
-            foreach (var action in lowLifePercentHealthActions)
-                action.Invoke();
-        }
+        
+        InvokeLowHealthActions(previousHealthPercent, currentHealthPercent);
 
         if (shouldDie && currentHealth <= 0)
         {
@@ -92,10 +80,9 @@ public class HealthController : MonoBehaviour
                 foreach (var action in onDeathActions)
                     action.Invoke();
             }
-            else
-            {
+
+            if (destroyOnDeath)
                 Destroy(gameObject);
-            }
         }
         else
         {
@@ -161,6 +148,25 @@ public class HealthController : MonoBehaviour
         yield return new WaitForSecondsRealtime(duration);
 
         isInvincible = false;
+    }
+    
+    private void InvokeLowHealthActions(float previousHealthPercent, float currentHealthPercent)
+    {
+        if (previousHealthPercent > 50 && currentHealthPercent <= 50)
+        {
+            foreach (var action in halfLifePercentHealthActions)
+                action.Invoke();
+        }
+        else if (previousHealthPercent > 25 && currentHealthPercent <= 25)
+        {
+            foreach (var action in quarterLifePercentHealthActions)
+                action.Invoke();
+        }
+        else if (previousHealthPercent > 10 && currentHealthPercent <= 10)
+        {
+            foreach (var action in lowLifePercentHealthActions)
+                action.Invoke();
+        }
     }
 
     private void UpdateUi()

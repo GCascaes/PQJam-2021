@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 8262910216901876973}
   - component: {fileID: 3550034175828987753}
   - component: {fileID: 1686181971588964377}
+  - component: {fileID: 7053498993299563198}
   m_Layer: 9
   m_Name: 1_Runner_Mouse
   m_TagString: Enemy
@@ -194,12 +195,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   maxHealth: 0
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
   deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
-  isPlayer: 0
+  destroyOnDeath: 1
 --- !u!114 &5735325634708763476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -279,3 +281,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c221157b7eb32e3468a08b8d28b5a54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7053498993299563198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3097244047824410357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0f486be56e8c6348a7004b8bf7c4a9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropChancePercent: 5
+  itemPrefab: {fileID: 4564424838903885222, guid: 9443ae1f0b0b7f047b55d5d1b431acc4, type: 3}

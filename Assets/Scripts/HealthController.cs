@@ -32,6 +32,7 @@ public class HealthController : MonoBehaviour
 
     private Coroutine invencibleCoroutine;
 
+    private DefenseController defenseController;
     private FlashController flashController;
 
     private readonly List<Action> halfLifePercentHealthActions = new List<Action>();
@@ -49,6 +50,7 @@ public class HealthController : MonoBehaviour
 
     private void Awake()
     {
+        defenseController = GetComponent<DefenseController>();
         flashController = GetComponent<FlashController>();
     }
 
@@ -64,7 +66,7 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (isInvincible)
+        if (isInvincible || (defenseController != null && defenseController.IsDefending))
             return;
 
         var previousHealthPercent = 100 * currentHealth / maxHealth;

@@ -33,6 +33,8 @@ public class DefenseController : MonoBehaviour
     private GunController gunController;
     private IMovementController movementController;
 
+    public bool IsDefending => isDefending;
+
     private void Start()
     {
         canDefend = defenseEnabled;

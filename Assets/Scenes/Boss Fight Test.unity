@@ -305,23 +305,6 @@ PrefabInstance:
       objectReference: {fileID: 709281143}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 781849b6e5b5ca04a98f83417e701744, type: 3}
---- !u!1 &389029069 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 18830164299632108, guid: d141e658a50d88149b70d59ff5106162, type: 3}
-  m_PrefabInstance: {fileID: 18830164619450658}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &389029070
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389029069}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13e05b978e465d647a5497cf103fde0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &400232873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3171,14 +3154,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1590928146, guid: d141e658a50d88149b70d59ff5106162, type: 3}
-      propertyPath: shouldDie
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1590928146, guid: d141e658a50d88149b70d59ff5106162, type: 3}
-      propertyPath: destroyOnDeath
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 18830164299632108, guid: d141e658a50d88149b70d59ff5106162, type: 3}
       propertyPath: m_Name
       value: Player

@@ -6,15 +6,16 @@ public class PowerUpController : MonoBehaviour
 
     private GunPowerUpController gunPowerUpController;
 
-    private void Awake()
+    private void Start()
     {
         gunPowerUpController = GetComponent<GunPowerUpController>();
+        PlayerUI.instance.SetPowerUpUI(currentlyHeldPowerUp);
     }
 
     public void CollectPowerUp(PowerUpType powerUpType)
     {
         currentlyHeldPowerUp = powerUpType;
-
+        PlayerUI.instance.SetPowerUpUI(powerUpType);
     }
 
     public void ActivatePowerUp()
@@ -36,5 +37,6 @@ public class PowerUpController : MonoBehaviour
         }
 
         currentlyHeldPowerUp = PowerUpType.None;
+        PlayerUI.instance.SetPowerUpUI(currentlyHeldPowerUp);
     }
 }

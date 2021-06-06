@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 8335621865432720638}
   - component: {fileID: 1590928144}
   - component: {fileID: 1590928145}
+  - component: {fileID: 389029070}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -115,7 +116,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5810904220289010611, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
+  m_Sprite: {fileID: 5110612511535974256, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -206,12 +207,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
   maxHealth: 200
   invincibilityTime: 0.5
   invincibleFlashPower: 3
-  shouldDie: 1
+  shouldDie: 0
+  deathAudio: {fileID: 0}
+  deathAudioVolume: 0
+  deathAudioPitch: 1
   deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
-  isPlayer: 1
+  destroyOnDeath: 0
 --- !u!114 &18830164299632118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -266,7 +271,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 5799282785307700406, guid: 272e15a24d20ef0428735fc7a47f5f86, type: 3}
   shootingEnabled: 1
-  hasGun: 1
+  hasGun: 0
   continuousShootingAnimation: 1
   shootingAnimationDelay: 0
   bulletVelocity: 150
@@ -312,6 +317,18 @@ MonoBehaviour:
   defenseCooldown: 1.5
   defenseDisableShooting: 1
   defenseDisableMoving: 1
+--- !u!114 &389029070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 18830164299632108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13e05b978e465d647a5497cf103fde0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3646962678488665546
 GameObject:
   m_ObjectHideFlags: 0

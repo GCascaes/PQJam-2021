@@ -234,6 +234,7 @@ MonoBehaviour:
   acceleration: 100
   decceleration: 500000
   airControl: 1
+  flipsWhileShooting: 1
   baseJumpHeight: 15
   holdJumpHeightMultiplier: 3
   holdJumpFallAttenuation: 0.1

@@ -7,6 +7,8 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
     [SerializeField]
     private bool airControl;
     [SerializeField]
+    private bool flipsWhileShooting = false;
+    [SerializeField]
     private float baseJumpHeight;
     [SerializeField]
     private float holdJumpHeightMultiplier;
@@ -151,8 +153,8 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
         if (animator != null)
             animator.SetFloat("Speed", Mathf.Abs(CurrentVelocity));
 
-        if (!IsShooting &&
-            ((CurrentVelocity > 0.1 && !FacingRight) || (CurrentVelocity < -0.1 && FacingRight)))
+        if ((flipsWhileShooting || !IsShooting)
+            && ((CurrentVelocity > 0.1 && !FacingRight) || (CurrentVelocity < -0.1 && FacingRight)))
             Flip();
 
         movementDirection = 0;

@@ -259,6 +259,9 @@ MonoBehaviour:
   gettingAngryTime: 2
   gettingCuteTime: 2
   collidersToDisableWhenCute: []
+  spritesToDisableWhenCute:
+  - {fileID: 5512438306651966700}
+  - {fileID: 6807689296599213992}
 --- !u!114 &7558024024199299144
 MonoBehaviour:
   m_ObjectHideFlags: 0

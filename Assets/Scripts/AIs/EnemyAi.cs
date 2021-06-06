@@ -25,6 +25,8 @@ public class EnemyAi : MonoBehaviour
     private float gettingCuteTime;
     [SerializeField]
     private List<Collider2D> collidersToDisableWhenCute;
+    [SerializeField]
+    private List<SpriteRenderer> spritesToDisableWhenCute;
 
     private EnemyState currentState;
     private readonly Queue<EnemyState> stateChangeCommandQueue = new Queue<EnemyState>();
@@ -55,6 +57,8 @@ public class EnemyAi : MonoBehaviour
         {
             foreach(var collider in collidersToDisableWhenCute)
                 collider.enabled = false;
+            foreach (var sprite in spritesToDisableWhenCute)
+                sprite.enabled = false;
         }
     }
 
@@ -143,6 +147,8 @@ public class EnemyAi : MonoBehaviour
 
         foreach (var collider in collidersToDisableWhenCute)
             collider.enabled = true;
+        foreach (var sprite in spritesToDisableWhenCute)
+            sprite.enabled = true;
 
         isAngry = true;
         yield return new WaitForSeconds(gettingAngryTime);
@@ -158,6 +164,8 @@ public class EnemyAi : MonoBehaviour
 
         foreach (var collider in collidersToDisableWhenCute)
             collider.enabled = false;
+        foreach (var sprite in spritesToDisableWhenCute)
+            sprite.enabled = false;
 
         isAngry = false;
         yield return new WaitForSeconds(gettingCuteTime);

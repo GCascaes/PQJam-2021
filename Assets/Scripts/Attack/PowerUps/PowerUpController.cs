@@ -2,7 +2,7 @@
 
 public class PowerUpController : MonoBehaviour
 {
-    private static PowerUpType currentlyHeldPowerUp;
+    private static PowerUpType currentlyHeldPowerUp = PowerUpType.None;
 
     private GunPowerUpController gunPowerUpController;
 
@@ -11,7 +11,11 @@ public class PowerUpController : MonoBehaviour
         gunPowerUpController = GetComponent<GunPowerUpController>();
     }
 
-    public void CollectPowerUp(PowerUpType powerUpType) => currentlyHeldPowerUp = powerUpType;
+    public void CollectPowerUp(PowerUpType powerUpType)
+    {
+        currentlyHeldPowerUp = powerUpType;
+
+    }
 
     public void ActivatePowerUp()
     {
@@ -30,5 +34,7 @@ public class PowerUpController : MonoBehaviour
                 gunPowerUpController.ActivateQuickShot();
                 break;
         }
+
+        currentlyHeldPowerUp = PowerUpType.None;
     }
 }

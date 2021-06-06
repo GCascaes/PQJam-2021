@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Linq;
 using UnityEngine;
 
 public class BossAi : MonoBehaviour
@@ -70,9 +69,12 @@ public class BossAi : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        CheckStartBoss(collision);
+        CheckStartBoss(collision.gameObject);
         CheckAkumaSpecial(collision);
     }
+
+    public void TryStartBoss()
+        => CheckStartBoss(GameObject.FindGameObjectWithTag("Player"));
 
     private void LevelUp(bool enableSpecial = false)
     {
@@ -83,12 +85,12 @@ public class BossAi : MonoBehaviour
             akumaSpecialAllowed = true;
     }
 
-    private void CheckStartBoss(Collider2D collision)
+    private void CheckStartBoss(GameObject target)
     {
-        if (bossStarted || !collision.CompareTag("Player"))
+        if (bossStarted || !target.CompareTag("Player"))
             return;
 
-        target = collision.gameObject;
+        this.target = target;
 
         if (followMovementAi != null)
             followMovementAi.FollowTarget(target);

@@ -485,11 +485,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 66.63173
+      value: -1458.0145
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -27.492645
+      value: -1930.8069
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.z
@@ -529,6 +529,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
+--- !u!20 &777865057 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 510543822584662595, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
+  m_PrefabInstance: {fileID: 777865056}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &784905587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1474,8 +1479,8 @@ Canvas:
   m_GameObject: {fileID: 1975897719}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 777865057}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1

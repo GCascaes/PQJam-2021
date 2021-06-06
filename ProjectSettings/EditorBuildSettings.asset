@@ -13,6 +13,9 @@ EditorBuildSettings:
     guid: c3641ae91e181f34d8106ef466cf2312
   - enabled: 1
     path: Assets/Scenes/Level_Final.unity
+    guid: b179a2e67e67fd64f9aa17cb74a01072
+  - enabled: 1
+    path: Assets/Scenes/Level_Boss.unity
     guid: ff9fd617136352544be722cdfea5ebf4
   - enabled: 1
     path: Assets/Imported Assets/Loading/Loading.unity

@@ -1703,7 +1703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521473694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -72.34762, y: -21.73625, z: 285.98538}
+  m_LocalPosition: {x: -72.347626, y: -21.73625, z: 285.98538}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 213705642}
@@ -1723,7 +1723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53.54355
+      value: -53.4755
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.y
@@ -31740,7 +31740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e60c052d38a8b54c81af675a80e6035, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _levelMusic: {fileID: 8300000, guid: d5d26a8e5bbe61d46af0fc6f922b2a58, type: 3}
+  _levelMusic: {fileID: 8300000, guid: 8ff7f3a35a0edbb4cb00792445bbc0c0, type: 3}
   _musicVolume: 0.5
   _camera: {fileID: 521473696}
   playerEndLevelSpeed: 55

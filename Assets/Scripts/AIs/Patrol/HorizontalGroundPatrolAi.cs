@@ -5,10 +5,9 @@ public class HorizontalGroundPatrolAi : PatrolBaseAi, IPatrolMovementAi
 {
     private GroundMovementController movementController;
 
-    protected override void Awake()
+    private void Awake()
     {
         movementController = GetComponent<GroundMovementController>();
-        base.Awake();
     }
 
     protected override IEnumerator MoveTo(Vector3 position)

@@ -1703,7 +1703,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521473694}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -72.347626, y: -21.73625, z: 285.98538}
+  m_LocalPosition: {x: -72.34762, y: -21.73625, z: 285.98538}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 213705642}
@@ -1723,7 +1723,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -53.50292
+      value: -53.54355
       objectReference: {fileID: 0}
     - target: {fileID: 510543822584662594, guid: 4e47b88cf58aa484d92d519d87091f44, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2544,10 +2544,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1590928143, guid: d141e658a50d88149b70d59ff5106162, type: 3}
-      propertyPath: hasGun
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 18830164299632108, guid: d141e658a50d88149b70d59ff5106162, type: 3}
       propertyPath: m_Name
       value: Player (1)
@@ -2600,13 +2596,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 18830164299632114, guid: d141e658a50d88149b70d59ff5106162, type: 3}
-      propertyPath: m_SpriteTilingProperty.pivot.x
-      value: 0.7619048
-      objectReference: {fileID: 0}
-    - target: {fileID: 18830164299632114, guid: d141e658a50d88149b70d59ff5106162, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 10.5
+    - target: {fileID: 8335621865432720638, guid: d141e658a50d88149b70d59ff5106162, type: 3}
+      propertyPath: hasGun
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d141e658a50d88149b70d59ff5106162, type: 3}

@@ -5,10 +5,9 @@ public class FlightPatrolAi : PatrolBaseAi, IPatrolMovementAi
 {
     private FlightMovementController movementController;
 
-    protected override void Awake()
+    private void Awake()
     {
         movementController = GetComponent<FlightMovementController>();
-        base.Awake();
     }
 
     protected override IEnumerator MoveTo(Vector3 position)

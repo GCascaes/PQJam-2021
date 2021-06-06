@@ -70,6 +70,12 @@ public class GunController : MonoBehaviour
         shouldShoot = true;
     }
 
+    public void StopShooting()
+    {
+        shouldShoot = false;
+        IsShooting = false;
+    }
+
     public void EquipGun()
     {
         hasGun = true;

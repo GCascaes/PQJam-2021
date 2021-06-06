@@ -7,11 +7,13 @@ public abstract class ShotAttackBaseAi : GunController, IAttackAi
     [SerializeField]
     private AimingCapability aimingCapability = AimingCapability.None;
 
-    private bool isEngaged = false;
-    protected bool IsEngaged => isEngaged;
-
     private IMovementController movementController;
     private GameObject target;
+
+    private Coroutine attackCoroutine;
+
+    private bool isEngaged = false;
+    protected bool IsEngaged => isEngaged;
 
     public enum AimingCapability
     {
@@ -50,8 +52,11 @@ public abstract class ShotAttackBaseAi : GunController, IAttackAi
     {
         this.target = target;
         isEngaged = true;
-        StopAllCoroutines();
-        StartCoroutine(AttackRoutine());
+
+        if (attackCoroutine != null)
+            StopCoroutine(attackCoroutine);
+
+        attackCoroutine = StartCoroutine(AttackRoutine());
     }
 
     public void StopAttacking()
@@ -59,7 +64,11 @@ public abstract class ShotAttackBaseAi : GunController, IAttackAi
         isEngaged = false;
         shootContinuously = false;
         target = null;
-        StopAllCoroutines();
+        StopShooting();
+
+        if (attackCoroutine != null)
+            StopCoroutine(attackCoroutine);
+
         UpdateAnimatorShooting(false);
     }
 

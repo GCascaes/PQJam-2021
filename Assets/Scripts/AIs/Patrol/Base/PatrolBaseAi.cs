@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public abstract class PatrolBaseAi : MonoBehaviour, IPatrolMovementAi
@@ -10,18 +11,12 @@ public abstract class PatrolBaseAi : MonoBehaviour, IPatrolMovementAi
     private float PatrolGuardTime = 0;
 
     private bool isPatroling = false;
-    private IEnumerator patrolCoroutine;
-
-    protected virtual void Awake()
-    {
-        patrolCoroutine = Patrol();
-    }
 
     public void StartPatroling()
     {
         isPatroling = true;
         StopAllCoroutines();
-        StartCoroutine(patrolCoroutine);
+        StartCoroutine(Patrol());
     }
 
     public void StopPatroling()
@@ -34,11 +29,20 @@ public abstract class PatrolBaseAi : MonoBehaviour, IPatrolMovementAi
 
     private IEnumerator Patrol()
     {
+        if (patrolPoints is null || !patrolPoints.Any())
+            yield break;
+
         while (isPatroling == true)
         {
             foreach (var point in patrolPoints)
             {
-                yield return StartCoroutine(MoveTo(point.transform.position));
+                if (point == null)
+                {
+                    yield return new WaitForFixedUpdate();
+                    continue;
+                }
+
+                yield return MoveTo(point.transform.position);
                 yield return new WaitForSecondsRealtime(PatrolGuardTime);
             }
         }

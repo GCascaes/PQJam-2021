@@ -34,6 +34,7 @@ public class HealthController : MonoBehaviour
 
     private float currentHealth;
     private bool isInvincible = false;
+    
 
     private Coroutine invencibleCoroutine;
 
@@ -98,6 +99,8 @@ public class HealthController : MonoBehaviour
 
             if (destroyOnDeath)
                 Destroy(gameObject);
+            if (isBoss)
+                onDefeat.Invoke();
         }
         else
         {
@@ -148,9 +151,9 @@ public class HealthController : MonoBehaviour
 
     public void RegisterDeathAction(Action action) => onDeathActions.Add(action);
 
-    public void EndLevel()
+    public void SetInvencible(bool value = true)
     {
-        isInvincible = true;
+        isInvincible = value;
     }
 
     private IEnumerator InvincibilityCooldown(float duration)

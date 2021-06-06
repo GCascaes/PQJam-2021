@@ -46,6 +46,8 @@ public class BossAi : MonoBehaviour
     [SerializeField]
     private GameObject akumaSpecialParticlePrefab;
     [SerializeField]
+    private GameObject impactParticlePrefab;
+    [SerializeField]
     private float idleTimeBetweenAttacks;
     [SerializeField]
     private float lowHealthVelocityIncreasePercent;
@@ -229,7 +231,15 @@ public class BossAi : MonoBehaviour
     private void AkumaSpecial()
     {
         Instantiate(akumaSpecialParticlePrefab, transform.position, transform.rotation);
-        StartCoroutine(ScreenFader.instance.Flash(Color.black, 1f));
+        StartCoroutine(FadeOut());
+
+    }
+
+    private IEnumerator FadeOut()
+    {
+        yield return ScreenFader.instance.FadeOut(.05f);
+        yield return new WaitForSeconds(0.5f);
+        yield return ScreenFader.instance.FadeIn(.1f);
 
     }
 

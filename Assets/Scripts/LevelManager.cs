@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour
         SoundManager.instance.FadeBGM(.5f);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         player.GetComponent<InputController>().enabled = false;
-        player.GetComponent<HealthController>().EndLevel();
+        player.GetComponent<HealthController>().SetInvencible();
         while (!CutsceneManager.instance.MoveObjectToPosition(player.transform, levelEnd.playerEndLevelStartPosition, playerEndLevelSpeed))
         {
             yield return null;

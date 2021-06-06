@@ -217,7 +217,7 @@ MonoBehaviour:
   deathAudioVolume: 0
   deathAudioPitch: 1
   deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
-  destroyOnDeath: 0
+  destroyOnDeath: 1
   onDefeat:
     m_PersistentCalls:
       m_Calls: []

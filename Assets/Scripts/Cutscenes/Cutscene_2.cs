@@ -21,6 +21,7 @@ public class Cutscene_2 : MonoBehaviour
     public void StartCutscene()
     {
         StartCoroutine(_StartCutscene());
+        princess.GetComponent<HealthController>().SetInvencible();
     }
     IEnumerator _StartCutscene()
     {
@@ -59,6 +60,7 @@ public class Cutscene_2 : MonoBehaviour
         player.GetComponent<GroundMovementController>().enabled = true;
         PlayerUI.instance.ShowUI();
         CutsceneManager.instance.EndCutscene();
+        princess.GetComponent<HealthController>().SetInvencible(false);
 
     }
 }

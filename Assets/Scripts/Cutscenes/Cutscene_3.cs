@@ -44,7 +44,7 @@ public class Cutscene_3 : MonoBehaviour
 
     Animator vultureAnimator;
     Animator[] guardsAnimator;
-
+    bool calledCutscene;
     void Start()
     {
         vultureAnimator = vulture.GetComponent<Animator>();
@@ -58,6 +58,10 @@ public class Cutscene_3 : MonoBehaviour
     
     public void StartCutscene()
     {
+        if (calledCutscene)
+            return;
+
+        calledCutscene = true;
         StartCoroutine(_StartCutscene());
     }
     IEnumerator _StartCutscene()
@@ -72,7 +76,7 @@ public class Cutscene_3 : MonoBehaviour
         player.GetComponent<InputController>().enabled = false;
         player.GetComponent<GroundMovementController>().enabled = false;
         player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
-        player.GetComponent<HealthController>().EndLevel();
+        player.GetComponent<HealthController>().SetInvencible();
         SoundManager.instance.FadeBGM(1);
         yield return new WaitForSeconds(0.7f);
 

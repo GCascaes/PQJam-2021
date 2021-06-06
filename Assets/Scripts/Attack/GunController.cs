@@ -6,7 +6,7 @@ using UnityEngine;
 public class GunController : MonoBehaviour
 {
     [SerializeField]
-    internal GameObject bulletPrefab;
+    protected GameObject bulletPrefab;
     [SerializeField]
     private bool shootingEnabled;
     [SerializeField]

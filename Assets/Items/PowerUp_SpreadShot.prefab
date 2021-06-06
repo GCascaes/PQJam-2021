@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7385523240463860112}
   - component: {fileID: 7385523240463860113}
   - component: {fileID: 7385523240463860118}
+  - component: {fileID: 5893906338487724959}
+  - component: {fileID: 1594985272064872555}
   m_Layer: 0
   m_Name: PowerUp_SpreadShot
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7385523240463860119}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.1, y: 23.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,3 +103,43 @@ MonoBehaviour:
   - {fileID: 8970114591845623677, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
   - {fileID: -2694260505849438984, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
   time: 0.2
+--- !u!61 &5893906338487724959
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385523240463860119}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.25, y: 0.25}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.4666667, y: 0.4814815}
+    oldSize: {x: 7.5, y: 13.5}
+    newSize: {x: 10.5, y: 11}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 7.5, y: 13.5}
+  m_EdgeRadius: 0
+--- !u!114 &1594985272064872555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7385523240463860119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38ce97b326c817742bf99f4c0a20f7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collectibleType: 3
+  quantity: 1

@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class ItemsController : MonoBehaviour
 {
-    private GunController gunController;
+    private GunPowerUpController gunController;
     private HealthController healthController;
 
     private void Awake()
     {
-        gunController = GetComponent<GunController>();
+        gunController = GetComponent<GunPowerUpController>();
         healthController = GetComponent<HealthController>();
     }
 
@@ -28,6 +28,18 @@ public class ItemsController : MonoBehaviour
                 break;
             case CollectibleType.SuperHeart:
                 GameManager.instance.AddMaxHealth(10 * collectible.Quantity);
+                break;
+            case CollectibleType.SpreadShot:
+                if (gunController != null)
+                    gunController.ActivateSpreadShot();
+                break;
+            case CollectibleType.SuperShot:
+                if (gunController != null)
+                    gunController.ActivateSuperShot();
+                break;
+            case CollectibleType.QuickShot:
+                if (gunController != null)
+                    gunController.ActivateQuickShot();
                 break;
         }
 

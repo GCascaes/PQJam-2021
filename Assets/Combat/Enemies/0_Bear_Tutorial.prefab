@@ -254,6 +254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTag: Player
   contactDamage: 10
+  percentualDamage: 0
   contactDamageCollider: {fileID: 717721879}
   disableCollisionsWithTarget: 1
 --- !u!114 &3277434494519544768
@@ -314,9 +315,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   maxHealth: 0
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
+  deathAudio: {fileID: 8300000, guid: 1f24b31d0de369d45b751d90a7c03d38, type: 3}
+  deathAudioVolume: 1
+  deathAudioPitch: 1
   deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
-  isPlayer: 0
+  destroyOnDeath: 1

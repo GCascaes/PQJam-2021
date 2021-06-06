@@ -56,7 +56,7 @@ public class HealthController : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        if (isInvincible && isPlayer)
+        if (isInvincible)
             return;
 
         var previousHealthPercent = 100 * currentHealth / maxHealth;
@@ -102,8 +102,7 @@ public class HealthController : MonoBehaviour
             MakeInvincible(invincibilityTime);
         }
 
-        if (PlayerUI.instance != null && isPlayer)
-            PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);
+        UpdateUi();
     }
 
     public void MakeInvincible(float duration)
@@ -111,6 +110,21 @@ public class HealthController : MonoBehaviour
         if (invencibleCoroutine != null)
             StopCoroutine(invencibleCoroutine);
         invencibleCoroutine = StartCoroutine(InvincibilityCooldown(duration));
+    }
+
+    public void RefillHealth(float amount)
+    {
+        if (currentHealth >= maxHealth)
+            return;
+
+        currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
+        UpdateUi();
+    }
+
+    public void SuperRefillHealth(float amount)
+    {
+        currentHealth = Mathf.Max(currentHealth, maxHealth + amount);
+        UpdateUi();
     }
 
     public void RegisterLowHealthAction(LowHealthLevel healthLevel, Action action)
@@ -141,5 +155,11 @@ public class HealthController : MonoBehaviour
         yield return new WaitForSecondsRealtime(duration);
 
         isInvincible = false;
+    }
+
+    private void UpdateUi()
+    {
+        if (PlayerUI.instance != null && isPlayer)
+            PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);
     }
 }

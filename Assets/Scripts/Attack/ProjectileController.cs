@@ -61,11 +61,10 @@ public class ProjectileController : MonoBehaviour
         if (collision.gameObject.TryGetComponent<HealthController>(out var healthController))
             healthController.TakeDamage(projectileDamage);
 
-        if (hitParticlePrefab != null)
-        {
+        // TODO Add camera shake
 
+        if (hitParticlePrefab != null)
             Instantiate(hitParticlePrefab, transform.position, transform.rotation);
-        }
 
         Destroy(gameObject);
     }

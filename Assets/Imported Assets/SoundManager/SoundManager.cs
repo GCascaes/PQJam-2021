@@ -60,14 +60,17 @@ public class SoundManager : MonoBehaviour
 
         if (audioClip)
         {
-            //if (audioClip == bgmAudioSource.clip)
-            //    return;
+            if (audioClip == bgmAudioSource.clip)
+                return;
 
             bgmAudioSource.volume = _maxBgmVolume * volume;
             bgmAudioSource.pitch = pitch;
             bgmAudioSource.loop = loop;
-            bgmAudioSource.clip = audioClip;
-            bgmAudioSource.Play();
+            if (audioClip != bgmAudioSource.clip)
+            {
+                bgmAudioSource.clip = audioClip;
+                bgmAudioSource.Play();
+            }
         }
         else
         {

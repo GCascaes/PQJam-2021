@@ -239,15 +239,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
+  isBoss: 0
   maxHealth: 20
-  invincibilityTime: 0
-  invincibleFlashPower: 0
+  invincibilityTime: 0.2
+  invincibleFlashPower: 3
   shouldDie: 1
   deathAudio: {fileID: 8300000, guid: 3b164c6b7d87e3b4ca5c09b03508cdd2, type: 3}
   deathAudioVolume: 1
   deathAudioPitch: 1
   deathParticle: {fileID: 269954556229664788, guid: dc2dbf6ad4415f949b14cc522f4a00da, type: 3}
   destroyOnDeath: 1
+  onDefeat:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &659917615
 MonoBehaviour:
   m_ObjectHideFlags: 0

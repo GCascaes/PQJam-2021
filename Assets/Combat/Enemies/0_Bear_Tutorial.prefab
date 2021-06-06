@@ -49,6 +49,7 @@ GameObject:
   - component: {fileID: 3277434494519544768}
   - component: {fileID: 2773148713492096343}
   - component: {fileID: 717721878}
+  - component: {fileID: 1106574099719164780}
   m_Layer: 9
   m_Name: 0_Bear_Tutorial
   m_TagString: Enemy
@@ -317,12 +318,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
+  isBoss: 0
   maxHealth: 30
-  invincibilityTime: 0
-  invincibleFlashPower: 0
+  invincibilityTime: 0.2
+  invincibleFlashPower: 3
   shouldDie: 1
   deathAudio: {fileID: 8300000, guid: 3b164c6b7d87e3b4ca5c09b03508cdd2, type: 3}
   deathAudioVolume: 1
   deathAudioPitch: 1
   deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
   destroyOnDeath: 1
+  onDefeat:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1106574099719164780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50317107150628599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d981c8eafb737864daa9722d11c37681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

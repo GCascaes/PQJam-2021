@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 5758239018606632922}
   - component: {fileID: 5758239018606632920}
   - component: {fileID: 142795474}
+  - component: {fileID: -6227443538163648385}
   m_Layer: 9
   m_Name: 1_Bear_Gunner
   m_TagString: Enemy
@@ -236,15 +237,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
+  isBoss: 0
   maxHealth: 30
-  invincibilityTime: 0
-  invincibleFlashPower: 0
+  invincibilityTime: 0.2
+  invincibleFlashPower: 3
   shouldDie: 1
   deathAudio: {fileID: 8300000, guid: 3b164c6b7d87e3b4ca5c09b03508cdd2, type: 3}
   deathAudioVolume: 1
   deathAudioPitch: 1
   deathParticle: {fileID: 269954556229664788, guid: 218c0530a73818540a96b0653a94fdfd, type: 3}
   destroyOnDeath: 1
+  onDefeat:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &5758239018606632913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -387,3 +392,15 @@ MonoBehaviour:
   - {fileID: 9118092177619433111, guid: b9fbcace0cc43ed45984070c3bfd5186, type: 3}
   - {fileID: 2023225859463519216, guid: b694ecbdf0516a543858bc6ad8adcb81, type: 3}
   - {fileID: 7385523240463860119, guid: 0412e213bd4e3c944baba688b5d11179, type: 3}
+--- !u!114 &-6227443538163648385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5758239018606632492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d981c8eafb737864daa9722d11c37681, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

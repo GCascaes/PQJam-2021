@@ -3101,6 +3101,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Super Heart
       objectReference: {fileID: 0}
+    - target: {fileID: 8733909182556193378, guid: ca8d776f55e9d3446be67ffa1e503744, type: 3}
+      propertyPath: quantity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8733909182556193381, guid: ca8d776f55e9d3446be67ffa1e503744, type: 3}
       propertyPath: m_RootOrder
       value: 16

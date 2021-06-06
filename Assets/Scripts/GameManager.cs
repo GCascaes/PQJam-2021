@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
         if(PlayerUI.instance)
             PlayerUI.instance.AddHeart();
     }
-    public void Death(int maxHealth)
+    public void Death()
     {
         if (deathStarted)
             return;

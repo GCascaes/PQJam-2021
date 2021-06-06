@@ -27,8 +27,7 @@ public class ItemsController : MonoBehaviour
                     healthController.RefillHealth(10 * collectible.Quantity);
                 break;
             case CollectibleType.SuperHeart:
-                if (healthController != null)
-                    healthController.SuperRefillHealth(10 * collectible.Quantity);
+                GameManager.instance.AddMaxHealth(10 * collectible.Quantity);
                 break;
         }
 

@@ -14,7 +14,6 @@ public class FlashController : MonoBehaviour
 
     public void Flash(float time = .5f, float flashPower = 3, float flashWaitTime = 0.05f)
     {
-        Debug.Log("flash");
         if (flashCoroutine != null)
             StopCoroutine(flashCoroutine);
 

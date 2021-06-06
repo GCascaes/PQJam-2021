@@ -85,7 +85,7 @@ public class HealthController : MonoBehaviour
                 Instantiate(deathParticle.gameObject, transform.position, Quaternion.identity);
 
             if (isPlayer)
-                GameManager.instance.Death(maxHealth);
+                GameManager.instance.Death();
 
             if (onDeathActions.Any())
             {
@@ -120,10 +120,11 @@ public class HealthController : MonoBehaviour
         currentHealth = Mathf.Min(currentHealth + amount, maxHealth);
         UpdateUi();
     }
-
-    public void SuperRefillHealth(float amount)
+    
+    public void SetMaxHealth(int value)
     {
-        currentHealth = Mathf.Max(currentHealth, maxHealth + amount);
+        maxHealth = value;
+        currentHealth = maxHealth;
         UpdateUi();
     }
 
@@ -145,6 +146,11 @@ public class HealthController : MonoBehaviour
 
     public void RegisterDeathAction(Action action) => onDeathActions.Add(action);
 
+    public void EndLevel()
+    {
+        isInvincible = true;
+    }
+
     private IEnumerator InvincibilityCooldown(float duration)
     {
         isInvincible = true;
@@ -161,15 +167,5 @@ public class HealthController : MonoBehaviour
     {
         if (PlayerUI.instance != null && isPlayer)
             PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);
-    }
-
-    public void EndLevel()
-    {
-        isInvincible = true;
-    }
-
-    public void SetMaxHealth(int value)
-    {
-        maxHealth = value;
     }
 }

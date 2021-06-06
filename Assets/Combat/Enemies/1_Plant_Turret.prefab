@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  maxHealth: 0
+  maxHealth: 20
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
@@ -271,6 +271,7 @@ MonoBehaviour:
   gettingCuteTime: 0.5
   collidersToDisableWhenCute:
   - {fileID: 659917617}
+  spritesToDisableWhenCute: []
 --- !u!114 &659917616
 MonoBehaviour:
   m_ObjectHideFlags: 0

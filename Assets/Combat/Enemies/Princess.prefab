@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  contactDamage: 10
+  contactDamage: 30
   percentualDamage: 0
   contactDamageCollider: {fileID: 1573965017}
   disableCollisionsWithTarget: 1

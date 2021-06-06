@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  maxHealth: 0
+  maxHealth: 20
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
@@ -227,6 +227,7 @@ MonoBehaviour:
   gettingAngryTime: 0
   gettingCuteTime: 0
   collidersToDisableWhenCute: []
+  spritesToDisableWhenCute: []
 --- !u!114 &8262910216901876973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -255,6 +256,9 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
+  jumpClip: {fileID: 0}
+  jumpVolume: 0
+  jumpPitch: 0
 --- !u!114 &3550034175828987753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  contactDamage: 10
+  contactDamage: 40
   percentualDamage: 0
   contactDamageCollider: {fileID: 7954108574801676870}
   disableCollisionsWithTarget: 1

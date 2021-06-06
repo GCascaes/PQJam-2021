@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  maxHealth: 0
+  maxHealth: 50
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
@@ -320,7 +320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f486be56e8c6348a7004b8bf7c4a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropChancePercent: 30
+  dropChancePercent: 5
   itemPrefab: {fileID: 4564424838903885222, guid: 9443ae1f0b0b7f047b55d5d1b431acc4, type: 3}
 --- !u!114 &1668383723
 MonoBehaviour:

@@ -266,7 +266,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  maxHealth: 0
+  maxHealth: 100
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
@@ -303,6 +303,9 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
+  jumpClip: {fileID: 0}
+  jumpVolume: 0
+  jumpPitch: 0
 --- !u!114 &1341780810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -325,6 +328,7 @@ MonoBehaviour:
   gettingAngryTime: 1
   gettingCuteTime: 2
   collidersToDisableWhenCute: []
+  spritesToDisableWhenCute: []
 --- !u!114 &1341780814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  contactDamage: 15
+  contactDamage: 50
   percentualDamage: 0
   contactDamageCollider: {fileID: 1341780815}
   disableCollisionsWithTarget: 1
@@ -378,5 +382,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f486be56e8c6348a7004b8bf7c4a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropChancePercent: 60
+  dropChancePercent: 20
   itemPrefab: {fileID: 4564424838903885222, guid: 9443ae1f0b0b7f047b55d5d1b431acc4, type: 3}

@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  maxHealth: 0
+  maxHealth: 30
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1
@@ -296,6 +296,9 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
+  jumpClip: {fileID: 0}
+  jumpVolume: 0
+  jumpPitch: 0
 --- !u!114 &5758239018606632493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  contactDamage: 10
+  contactDamage: 30
   percentualDamage: 0
   contactDamageCollider: {fileID: 5758239018606632926}
   disableCollisionsWithTarget: 1
@@ -377,5 +380,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0f486be56e8c6348a7004b8bf7c4a9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropChancePercent: 20
+  dropChancePercent: 5
   itemPrefab: {fileID: 4564424838903885222, guid: 9443ae1f0b0b7f047b55d5d1b431acc4, type: 3}

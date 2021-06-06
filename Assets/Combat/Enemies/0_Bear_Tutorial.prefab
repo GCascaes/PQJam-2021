@@ -253,7 +253,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetTag: Player
-  contactDamage: 10
+  contactDamage: 30
   percentualDamage: 0
   contactDamageCollider: {fileID: 717721879}
   disableCollisionsWithTarget: 1
@@ -279,6 +279,7 @@ MonoBehaviour:
   gettingAngryTime: 0
   gettingCuteTime: 0
   collidersToDisableWhenCute: []
+  spritesToDisableWhenCute: []
 --- !u!114 &2773148713492096343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  maxHealth: 0
+  maxHealth: 30
   invincibilityTime: 0
   invincibleFlashPower: 0
   shouldDie: 1

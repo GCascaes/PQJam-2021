@@ -9,9 +9,12 @@ public class PlayerUI : MonoBehaviour
     [SerializeField] GameObject shieldPrefab;
     [SerializeField] Transform heartParent;
     [SerializeField] Transform shieldParent;
-
+    [SerializeField] Image powerUpSprite;
+    [SerializeField] PowerUpSprite[] powerUps;
     List<GameObject> hearts = new List<GameObject>();
     List<GameObject> shields = new List<GameObject>();
+
+
 
     static PlayerUI _instance;
     public static PlayerUI instance { get { return _instance; } }
@@ -69,5 +72,29 @@ public class PlayerUI : MonoBehaviour
     public void ShowUI()
     {
         uiParent.SetActive(true);
+    }
+
+    public void SetPowerUpUI (PowerUpType powerUp)
+    {
+        if (powerUp == PowerUpType.None)
+            powerUpSprite.sprite = null;
+        else
+        {
+            foreach (var item in powerUps)
+            {
+                if(powerUp == item.powerUp)
+                    powerUpSprite.sprite = item.sprite;
+
+            }
+        }
+    }
+
+    [System.Serializable]
+    public class PowerUpSprite
+    {
+        public PowerUpType powerUp;
+        public Sprite sprite;
+
+
     }
 }

@@ -17,6 +17,12 @@ public class HealthController : MonoBehaviour
     [SerializeField]
     private bool shouldDie;
     [SerializeField]
+    private AudioClip deathAudio;
+    [SerializeField]
+    private float deathAudioVolume;
+    [SerializeField]
+    private float deathAudioPitch = 1;
+    [SerializeField]
     private ParticleSystem deathParticle;
     [SerializeField]
     private bool destroyOnDeath = true;
@@ -69,6 +75,8 @@ public class HealthController : MonoBehaviour
 
         if (shouldDie && currentHealth <= 0)
         {
+            if (deathAudio)
+                SoundManager.instance.PlaySFX(deathAudio, deathAudioVolume, deathAudioPitch);
             if (deathParticle)
                 Instantiate(deathParticle.gameObject, transform.position, Quaternion.identity);
 

@@ -191,6 +191,9 @@ TextureImporter:
   - first:
       213: 65855147690103144
     second: Torch_3
+  - first:
+      213: 8802317700287236872
+    second: Tutorial_Item
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1577,6 +1580,27 @@ TextureImporter:
       bones: []
       spriteID: 86113bc68e6f9e000800000000000000
       internalID: 65855147690103144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tutorial_Item
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 367
+        width: 28
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b01cdcf4d182a70800000000000000
+      internalID: 8802317700287236872
       vertices: []
       indices: 
       edges: []

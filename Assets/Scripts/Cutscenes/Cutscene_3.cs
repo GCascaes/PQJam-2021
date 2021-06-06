@@ -39,6 +39,8 @@ public class Cutscene_3 : MonoBehaviour
     [SerializeField] AudioClip moneySound;
     [SerializeField] float moneySoundVolume;
     [SerializeField] float moneySoundPitch = 1;
+    [SerializeField] GameObject[] battleColliders;
+
 
     Animator vultureAnimator;
     Animator[] guardsAnimator;
@@ -60,6 +62,10 @@ public class Cutscene_3 : MonoBehaviour
     }
     IEnumerator _StartCutscene()
     {
+        foreach (var item in battleColliders)
+        {
+            item.SetActive(false);
+        }
         LevelManager.instance.camera.Follow = cameraPosition;
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         PlayerUI.instance.HideUI();

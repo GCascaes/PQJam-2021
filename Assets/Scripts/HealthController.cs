@@ -3,11 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HealthController : MonoBehaviour
 {
     [SerializeField]
     private bool isPlayer;
+    [SerializeField]
+    private bool isBoss;
     [SerializeField]
     private float maxHealth;
     [SerializeField]
@@ -26,6 +29,8 @@ public class HealthController : MonoBehaviour
     private ParticleSystem deathParticle;
     [SerializeField]
     private bool destroyOnDeath = true;
+    [SerializeField]
+    UnityEvent onDefeat;
 
     private float currentHealth;
     private bool isInvincible = false;

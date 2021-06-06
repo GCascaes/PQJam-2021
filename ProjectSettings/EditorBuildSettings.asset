@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_Boss.unity
     guid: ff9fd617136352544be722cdfea5ebf4
   - enabled: 1
+    path: Assets/Scenes/EndGame.unity
+    guid: 42bef60906109ab4880e94d17d490826
+  - enabled: 1
     path: Assets/Imported Assets/Loading/Loading.unity
     guid: 0315bf772343d234dbbcf5cbba2ec780
   m_configObjects: {}

@@ -227,7 +227,11 @@ public class BossAi : MonoBehaviour
     }
 
     private void AkumaSpecial()
-        => Instantiate(akumaSpecialParticlePrefab, transform.position, transform.rotation);
+    {
+        Instantiate(akumaSpecialParticlePrefab, transform.position, transform.rotation);
+        StartCoroutine(ScreenFader.instance.Flash(Color.black, 1f));
+
+    }
 
     private void Death()
     {

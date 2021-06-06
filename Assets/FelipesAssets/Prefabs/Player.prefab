@@ -245,6 +245,9 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
+  jumpClip: {fileID: 8300000, guid: 7432c54c9f557fd47bdcd5cc50a9ce73, type: 3}
+  jumpVolume: 1
+  jumpPitch: 1
 --- !u!114 &5697218298145468524
 MonoBehaviour:
   m_ObjectHideFlags: 0

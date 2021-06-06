@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3637046309376716156}
   - component: {fileID: 3012550861077010406}
   - component: {fileID: 9176109375223624902}
+  - component: {fileID: 6049356284569778752}
   m_Layer: 0
   m_Name: Special_Particle
   m_TagString: Untagged
@@ -4874,3 +4875,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &6049356284569778752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5029203823688637057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8efa5e0ea1d2ee4e9a10e5dfc4d00e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+  spawnAudio: {fileID: 8300000, guid: 5f3535cebbefc504a80830255ea72d76, type: 3}
+  volume: 1
+  pitch: 1

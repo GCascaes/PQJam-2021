@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySound : MonoBehaviour
@@ -40,7 +38,7 @@ public class EnemySound : MonoBehaviour
         currentState = ai.CurrentState;
 
 
-        if (isAware)
+        if (isAware && awareClip != null)
         {
             isAware = false;
 
@@ -53,7 +51,7 @@ public class EnemySound : MonoBehaviour
         {
             isAttacking = false;
 
-            Invoke("EnemyGunSound", 0.5f);
+            //Invoke("EnemyGunSound", 0.5f);
         }
 
 

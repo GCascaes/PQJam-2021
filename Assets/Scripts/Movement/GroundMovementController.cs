@@ -25,6 +25,14 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
     private float dashDistance;
     [SerializeField]
     private LayerMask groundLayers;
+    [SerializeField]
+    private AudioClip jumpClip;
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float jumpVolume;
+    [SerializeField]
+    [Range(-1f, 1f)]
+    private float jumpPitch;
 
     private int currentJumps = 0;
     private bool shouldJump = false;
@@ -181,6 +189,9 @@ public class GroundMovementController : MovementControllerBase, IMovementControl
             jumpVelocity *= doubleJumpVelocityModifier;
 
         body.velocity = new Vector2(body.velocity.x, jumpVelocity);
+
+        if (jumpClip != null)
+            SoundManager.instance.PlaySFX(jumpClip, jumpVolume, jumpPitch);
 
         SetJumping(true);
         currentJumps++;

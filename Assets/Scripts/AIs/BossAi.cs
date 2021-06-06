@@ -4,6 +4,8 @@ using UnityEngine;
 public class BossAi : MonoBehaviour
 {
     [SerializeField]
+    private float introTime;
+    [SerializeField]
     [Range(0, 100)]
     private int punchChance;
     [SerializeField]
@@ -13,12 +15,30 @@ public class BossAi : MonoBehaviour
     [SerializeField]
     private float punchDamage;
     [SerializeField]
+    private AudioClip punchChargeClip;
+    [SerializeField]
+    private AudioClip punchClip;
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float punchVolume;
+    [SerializeField]
+    [Range(-1f, 1f)]
+    private float punchPitch;
+    [SerializeField]
     private float hadoukenInterval;
     [SerializeField]
     [Range(0, 100)]
     private int tauntChance;
     [SerializeField]
     private float tauntDuration;
+    [SerializeField]
+    private AudioClip tauntClip;
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float tauntVolume;
+    [SerializeField]
+    [Range(-1f, 1f)]
+    private float tauntPitch;
     [SerializeField]
     private float akumaSpecialDuration;
     [SerializeField]
@@ -116,7 +136,7 @@ public class BossAi : MonoBehaviour
         bossStarted = true;
 
         animator.SetBool("IntroPlaying", true);
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(introTime);
         animator.SetBool("IntroPlaying", false);
 
         while (true)
@@ -149,6 +169,10 @@ public class BossAi : MonoBehaviour
     private IEnumerator Taunt()
     {
         animator.SetTrigger("Taunt");
+
+        if (tauntClip != null)
+            SoundManager.instance.PlaySFX(tauntClip, tauntVolume, tauntPitch);
+
         yield return new WaitForSecondsRealtime(tauntDuration);
     }
 
@@ -163,8 +187,15 @@ public class BossAi : MonoBehaviour
     private IEnumerator Punch()
     {
         animator.SetBool("Punch", true);
+
+        if (punchChargeClip != null)
+            SoundManager.instance.PlaySFX(punchChargeClip, punchVolume, punchPitch);
+
         yield return new WaitForSecondsRealtime(punchPrepareTime);
-        
+
+        if (punchClip != null)
+            SoundManager.instance.PlaySFX(punchClip, punchVolume, punchPitch);
+
         movementController.Dash();
         healthController.MakeInvincible(movementController.DashTime);
 

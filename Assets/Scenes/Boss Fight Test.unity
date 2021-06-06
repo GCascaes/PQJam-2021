@@ -1240,6 +1240,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b9fbcace0cc43ed45984070c3bfd5186, type: 3}
+--- !u!1001 &952721767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1738217363784354612, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_Name
+      value: SoundManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 928.47565
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1356.1263
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1005.83575
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1738217363784354614, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 95a6f51ed80df9448a95e26ec2f67b73, type: 3}
 --- !u!1 &955035890
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,10 +2366,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1573965013, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
-      propertyPath: destroyOnDeath
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3176854046947999758, guid: f7ca33c999764de429c68fe101147ed0, type: 3}
       propertyPath: m_Name
       value: Princess

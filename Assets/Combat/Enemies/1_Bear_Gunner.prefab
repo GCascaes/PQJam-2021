@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 5758239018606632919}
   - component: {fileID: 5758239018606632922}
   - component: {fileID: 5758239018606632920}
-  - component: {fileID: -6196950752929531807}
   - component: {fileID: 142795474}
   m_Layer: 9
   m_Name: 1_Bear_Gunner
@@ -131,7 +130,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 50
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -268,6 +267,7 @@ MonoBehaviour:
   gettingAngryTime: 0.5
   gettingCuteTime: 0
   collidersToDisableWhenCute: []
+  spritesToDisableWhenCute: []
 --- !u!114 &5758239018606632912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,24 +365,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distanceToKeepFromTarget: 50
---- !u!114 &-6196950752929531807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5758239018606632492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a747db71127816458cdec43116830be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacking: 0
-  isAware: 0
-  attackClip: {fileID: 8300000, guid: 473d03fc48a77414ea0eb9bc1481103d, type: 3}
-  awareClip: {fileID: 8300000, guid: fbb1ec6c05910ff428ea0c547c4dbe9a, type: 3}
-  volume: 0.4
-  pitch: 1
 --- !u!114 &142795474
 MonoBehaviour:
   m_ObjectHideFlags: 0

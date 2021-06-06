@@ -18,8 +18,8 @@ public class ExplosionController : MonoBehaviour
 
     private void Start()
     {
-        SoundManager.instance.PlaySFX(spawnAudio, volume, pitch);
-
+        if (spawnAudio != null)
+            SoundManager.instance.PlaySFX(spawnAudio, volume, pitch);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

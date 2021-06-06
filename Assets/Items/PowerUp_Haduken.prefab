@@ -143,3 +143,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectibleType: 4
   quantity: 1
+  pickupAudio: {fileID: 8300000, guid: 4587908b877077e44993a325d3197fc9, type: 3}
+  pickupAudioVolume: 1
+  pickupAudioPitch: 1

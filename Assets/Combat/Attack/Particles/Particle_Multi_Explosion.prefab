@@ -4902,6 +4902,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 50
-  spawnAudio: {fileID: 8300000, guid: 8cfdbcdc3cf7cf44aa17aba82f7b5507, type: 3}
-  volume: 0.8
+  spawnAudio: {fileID: 8300000, guid: 27f1a06ff44b57d44aec457436aebd49, type: 3}
+  volume: 1
   pitch: 0.87

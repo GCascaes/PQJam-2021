@@ -250,12 +250,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   maxHealth: 400
   invincibilityTime: 0
-  invincibleFlashPower: 0
+  invincibleFlashPower: 0.3
   shouldDie: 1
+  deathAudio: {fileID: 0}
+  deathAudioVolume: 0
+  deathAudioPitch: 1
   deathParticle: {fileID: 0}
-  isPlayer: 0
+  destroyOnDeath: 0
 --- !u!114 &1573965016
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +305,9 @@ MonoBehaviour:
   groundLayers:
     serializedVersion: 2
     m_Bits: 8
+  jumpClip: {fileID: 8300000, guid: 7432c54c9f557fd47bdcd5cc50a9ce73, type: 3}
+  jumpVolume: 1
+  jumpPitch: 1
 --- !u!114 &2056898212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,13 +320,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0688329775ffb4a4581353fc4b6bffaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  punchChance: 100
+  introTime: 0
+  punchChance: 60
   punchPrepareTime: 0.5
   punchEndTime: 0.5
   punchDamage: 30
+  punchChargeClip: {fileID: 8300000, guid: e17fe39c22baa44418e570ec78ff12f9, type: 3}
+  punchClip: {fileID: 8300000, guid: fa737af7505857e4d8d579434e5f4b2f, type: 3}
+  punchVolume: 1
+  punchPitch: 1
   hadoukenInterval: 1
-  tauntChance: 0
+  tauntChance: 20
   tauntDuration: 1
+  tauntClip: {fileID: 8300000, guid: 78c776d64677ea442b18e9bafaec5654, type: 3}
+  tauntVolume: 1
+  tauntPitch: 1
   akumaSpecialDuration: 2
   akumaSpecialDamagePercent: 50
   akumaSpecialParticlePrefab: {fileID: 5029203823688637057, guid: 441dfbe9e5401744893bad945eca3bc0, type: 3}

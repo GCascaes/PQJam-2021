@@ -172,3 +172,6 @@ MonoBehaviour:
   projectileDamage: 99999
   shotParticlePrefab: {fileID: 0}
   hitParticlePrefab: {fileID: 3082499236936779716, guid: 687691f2dd453514da61775373eb5f55, type: 3}
+  spawnAudio: {fileID: 8300000, guid: 7f3418293ce3ac947aa8a2e904683f11, type: 3}
+  volume: 0
+  pitch: 1

@@ -13,6 +13,17 @@ public class ProjectileController : MonoBehaviour
     
     protected string shootingEntityTag { get; private set; }
 
+    [SerializeField]
+    private AudioClip spawnAudio;
+
+    [SerializeField]
+    [Range(0, 1f)]
+    private float volume;
+
+    [SerializeField]
+    [Range(-1, 1)]
+    private float pitch;
+
     public static ProjectileController Instantiate(
         GameObject projectilePrefab,
         Vector2 position,
@@ -33,7 +44,11 @@ public class ProjectileController : MonoBehaviour
         body.velocity = body.transform.right * bulletVelocity;
 
         if (shotParticlePrefab != null)
+        {
+            SoundManager.instance.PlaySFX(spawnAudio, volume, pitch);
+
             Instantiate(shotParticlePrefab, transform.position, transform.rotation);
+        }
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)

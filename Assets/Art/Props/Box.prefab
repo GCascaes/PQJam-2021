@@ -145,4 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionPrefab: {fileID: 7145050114450883896, guid: 054c33dbfc0ce0c4cbb55d4d88a3b042, type: 3}
-  minimumVelocityToExplode: 40
+  isArmed: 0

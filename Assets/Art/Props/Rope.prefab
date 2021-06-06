@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 103345191}
   - component: {fileID: 103345190}
   - component: {fileID: 103345192}
-  m_Layer: 10
+  - component: {fileID: 241882248}
+  m_Layer: 0
   m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 1.5, y: 17.716324}
+  m_Size: {x: 1.5, y: 21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -93,7 +94,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6812825585983996111}
-  m_BodyType: 2
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -124,13 +125,13 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1.5, y: 8}
-    newSize: {x: 1.5, y: 17.716324}
+    newSize: {x: 1.5, y: 21}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 17}
+  m_Size: {x: 1.5, y: 21}
   m_EdgeRadius: 0
 --- !u!114 &103345192
 MonoBehaviour:
@@ -144,5 +145,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a815527e43c445489034bcc209c0c86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 0.1
+  isPlayer: 0
+  maxHealth: 0
+  invincibilityTime: 0
+  invincibleFlashPower: 0
   shouldDie: 1
+  deathAudio: {fileID: 0}
+  deathAudioVolume: 0
+  deathAudioPitch: 1
+  deathParticle: {fileID: 0}
+  destroyOnDeath: 1
+--- !u!114 &241882248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6812825585983996111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83b358b2841c4214f980a0960ddd82fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bombToArm: {fileID: 0}

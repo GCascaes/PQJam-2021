@@ -317,6 +317,9 @@ TextureImporter:
   - first:
       213: -1758110064620784475
     second: RabbitAngry_Jump_1
+  - first:
+      213: -2863334806814322636
+    second: poster
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -2618,6 +2621,27 @@ TextureImporter:
       bones: []
       spriteID: 5a43d3a0630f997e0800000000000000
       internalID: -1758110064620784475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poster
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 110
+        width: 92
+        height: 127
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43012dee9246348d0800000000000000
+      internalID: -2863334806814322636
       vertices: []
       indices: 
       edges: []

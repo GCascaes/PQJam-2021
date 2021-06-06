@@ -181,5 +181,6 @@ public class Cutscene_3 : MonoBehaviour
         }
         SoundManager.instance.FadeBGM(1);
         yield return ScreenFader.instance.FadeOut(1);
+        Loading.LoadScene("EndGame");
     }
 }

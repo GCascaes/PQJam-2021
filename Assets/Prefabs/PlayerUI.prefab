@@ -334,12 +334,14 @@ MonoBehaviour:
   shieldParent: {fileID: 2385190775755017733}
   powerUpSprite: {fileID: 2093115133587607866}
   powerUps:
-  - powerUp: 1
-    sprite: {fileID: -5944424296857690179, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
+  - powerUp: 0
+    sprite: {fileID: -3743772804841676851, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
   - powerUp: 2
     sprite: {fileID: 3209412282082176085, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
   - powerUp: 3
     sprite: {fileID: 1260779978318923706, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
+  - powerUp: 1
+    sprite: {fileID: -5944424296857690179, guid: 64a0e23f3ccb82d468ad2eaf3f97eaf7, type: 3}
 --- !u!1 &7003243263332829548
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -76,25 +78,16 @@ public class PlayerUI : MonoBehaviour
 
     public void SetPowerUpUI (PowerUpType powerUp)
     {
-        if (powerUp == PowerUpType.None)
-            powerUpSprite.sprite = null;
-        else
-        {
-            foreach (var item in powerUps)
-            {
-                if(powerUp == item.powerUp)
-                    powerUpSprite.sprite = item.sprite;
-
-            }
-        }
+        powerUpSprite.sprite = powerUps
+            .Where(x => x.powerUp == powerUp)
+            .SingleOrDefault()
+            .sprite;
     }
 
-    [System.Serializable]
+    [Serializable]
     public class PowerUpSprite
     {
         public PowerUpType powerUp;
         public Sprite sprite;
-
-
     }
 }

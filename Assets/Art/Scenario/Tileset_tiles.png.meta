@@ -179,6 +179,18 @@ TextureImporter:
   - first:
       213: -4073285854003256913
     second: Door
+  - first:
+      213: 5317076598099190021
+    second: Torch_0
+  - first:
+      213: -3985778111471407801
+    second: Torch_1
+  - first:
+      213: -8732725028560073204
+    second: Torch_2
+  - first:
+      213: 65855147690103144
+    second: Torch_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1473,7 +1485,7 @@ TextureImporter:
         width: 32
         height: 33
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1481,6 +1493,90 @@ TextureImporter:
       bones: []
       spriteID: fa12383d818c877c0800000000000000
       internalID: -4073285854003256913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_0
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 379
+        width: 11
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501ae31befc0ac940800000000000000
+      internalID: 5317076598099190021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 379
+        width: 11
+        height: 17
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d2838dcebafa8c0800000000000000
+      internalID: -3985778111471407801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_2
+      rect:
+        serializedVersion: 2
+        x: 218
+        y: 378
+        width: 11
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e838fbad02fc680800000000000000
+      internalID: -8732725028560073204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Torch_3
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 378
+        width: 11
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86113bc68e6f9e000800000000000000
+      internalID: 65855147690103144
       vertices: []
       indices: 
       edges: []

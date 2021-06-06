@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         
         WaitForSeconds wait = new WaitForSeconds(1f);
         yield return wait;
-        SoundManager.instance.FadeBGM(1);
+        //SoundManager.instance.FadeBGM(1);
         yield return ScreenFader.instance.FadeOut(1f);
         yield return wait;
         string sceneToLoad = SceneManager.GetActiveScene().name;

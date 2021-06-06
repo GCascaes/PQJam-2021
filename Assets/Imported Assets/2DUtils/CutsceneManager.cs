@@ -48,10 +48,10 @@ public class CutsceneManager : MonoBehaviour
         bottomCut.DOLocalMove(bottomCutOffPosition, 0.2f);
     }
 
-    public bool MoveObjectToPosition(Transform obj, Vector3 position, float moveSpeed)
+    public bool MoveObjectToPosition(Transform obj, Vector3 position, float moveSpeed, float maxDistance =0.2f)
     {
         var movementThisFrame = moveSpeed * Time.deltaTime;
         obj.position = Vector2.MoveTowards(obj.position, position, movementThisFrame);
-        return (Vector3.Distance(obj.position, position) <= 0.2f);
+        return (Vector3.Distance(obj.position, position) <= maxDistance);
     }
 }

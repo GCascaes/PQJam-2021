@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public float playerHealth;
+    public int playerHealth;
     public int numOfHearts = 3;
     public int numOfShields = 3;
     public AudioClip endLevelMusic;
     public float endLevelMusicVolume;
 
     public int numOfDeaths;// { get; private set; }
+    //public CheckPoint currentCheckPoint { get; set; }
+    public bool hasCheckPoint { get; set; }
+    public Vector3 spawnPosition { get; set; }
 
     bool deathStarted;
     public static GameManager instance { get; private set; }
@@ -29,7 +32,15 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void Death()
+    public void AddMaxHealth(int amountToAdd)
+    {
+        playerHealth += amountToAdd;
+        GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().SetMaxHealth(playerHealth);
+        
+        if(PlayerUI.instance)
+            PlayerUI.instance.AddHeart();
+    }
+    public void Death(int maxHealth)
     {
         if (deathStarted)
             return;

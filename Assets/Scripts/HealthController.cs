@@ -85,7 +85,7 @@ public class HealthController : MonoBehaviour
                 Instantiate(deathParticle.gameObject, transform.position, Quaternion.identity);
 
             if (isPlayer)
-                GameManager.instance.Death();
+                GameManager.instance.Death(maxHealth);
 
             if (onDeathActions.Any())
             {
@@ -161,5 +161,15 @@ public class HealthController : MonoBehaviour
     {
         if (PlayerUI.instance != null && isPlayer)
             PlayerUI.instance.UpdateHeartBar(maxHealth, currentHealth);
+    }
+
+    public void EndLevel()
+    {
+        isInvincible = true;
+    }
+
+    public void SetMaxHealth(int value)
+    {
+        maxHealth = value;
     }
 }

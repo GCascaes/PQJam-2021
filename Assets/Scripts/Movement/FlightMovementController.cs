@@ -6,8 +6,14 @@ public class FlightMovementController : MovementControllerBase, IMovementControl
     [SerializeField]
     private float minSteer = 360;
 
-    private Vector2 currentDirection = Vector2.right;
+    private Vector2 currentDirection;
     private Vector2 desiredDirection = Vector2.zero;
+
+    protected override void Awake()
+    {
+        base.Awake();
+        currentDirection = FacingRight ? Vector2.right : Vector2.left;
+    }
 
     private void FixedUpdate() => HandleFlight();
 

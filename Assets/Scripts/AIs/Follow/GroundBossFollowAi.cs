@@ -37,6 +37,9 @@ public class GroundBossFollowAi : HorizontalGroundFollowAi, IFollowMovementAi
 
         while (IsFollowing)
         {
+            if (target == null)
+                yield break;
+
             CheckShouldFlip(target);
 
             float direction = GetDirectionToFollowTarget(target);

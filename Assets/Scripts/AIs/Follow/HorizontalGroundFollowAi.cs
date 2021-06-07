@@ -19,6 +19,9 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
         while (IsLooking)
         {
+            if (target == null)
+                yield break;
+
             CheckShouldFlip(target);
 
             yield return new WaitForFixedUpdate();
@@ -32,6 +35,9 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
         while (IsFollowing)
         {
+            if (target == null)
+                yield break;
+
             CheckShouldFlip(target);
 
             float direction = GetDirectionToFollowTarget(target);

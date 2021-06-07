@@ -286,7 +286,7 @@ MonoBehaviour:
   shotsPerSecond: 5
   shootPoints:
   - {fileID: 6434886058902154083}
-  quickShotBulletVelocity: 250
+  quickShotBulletVelocity: 150
   quickShotDuration: 10
   spreadShotExtraPoints:
   - {fileID: 3646962678488665546}

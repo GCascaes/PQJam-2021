@@ -35,10 +35,10 @@ public class PlayerUI : MonoBehaviour
         {
             AddHeart();
         }
-        for (int i = 0; i < GameManager.instance.numOfShields; i++)
-        {
-            AddShield();
-        }
+        //for (int i = 0; i < GameManager.instance.numOfShields; i++)
+        //{
+        //    AddShield();
+        //}
     }
 
     public void UpdateHeartBar(float maxHp, float currentHP)

@@ -20,6 +20,7 @@ public class ItemDropper : MonoBehaviour
                 if (Random.Range(0, 100) <= dropChancePercent)
                 {
                     int itemIndex = Random.Range(0, itemsPrefab.Count);
+                    Debug.Log(itemIndex);
                     var itemPrefab = itemsPrefab[itemIndex];
                     Instantiate(itemPrefab, transform.position, Quaternion.identity);
                 }

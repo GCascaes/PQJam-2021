@@ -14,11 +14,14 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
     protected override IEnumerator LookAt(GameObject target)
     {
-        if (movementController is null)
+        if (movementController == null)
             yield break;
 
         while (IsLooking)
         {
+            if (target == null)
+                yield break;
+
             CheckShouldFlip(target);
 
             yield return new WaitForFixedUpdate();
@@ -27,11 +30,14 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
     protected override IEnumerator Follow(GameObject target)
     {
-        if (movementController is null)
+        if (movementController == null)
             yield break;
 
         while (IsFollowing)
         {
+            if (target == null)
+                yield break;
+
             CheckShouldFlip(target);
 
             float direction = GetDirectionToFollowTarget(target);

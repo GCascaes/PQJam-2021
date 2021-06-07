@@ -12,7 +12,7 @@ public class HorizontalGroundPatrolAi : PatrolBaseAi, IPatrolMovementAi
 
     protected override IEnumerator MoveTo(Vector3 position)
     {
-        if (movementController is null)
+        if (movementController == null)
             yield break;
 
         while (Mathf.Abs(position.x - transform.position.x)

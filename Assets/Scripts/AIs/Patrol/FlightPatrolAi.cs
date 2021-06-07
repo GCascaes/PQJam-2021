@@ -12,7 +12,7 @@ public class FlightPatrolAi : PatrolBaseAi, IPatrolMovementAi
 
     protected override IEnumerator MoveTo(Vector3 position)
     {
-        if (movementController is null)
+        if (movementController == null)
             yield break;
 
         while (Vector2.Distance(position, transform.position)

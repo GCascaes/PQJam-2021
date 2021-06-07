@@ -32,11 +32,14 @@ public class GroundBossFollowAi : HorizontalGroundFollowAi, IFollowMovementAi
 
     protected override IEnumerator Follow(GameObject target)
     {
-        if (MovementController is null)
+        if (MovementController == null)
             yield break;
 
         while (IsFollowing)
         {
+            if (target == null)
+                yield break;
+
             CheckShouldFlip(target);
 
             float direction = GetDirectionToFollowTarget(target);

@@ -125,7 +125,7 @@ public class DefenseController : MonoBehaviour
 
     private bool TryStopCoroutine(IEnumerator coroutine)
     {
-        if (coroutine is null)
+        if (coroutine == null)
             return false;
 
         try

@@ -12,7 +12,7 @@ public class BombController : MonoBehaviour
         if (collision.gameObject.CompareTag("LevelBounds")
             || collision.gameObject.CompareTag("Bullet")
             || (collision.collider.isTrigger && !collision.gameObject.CompareTag("DefenseBarrier"))
-            || explosionPrefab is null
+            || explosionPrefab == null
             || !isArmed)
             return;
 

@@ -37,6 +37,7 @@ public class GameManager : MonoBehaviour
     public void AddMaxHealth(int amountToAdd)
     {
         playerHealth += amountToAdd;
+        numOfHearts++;
         GameObject.FindGameObjectWithTag("Player").GetComponent<HealthController>().SetMaxHealth(playerHealth);
         
         if(PlayerUI.instance)

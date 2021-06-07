@@ -180,7 +180,7 @@ public class BossAi : MonoBehaviour
 
     private bool ShouldPunch()
     {
-        if (target is null)
+        if (target == null)
             return false;
 
         return Mathf.Abs(target.transform.position.x - transform.position.x) < movementController.DashDistance;

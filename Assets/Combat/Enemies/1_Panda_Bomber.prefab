@@ -369,7 +369,7 @@ MonoBehaviour:
   hasGun: 1
   continuousShootingAnimation: 0
   shootingAnimationDelay: 0.25
-  bulletVelocity: 100
+  bulletVelocity: 50
   shotsPerSecond: 0.4
   shootPoints:
   - {fileID: 847006693}

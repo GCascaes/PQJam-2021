@@ -307,7 +307,7 @@ MonoBehaviour:
   continuousShootingAnimation: 1
   shootingAnimationDelay: 0
   bulletVelocity: 50
-  shotsPerSecond: 2
+  shotsPerSecond: 0.7
   shootPoints:
   - {fileID: 2236786138730742030}
   aimingCapability: 2

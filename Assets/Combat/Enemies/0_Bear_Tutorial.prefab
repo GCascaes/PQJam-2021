@@ -319,7 +319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer: 0
   isBoss: 0
-  maxHealth: 30
+  maxHealth: 1
   invincibilityTime: 0.2
   invincibleFlashPower: 3
   shouldDie: 1

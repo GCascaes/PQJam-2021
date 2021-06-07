@@ -369,8 +369,8 @@ MonoBehaviour:
   hasGun: 1
   continuousShootingAnimation: 0
   shootingAnimationDelay: 0.25
-  bulletVelocity: 200
-  shotsPerSecond: 0.3
+  bulletVelocity: 100
+  shotsPerSecond: 0.4
   shootPoints:
   - {fileID: 847006693}
   aimingCapability: 3

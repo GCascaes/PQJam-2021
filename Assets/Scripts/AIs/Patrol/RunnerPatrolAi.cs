@@ -29,7 +29,7 @@ public class RunnerPatrolAi : MonoBehaviour, IPatrolMovementAi
 
     private IEnumerator Run()
     {
-        if (movementController is null)
+        if (movementController == null)
             yield break;
 
         while (isRunning == true)

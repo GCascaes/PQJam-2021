@@ -29,7 +29,7 @@ public abstract class PatrolBaseAi : MonoBehaviour, IPatrolMovementAi
 
     private IEnumerator Patrol()
     {
-        if (patrolPoints is null || !patrolPoints.Any())
+        if (patrolPoints == null || !patrolPoints.Any())
             yield break;
 
         while (isPatroling == true)

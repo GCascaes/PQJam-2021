@@ -56,11 +56,11 @@ public class ContactDamageController : MonoBehaviour
 
     private void TryDamage(Collider2D collider)
     {
-        if (collider is null || contactDamage <= 0 || !enabled)
+        if (collider == null || contactDamage <= 0 || !enabled)
             return;
 
         if (!collider.gameObject.CompareTag(targetTag)
-            || contactDamageCollider is null
+            || contactDamageCollider == null
             || !collider.IsTouching(contactDamageCollider))
             return;
 

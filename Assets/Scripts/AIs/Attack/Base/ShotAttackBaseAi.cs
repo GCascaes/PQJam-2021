@@ -76,7 +76,7 @@ public abstract class ShotAttackBaseAi : GunController, IAttackAi
 
     protected void AimHorizontally()
     {
-        if (target is null || movementController is null)
+        if (target == null || movementController == null)
             return;
 
         if ((target.transform.position.x > transform.position.x && !movementController.FacingRight)
@@ -86,7 +86,7 @@ public abstract class ShotAttackBaseAi : GunController, IAttackAi
 
     protected void AimStraightShot()
     {
-        if (target is null)
+        if (target == null)
             return;
 
         foreach (var shootPoint in shootPoints)
@@ -98,7 +98,7 @@ public abstract class ShotAttackBaseAi : GunController, IAttackAi
 
     protected void AimBallistically()
     {
-        if (target is null)
+        if (target == null)
             return;
 
         if (!bulletPrefab.TryGetComponent<Rigidbody2D>(out var bulletBody))

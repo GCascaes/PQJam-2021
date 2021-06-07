@@ -20,7 +20,7 @@ public class PowerUpController : MonoBehaviour
 
     public void ActivatePowerUp()
     {
-        if (gunPowerUpController is null)
+        if (gunPowerUpController == null)
             return;
 
         switch (currentlyHeldPowerUp)

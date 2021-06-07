@@ -14,7 +14,7 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
     protected override IEnumerator LookAt(GameObject target)
     {
-        if (movementController is null)
+        if (movementController == null)
             yield break;
 
         while (IsLooking)
@@ -27,7 +27,7 @@ public class HorizontalGroundFollowAi : FollowBaseAi, IFollowMovementAi
 
     protected override IEnumerator Follow(GameObject target)
     {
-        if (movementController is null)
+        if (movementController == null)
             yield break;
 
         while (IsFollowing)

@@ -18,10 +18,13 @@ public class Cutscene_2 : MonoBehaviour
     [SerializeField] GameObject[] battleColliders;
 
 
+    private void Start()
+    {
+        princess.GetComponent<HealthController>().SetInvencible();
+    }
     public void StartCutscene()
     {
         StartCoroutine(_StartCutscene());
-        princess.GetComponent<HealthController>().SetInvencible();
     }
     IEnumerator _StartCutscene()
     {

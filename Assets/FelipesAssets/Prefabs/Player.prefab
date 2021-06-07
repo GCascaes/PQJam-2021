@@ -321,8 +321,8 @@ MonoBehaviour:
   barrierPrefab: {fileID: 2927532974339460685, guid: d4cdb80941be0374dab6e3f29675841e, type: 3}
   barrierSpawnPoint: {fileID: 1102430821}
   defenseEnabled: 1
-  defenseDuration: 3
-  defenseCooldown: 1.5
+  defenseDuration: 0.3
+  defenseCooldown: 0.2
   defenseDisableShooting: 1
   defenseDisableMoving: 1
 --- !u!114 &389029070

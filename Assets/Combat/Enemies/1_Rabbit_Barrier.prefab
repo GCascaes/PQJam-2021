@@ -438,7 +438,7 @@ MonoBehaviour:
   - {fileID: 1727894701}
   aimingCapability: 1
   defensePeriod: 4
-  idlePeriodBeforeShooting: 1
+  idlePeriodBeforeShooting: 0.1
   shootingPeriod: 2
   idlePeriodAfterShooting: 1
 --- !u!114 &6176436516032391354
@@ -459,3 +459,5 @@ MonoBehaviour:
   - {fileID: 9118092177619433111, guid: b9fbcace0cc43ed45984070c3bfd5186, type: 3}
   - {fileID: 2023225859463519216, guid: b694ecbdf0516a543858bc6ad8adcb81, type: 3}
   - {fileID: 7385523240463860119, guid: 0412e213bd4e3c944baba688b5d11179, type: 3}
+  - {fileID: 4564424838903885222, guid: 9443ae1f0b0b7f047b55d5d1b431acc4, type: 3}
+  - {fileID: 4564424838903885222, guid: 9443ae1f0b0b7f047b55d5d1b431acc4, type: 3}

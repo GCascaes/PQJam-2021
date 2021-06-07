@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ItemDropper : MonoBehaviour
@@ -10,7 +11,9 @@ public class ItemDropper : MonoBehaviour
 
     private void Start()
     {
-        if (TryGetComponent<HealthController>(out var healthController))
+        if (TryGetComponent<HealthController>(out var healthController)
+            && itemsPrefab != null
+            && itemsPrefab.Any())
         {
             healthController.RegisterDeathAction(() =>
             {
@@ -18,7 +21,7 @@ public class ItemDropper : MonoBehaviour
                 {
                     int itemIndex = Random.Range(0, itemsPrefab.Count);
                     var itemPrefab = itemsPrefab[itemIndex];
-                    Instantiate(itemPrefab, transform.position, transform.rotation);
+                    Instantiate(itemPrefab, transform.position, Quaternion.identity);
                 }
             });
         }

@@ -413,7 +413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dropChancePercent: 10
-  itemPrefab: {fileID: 4564424838903885222, guid: 9443ae1f0b0b7f047b55d5d1b431acc4, type: 3}
+  itemsPrefab: []
 --- !u!1001 &255436859
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3449,6 +3449,10 @@ PrefabInstance:
     - target: {fileID: 3411906843983970854, guid: 73f94a20423be5541b3830684e22a210, type: 3}
       propertyPath: m_Name
       value: 1_Rabbit_Barrier
+      objectReference: {fileID: 0}
+    - target: {fileID: 6176436516032391354, guid: 73f94a20423be5541b3830684e22a210, type: 3}
+      propertyPath: dropChancePercent
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73f94a20423be5541b3830684e22a210, type: 3}

@@ -219,7 +219,7 @@ MonoBehaviour:
   followTargetTriggerCollider: {fileID: 0}
   attackTargetTriggerCollider: {fileID: 0}
   disengageTriggerCollider: {fileID: 0}
-  disengageTime: 0
+  disengageTime: 5
   targetTag: Player
   gettingAngryTime: 0
   gettingCuteTime: 0
@@ -271,9 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93748a79a5e50b04eb867932490b846e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  patrolPoints: []
   PatrolGuardTime: 1
 --- !u!114 &3423235026150472278
 MonoBehaviour:
